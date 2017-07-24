@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<theme version="php">
+<id>qxcms</id>
+<name>千寻免费CMS主题</name>
+<url>http://www.ynjuyi.com/post/22.html</url>
+<note>简洁CMS主题，轻门户型</note>
+<description>千寻广告的首款CMS主题</description>
+<path>main.php</path>
+<include>include.php</include>
+<level>1</level>
+<author>
+  <name>千寻</name>
+  <email>wang_longyun@163.com</email>
+  <url>http://www.ynjuyi.com/</url>
+</author>
+<source>
+  <name></name>
+  <email></email>
+  <url></url>
+</source>
+<adapted>150101</adapted>
+<version>1.1</version>
+<pubdate>2015-11-06</pubdate>
+<modified>2015-12-22</modified>
+<price>0</price>
+<advanced>
+  <dependency></dependency>
+  <rewritefunctions></rewritefunctions>
+  <conflict></conflict>
+</advanced>
+<sidebars>
+  <sidebar1></sidebar1>
+  <sidebar2></sidebar2>
+  <sidebar3></sidebar3>
+  <sidebar4></sidebar4>
+  <sidebar5></sidebar5>
+</sidebars>
+</theme>

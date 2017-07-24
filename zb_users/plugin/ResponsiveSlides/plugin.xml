@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin version="php">
+<id>ResponsiveSlides</id>
+<name>幻灯片插件ResponsiveSlides</name>
+<url>http://www.boke8.net/zbpResponsiveSlides.html</url>
+<note>基于jquery幻灯片插件ResponsiveSlides制作的zblog php图片轮播插件。</note>
+<description>基于免费的响应式jquery幻灯片插件ResponsiveSlides.js制作的zblog php图片轮播插件，理论上支持所有非pjax、ajax效果的zblog主题，包括响应式自适应主题，使用pjax或ajax的主题需要设置回调函数。</description>
+<path>main.php</path>
+<include>include.php</include>
+<level>1</level>
+<author>
+  <name>博客吧</name>
+  <email>bandeng@boke8.net</email>
+  <url>http://www.boke8.net/</url>
+</author>
+<source>
+  <name></name>
+  <email></email>
+  <url></url>
+</source>
+<adapted>150101</adapted>
+<version>1.0</version>
+<pubdate>2016-06-30</pubdate>
+<modified>2016-06-30</modified>
+<price>2.8</price>
+<advanced>
+  <dependency></dependency>
+  <rewritefunctions></rewritefunctions>
+  <conflict></conflict>
+</advanced>
+<sidebars>
+  <sidebar1></sidebar1>
+  <sidebar2></sidebar2>
+  <sidebar3></sidebar3>
+  <sidebar4></sidebar4>
+  <sidebar5></sidebar5>
+</sidebars>
+</plugin><!-- app_host:http://localhost/lkkbkmini/;app_email:;app_user:admin; -->
