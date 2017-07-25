@@ -12,8 +12,8 @@
         </div> -->
         <div id="divMiddle">
             <!--轮播图首页-->
-            <!--z-index:-999;position:relative--防止轮播图遮挡-->
-            <div id="divTop" class="slider" style="z-index:-999;position:relative;">
+            <!--z-index:-999;position:relative防止轮播图遮挡-->
+            <div id="divTop" class="slider">
                 {ResponsiveSlides_call('')}
                <!-- <ul class="bxslider">
                     <li><img src="{$host}zb_users/theme/{$theme}/image/slider_image_1.jpg"/></li>
