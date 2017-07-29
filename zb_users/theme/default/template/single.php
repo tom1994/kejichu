@@ -4,8 +4,7 @@
 <div id="divAll">
 	<div id="divPage">
 	<div id="divMiddle">
-		<!--面包屑导航-->
-		{template:breadcrumb}
+
 		<div id="divTop">
 			<h1 id="BlogTitle"><a href="{$article.Category.Url}">{$article.Category.Name}</a></h1>
 		</div>

@@ -51,34 +51,41 @@ img{border:none;}
 .big-ad{margin-bottom: 10px;}
 .big-ad img{width: 960px;height: 60px;}
 .cms-content{width: 960px;height: auto;overflow: hidden;}
-.cms-title{width: 960px;height: 50px;border-bottom: 2px solid #336699;}
-.cms-title h2{width: auto;margin: 0;float: left;position: relative;top: 11px;border-bottom: 6px solid #336699;padding-bottom: 2px;padding-right: 20px;font-weight: 500;}
+.cms-title{width: 960px; height: 50px; border-bottom: 2px solid #336699; text-align: center}
+.cms-title h2{width: 960px; margin: 0 auto;position: relative;top: 11px;border-bottom: 6px solid #336699;padding-bottom: 2px;padding-right: 20px;font-weight: 500; display: inline-block}
 .cms-title h2 a{color: #336699;}
 .cms-title ul{list-style-type: none;margin: 0;padding: 0;}
 .cms-title ul li{float:left; line-height: 50px; position: relative; top: 15px; margin-left: 10px;}
 .cms-title ul li a{color: #6E7E97;}
 .cms-title .more{width: 40px; height: 20px; float: right; background: url(img/more.gif) no-repeat; position: relative; top: 35px;}
 .cms-title .more span{position: relative; bottom: 6px; right: 35px; font-size: 14px; color: #c0c0c0;}
-.cms-left,.cms-right{width: 320px; height: auto; float: left;}
+.cms-up h2{color: #000; font-family: '楷体'; font-size: 24px; font-weight: bolder; margin: 0; border-bottom: 3px solid #336699;}
+.cms-up ul li{margin: 5px 0}
+.cms-up ul li a{color: #4e4e4e;}
+.cms-up ul li a:hover{text-decoration: underline; color: #8c1515;}
+.cms-left-title,.cms-right-title{width:380px; margin-bottom:10px; display: inline-block}
+.cms-left-title span,.cms-right-title span{line-height:30px; float: right}
+.cms-left-title span img,.cms-right-title span img{width:25px; height:25px; margin: 5px 0;}
+.cms-left,.cms-right{width: 380px; height: auto; float: left; padding: 0 50px; text-align: center}
 .cms-left .list-tu{width: 308px; height: 85px; list-style-type: none;}
 .cms-left .list-tu img{width: 100px; height: 80px; float: left; margin-right: 10px;}
-.cms-left h3,.cms-right h3{font-weight: 600;}
+.cms-left h2,.cms-right h2{float:left; margin: 5px 0; color: #000; font-family: '黑体'; font-size: 20px; font-weight: bolder;}
 .cms-left .list-tu h3{width: 180px; height:26px; overflow: hidden; float: left; margin: 0; padding:0; font-size:16px; font-weight: 400;}
 .cms-left .list-tu p{width: 180px; height: 52px; overflow: hidden; float: left; margin: 0; font-size: 12px; color: #555;}
 .cms-tui{width: 290px; height: auto; float: left; padding: 0 0 0 10px; border-left: 2px solid #C0C0C0; border-right: 2px solid #C0C0C0; margin: 20px 0px 5px 10px;}
-.cms-left ul{list-style-image: none; padding: 0; margin-left: 10px;}
-.cms-left ul li{line-height: 26px; height: 26px; overflow: hidden; background-image: url(img/li.png); background-repeat: no-repeat; background-position: 0px 13px; text-indent: 10px;}
 .cms-left h3{padding-left: 10px; font-weight: 600; font-size: 16px;}
-.cms-right ul{list-style-image: none; padding: 0 10px 0 20px; margin-left: 10px;}
-.cms-right ul li{line-height: 25px; height: 25px; overflow: hidden; background-image: url(img/li.png); background-repeat: no-repeat; background-position: 0px 13px; text-indent: 10px;}
 .cms-right h3{padding-left: 20px; font-weight: 600; font-size: 16px;}
+.cms-lr-list{width: 100%; height: auto; float: left}
+.cms-lr-list ul li{height: 30px; line-height: 30px; margin: 5px 0; overflow: hidden; text-overflow: ellipsis;}
+.cms-lr-list ul li a{float: left; font-size:16px; color: #4e4e4e;}
+.cms-lr-list ul li a:hover{text-decoration: underline; color: #8c1515;}
 .cms-te{width: 280px; height: auto; float: left; padding: 0 10px 0 12px; border-left: 2px solid #C0C0C0; border-right: 2px solid #C0C0C0; margin: 20px 0px 5px 10px;}
-.cms-te ul{list-style-type: none; padding: 0px;}
-.cms-te ul li{line-height: 26px; height: 26px; overflow: hidden; background-image: url(img/li.png); background-repeat: no-repeat; background-position: 0px 13px; text-indent: 10px;}
+.cms-te ul,.top-art ul{list-style-type: none; padding: 0px;}
+.cms-te ul li,.top-art ul li{line-height: 26px; height: 26px; overflow: hidden; background-image: url(img/li.png); background-repeat: no-repeat; background-position: 0px 13px; text-indent: 10px;}
 .cms-te .cms-up h3,.cms-te .cms-down h3{margin: 0 0 18px 0; font-weight: 600; font-size: 16px;}
-.cms-tui .tu-f{width: 280px; height: 180px; margin-bottom: 15px; overflow: hidden;}
-.cms-tui .tu-f img{width: 280px; height: 180px; float: left;}
-.tu-f h3{position: relative; float: left; bottom: 30px; left: 0; width: 260px; height: 30px; line-height: 30px; padding: 0 10px; margin: 0; font-size: 14px; font-weight: normal; color: #fff; background: rgba(0,0,0,0.6); display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.tu-f{width: 380px; height: 220px; overflow: hidden; display: inline-block}
+.tu-f img{width: 380px; height: 220px; float: left;}
+.tu-f h3{position: relative; float: left; bottom: 30px; left: 0; width: 380px; height: 30px; line-height: 30px; padding: 0 10px; margin: 0; font-size: 14px; font-weight: normal; color: #fff; background: rgba(0,0,0,0.6); display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
 .tu-f h3:hover{background: rgba(255,50,0,0.6);}
 .cms-tui .tu-s{width: 128px; height: 100px; float: left; margin-right: 17px;}
 .cms-tui .tu-s img{width: 128px; height: 100px;}
@@ -148,11 +155,19 @@ img{border:none;}
 .right-tag ul li:hover{background: rgba(255,50,0,0.8);}
 .right-tag ul li a:hover{color: #fff;}
 /*内容*/
+.art-t-full{width: 960px; margin:30px 0 30px 0; font-size:36px; font-weight:bold; color: #1c4e7c; text-align:center;}
+.art-full{width: 960px; height: auto; padding-right: 20px; float: left;}
 .art-left{width: 658px; height: auto; padding-right: 20px; float: left;}
+.art-msg-container{width:960px; text-align:center;}
+.art-msg-full{display:inline-block;}
+.art-msg-full{_display:inline;} /*针对ie6 hack*/
+.art-msg-full span{margin-right: 10px;}
+.art-msg-full span img{width: 20px; height: 20px; position: relative; top: 5px;}
 .art-msg{margin-bottom: 30px; margin-left: 5px;}
 .art-msg span{margin-right: 10px;}
 .art-msg span img{width: 20px; height: 20px; position: relative; top: 5px;}
 .art-content p{width: 658px; margin-top: 40px; text-indent: 28px;}
+.art-content-full p{width: 960px; margin-top: 40px; text-indent: 28px;}
 .art-tag{width: 658px; overflow: hidden; margin-bottom: 20px;}
 .art-tag ul{list-style-type: none; padding: 0; margin: 20px 0;}
 .art-tag ul li{float: left; background: #ddd; margin: 10px; padding: 5px;}
