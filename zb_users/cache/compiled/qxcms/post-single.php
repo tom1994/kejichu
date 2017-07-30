@@ -13,7 +13,8 @@
 			   </span>
 			   <span><?php  echo $article->Time('Y年m月d日');  ?></span>
 			   <span><a href="<?php  echo $article->Category->Url;  ?>"><?php  echo $article->Category->Name;  ?></a></span>
-			   <span><?php  echo $article->ViewNums;  ?>次浏览</span>			   		   
+			   <span><?php  echo $article->ViewNums;  ?>次浏览</span>
+               <span><?php  echo $article->Metas->Org;  ?></span>
 		   </div>
 		   <div class="art-content">
 			   <?php  echo $article->Content;  ?> 
