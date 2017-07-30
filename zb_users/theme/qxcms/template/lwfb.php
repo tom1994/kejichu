@@ -1,4 +1,4 @@
-{* Template Name:论文发表页面 *}
+{* Template Name:论文著作首页 *}
 {template:header}
 <!--面包屑导航-->
 {template:breadcrumb}
@@ -20,7 +20,7 @@
         <div class="cms-lwzz-lwfb">
             <div class="cms-cbzz-title">
                 <div class="cbzz-title"><span>论文发表</span></div>
-                <span class="cbzz-more"><a href="{$categorys[22].Url}">更多</a></span>
+                <span class="cbzz-more"><a href="#"></a>更多</span>
             </div>
             <div class="cms-lwfb-list">
                 <ul>
