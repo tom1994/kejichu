@@ -2,6 +2,8 @@
 
 RegisterPlugin("qxcms", "ActivePlugin_qxcms");
 RegisterPlugin("org", "ActivePlugin_org");
+RegisterPlugin("author", "ActivePlugin_author");
+RegisterPlugin("code", "ActivePlugin_code");
 
 function ActivePlugin_qxcms()
 {
@@ -13,12 +15,43 @@ function ActivePlugin_org()
     Add_Filter_Plugin('Filter_Plugin_Edit_Response3', 'add_Organization');
 }
 
+function ActivePlugin_author()
+{
+    Add_Filter_Plugin('Filter_Plugin_Edit_Response3', 'add_Author');
+}
+
+function ActivePlugin_code()
+{
+    Add_Filter_Plugin('Filter_Plugin_Edit_Response3', 'add_Code');
+}
+
+// 文章所属组织或者出版社字段
 function add_Organization()
 {
     global $zbp, $article;
     echo '<div id="alias" class="editmod">
 <label for="meta_org" class="editinputname">文章所属组织</label>
-<input type="text" name="meta_org" value="' . htmlspecialchars($article->Metas->Org) . '"/>
+<input type="text" name="meta_org" value="' . htmlspecialchars($article->Metas->org) . '"/>
+</div>';
+}
+
+// 文章作者字段
+function add_Author()
+{
+    global $zbp, $article;
+    echo '<div id="alias" class="editmod">
+<label for="meta_author" class="editinputname">文章作者</label>
+<input type="text" name="meta_author" value="' . htmlspecialchars($article->Metas->author) . '"/>
+</div>';
+}
+
+// 文章编号字段
+function add_Code()
+{
+    global $zbp, $article;
+    echo '<div id="alias" class="editmod">
+<label for="meta_code" class="editinputname">文章编号</label>
+<input type="text" name="meta_code" value="' . htmlspecialchars($article->Metas->code) . '"/>
 </div>';
 }
 
