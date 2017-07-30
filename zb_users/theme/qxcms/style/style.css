@@ -110,7 +110,7 @@ img{border:none;}
 .cms-lwfb-list ul li a{width:700px;display:inline-block;float: left; font-size:20px; color: rgba(127, 167, 190, 0.91);}
 .cms-lwfb-list ul li a:hover{text-decoration: underline; color: #8c1515;}
 .lwfb-date{width: 220px;display: inline-block;text-align: right;}
-.lufb-zz{width: 200px;display: inline-block}
+.lufb-zz{width: 100px;display: inline-block}
 
 /*论文著作样式*/
 .cms-left-title,.cms-right-title{width:380px; margin-bottom:10px; display: inline-block}
