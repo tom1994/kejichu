@@ -18,7 +18,7 @@
         <!--分割线-->
         <div class="cms-kyxm-halving-line"></div>
         <div class="cms-kyxm-title">
-            <h2>时政/人事</h2>
+            <h3>时政/人事</h3>
             <span><a href="<?php  echo $categorys[24]->Url;  ?>"><img src="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/image/focus.png"></a></span>
         </div>
         <div class="tu-kyxm-f">
@@ -40,7 +40,7 @@
         <!--分割线-->
         <div class="cms-kyxm-halving-line"></div>
         <div class="cms-kyxm-title">
-            <h2>国际</h2>
+            <h3>国际</h3>
             <span><a href="<?php  echo $categorys[25]->Url;  ?>"><img src="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/image/focus.png"></a></span>
         </div>
         <div class="tu-kyxm-f">
@@ -61,7 +61,7 @@
         <!--分割线-->
         <div class="cms-kyxm-halving-line"></div>
         <div class="cms-kyxm-title">
-            <h2>财经</h2>
+            <h3>财经</h3>
             <span><a href="<?php  echo $categorys[26]->Url;  ?>"><img src="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/image/focus.png"></a></span>
         </div>
         <div class="tu-kyxm-f">
@@ -83,7 +83,7 @@
         <!--分割线-->
         <div class="cms-kyxm-halving-line"></div>
         <div class="cms-kyxm-title">
-            <h2>法制/社会</h2>
+            <h3>法制/社会</h3>
             <span><a href="<?php  echo $categorys[27]->Url;  ?>"><img src="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/image/focus.png"></a></span>
         </div>
         <div class="tu-kyxm-f">
@@ -105,7 +105,7 @@
         <!--分割线-->
         <div class="cms-kyxm-halving-line"></div>
         <div class="cms-kyxm-title">
-            <h2>数据新闻</h2>
+            <h3>数据新闻</h3>
             <span><a href="<?php  echo $categorys[28]->Url;  ?>"><img src="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/image/focus.png"></a></span>
         </div>
         <div class="tu-kyxm-f">
@@ -126,7 +126,7 @@
         <!--分割线-->
         <div class="cms-kyxm-halving-line"></div>
         <div class="cms-kyxm-title">
-            <h2>证券</h2>
+            <h3>证券</h3>
             <span><a href="<?php  echo $categorys[29]->Url;  ?>"><img src="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/image/focus.png"></a></span>
         </div>
         <div class="tu-kyxm-f">

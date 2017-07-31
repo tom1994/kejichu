@@ -8,7 +8,7 @@
         <div class="cbzz">
             <div class="cms-cbzz-title">
                 <div class="cbzz-title"><span>出版著作</span></div>
-                <span class="cbzz-more"><a href="#"></a>更多</span>
+                <span class="cbzz-more"><a href="<?php  echo $categorys[23]->Url;  ?>">更多</a></span>
             </div>
 
             <div class="cbzz-lunbo">
