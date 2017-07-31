@@ -5,6 +5,8 @@ RegisterPlugin("org", "ActivePlugin_org");
 RegisterPlugin("author", "ActivePlugin_author");
 RegisterPlugin("code", "ActivePlugin_code");
 RegisterPlugin("img", "ActivePlugin_img");
+RegisterPlugin("info", "ActivePlugin_info");
+RegisterPlugin("author_info", "ActivePlugin_author_info");
 
 function ActivePlugin_qxcms()
 {
@@ -31,12 +33,22 @@ function ActivePlugin_img()
     Add_Filter_Plugin('Filter_Plugin_Edit_Response5', 'add_Img');
 }
 
+function ActivePlugin_info()
+{
+    Add_Filter_Plugin('Filter_Plugin_Edit_Response5', 'add_Info');
+}
+
+function ActivePlugin_author_info()
+{
+    Add_Filter_Plugin('Filter_Plugin_Edit_Response5', 'add_Author_Info');
+}
+
 // 文章所属组织或者出版社字段
 function add_Organization()
 {
     global $zbp, $article;
     echo '<div id="alias" class="editmod">
-<label for="meta_org" class="editinputname">文章所属组织</label>
+<label for="meta_org" class="editinputname">所属组织</label>
 <input type="text" name="meta_org" value="' . htmlspecialchars($article->Metas->org) . '"/>
 </div>';
 }
@@ -77,6 +89,33 @@ function add_Img()
 </p>
       </div>
     </div>';
+}
+
+// 文章基本信息
+function add_Info()
+{
+    global $zbp, $article;
+    echo '
+        <div id="titleheader" class="editmod">
+            <label for="edtTitle" class="editinputname">基本信息</label>
+            <p align="left" class="uploadimg">
+            <input type="text" name="meta_info" style="width: 60%;" value="' . htmlspecialchars($article->Metas->info) . '"/>
+            </p>
+        </div>';
+}
+
+// 作者介绍
+function add_Author_Info()
+{
+    global $zbp, $article;
+    echo '<div id="titleheader" class="editmod">
+            <label for="edtTitle" class="editinputname">作者信息</label>
+            <p align="left" class="uploadimg">
+            <textarea rows="4" cols="60" name="meta_author_info" style="width: 60%; resize: none; padding: 5px">
+                ' . htmlspecialchars($article->Metas->author_info) . '
+            </textarea>
+            </p>
+        </div>';
 }
 
 function qxcms_AddMenu(&$m)
