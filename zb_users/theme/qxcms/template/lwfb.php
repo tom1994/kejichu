@@ -26,7 +26,7 @@
                 <div class="zyqk-title"><span>主要期刊</span></div>
             </div>
             <div class="cms-list-zyqk">
-                
+
             </div>
         </div>
     </div>
