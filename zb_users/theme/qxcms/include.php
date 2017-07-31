@@ -4,6 +4,7 @@ RegisterPlugin("qxcms", "ActivePlugin_qxcms");
 RegisterPlugin("org", "ActivePlugin_org");
 RegisterPlugin("author", "ActivePlugin_author");
 RegisterPlugin("code", "ActivePlugin_code");
+RegisterPlugin("img", "ActivePlugin_img");
 
 function ActivePlugin_qxcms()
 {
@@ -23,6 +24,11 @@ function ActivePlugin_author()
 function ActivePlugin_code()
 {
     Add_Filter_Plugin('Filter_Plugin_Edit_Response3', 'add_Code');
+}
+
+function ActivePlugin_img()
+{
+    Add_Filter_Plugin('Filter_Plugin_Edit_Response5', 'add_Img');
 }
 
 // 文章所属组织或者出版社字段
@@ -53,6 +59,24 @@ function add_Code()
 <label for="meta_code" class="editinputname">文章编号</label>
 <input type="text" name="meta_code" value="' . htmlspecialchars($article->Metas->code) . '"/>
 </div>';
+}
+
+// 文章缩略图
+function add_Img()
+{
+    global $zbp, $article;
+    echo "<script type=\"text/javascript\" src=\"{$zbp->host}zb_users/theme/qxcms/script/lib.upload.js\"></script>";
+    echo '<div id="divtcimg" class="editmod2">
+        <div id="titleheader" class="editmod">
+            <label for="edtTitle" class="editinputname">文章缩略图</label>
+            <p align="left" class="uploadimg">
+<input name="meta_pic" id="edtTitle" type="text" class="uplod_img" style="width: 60%;" value="' . $article->Metas->pic . '" />
+<strong class="button" style="
+    color: #ffffff;    font-size: 1.1em;    height: 29px;      padding: 6px 18px 6px 18px;    margin: 0 0.5em;    background: #3a6ea5;    border: 1px solid #3399cc;    cursor: pointer;
+">浏览文件</strong>
+</p>
+      </div>
+    </div>';
 }
 
 function qxcms_AddMenu(&$m)
