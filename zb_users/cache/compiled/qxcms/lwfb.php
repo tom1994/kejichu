@@ -1,34 +1,32 @@
-<?php  /* Template Name:论文著作首页 */  ?>
+<?php  /* Template Name:论文发表首页 */  ?>
 <?php  include $this->GetTemplate('header');  ?>
 <!--面包屑导航-->
 <?php  include $this->GetTemplate('breadcrumb');  ?>
 <!-- 焦点文章开始 -->
 <div class="top-content">
     <div class="cms-content">
-        <div class="cbzz">
-            <div class="cms-cbzz-title">
-                <div class="cbzz-title"><span>出版著作</span></div>
-                <span class="cbzz-more"><a href="#"></a>更多</span>
+        <div class="lwfb">
+            <div class="cms-title-lwfb">
+                <div class="bj-lwfb"></div>
+                <div class="title-lwfb"><span>论文发表</span></div>
             </div>
-
-            <div class="cbzz-lunbo">
-                <?php  echo ResponsiveSlides_call('');  ?>
+            <div class="line-lwfb"></div>
+            <div class="cms-list-lwfb">
+                <ul>
+                    <?php  foreach ( GetList(8,$ason1) as $key=>$article) { ?>
+                    <li><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Title;  ?></a><span class="lwfb-date">[出版日期:<?php  echo $article->Time('Y-m-d');  ?>]</span></li>
+                    <?php }   ?>
+                </ul>
             </div>
         </div>
 
 
-        <div class="cms-lwzz-lwfb">
-            <div class="cms-cbzz-title">
-                <div class="cbzz-title"><span>论文发表</span></div>
-                <span class="cbzz-more"><a href="#"></a>更多</span>
+        <div class="cms-zyqk">
+            <div class="cms-title-zyqk">
+                <div class="zyqk-title"><span>主要期刊</span></div>
             </div>
-            <div class="cms-lwfb-list">
-                <ul>
-                    <?php  foreach ( GetList(4,$ason1) as $key=>$article) { ?>
-                    <li><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Title;  ?></a><span class="lwfb-date">[出版日期:<?php  echo $article->Time('Y-m-d');  ?>]</span></li>
-                    <li><span class="lufb-zz"><strong>·</strong>作者:<?php  echo $article->Author->Name;  ?></span><span class="lufb-cbs"><strong>·</strong>出版社</span></li>
-                    <?php }   ?>
-                </ul>
+            <div class="cms-list-zyqk">
+                
             </div>
         </div>
     </div>

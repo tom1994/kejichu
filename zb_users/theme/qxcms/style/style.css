@@ -134,8 +134,24 @@ img{border:none;}
 .cms-lwfb-list ul li a:hover{text-decoration: underline; color: #8c1515;}
 .lwfb-date{width: 220px;display: inline-block;text-align: right;}
 .lufb-zz{width: 100px;display: inline-block}
-
 /*论文著作样式*/
+/*论文发表样式*/
+.lwfb{height: 480px}
+.cms-title-lwfb{background-color: #f2f2f2;height: 50px}
+.bj-lwfb{width: 8px;height: 50px;background-color: #2e3190;display: inline-block;vertical-align: top;}
+.title-lwfb{width: 300px;height:50px;text-align: left;display: inline-block;vertical-align: top;}
+.title-lwfb span{color: black;font-family: 微软雅黑;font-size: 26px;line-height:50px}
+.line-lwfb{width: 100%;height: 3px;background-color: #2e3190;}
+.cms-list-lwfb{display: inline-block;width: 960px; height: auto;margin-top:5px;background-color: white}
+.cms-list-lwfb ul li{width:100%;height: 50px; line-height: 30px; margin: 2px 0; overflow: hidden; text-overflow: ellipsis;}
+.cms-list-lwfb ul li a{width:700px;display:inline-block;float: left; font-size:20px; color: rgba(127, 167, 190, 0.91);}
+.cms-list-lwfb ul li a:hover{text-decoration: underline; color: #8c1515;}
+.lwfb-date{width: 250px;display: inline-block;text-align: right;}
+.cms-zyqk{margin: 1px 0}
+.cms-title-zyqk{background-color: #f2f2f2;height: 35px}
+.zyqk-title{  width: 150px;height: 35px;background-color: #2e3190;text-align: center;display: inline-block}
+.zyqk-title span{color: white;font-family: 微软雅黑;font-size: 20px;}
+/*论文发表样式*/
 .cms-left-title,.cms-right-title{width:380px; margin-bottom:10px; display: inline-block}
 .cms-left-title span,.cms-right-title span{line-height:30px; float: right}
 .cms-left-title span img,.cms-right-title span img{width:25px; height:25px; margin: 5px 0;}
