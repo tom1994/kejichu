@@ -13,7 +13,8 @@
 			   </span>
 			   <span>{$article.Time('Y年m月d日')}</span>
 			   <span><a href="{$article.Category.Url}">{$article.Category.Name}</a></span>
-			   <span>{$article.ViewNums}次浏览</span>			   		   
+			   <span>{$article.ViewNums}次浏览</span>
+               <span>{$article->Metas->org}</span>
 		   </div>
 		   <div class="art-content">
 			   {$article.Content} 
