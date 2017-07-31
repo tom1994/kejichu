@@ -14,8 +14,12 @@
     <!-- cms2开始 -->
     {if $zbp->Config('qxcms')->Bcms=='1'}
     <div class="cms-content">
-        <div><h2>最新洞见</h2></div>
-        <div>
+        <div class="cms-wbyj-zxdj">
+            <div class="cms-title-wbyj">
+                <div class="title-wbyj-left"></div>
+                <div class="title-wbyj"><span><h2>最新洞见</h2></span></div>
+                <div class="more-wbyj"><a href="{$categorys[30].Url}">更多</a></div>
+            </div>
             <div class="cms-wbyj">
                 <div class="tu-wbyj-f">
                     {$btuid=GetPost((int)$zbp->Config('qxcms')->Btuid)}
@@ -64,8 +68,12 @@
                 </div>
             </div>
         </div>
+        <div class="cms-title-wbyj">
+            <div class="title-wbyj-left"></div>
+            <div class="title-wbyj"><span><h2>热点话题</h2></span></div>
+            <div class="more-wbyj"><a href="{$categorys[31].Url}">更多</a></div>
+        </div>
         <div class="cms-wbyj-redian">
-            <div><h2>热点话题</h2></div>
             <div class="tu-wbyj-f-redian">
                 {$btuid=GetPost((int)$zbp->Config('qxcms')->Btuid)}
 
