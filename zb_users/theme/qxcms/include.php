@@ -88,6 +88,7 @@ function add_Img()
 ">浏览文件</strong>
 </p>
       </div>
+ <img src="'. htmlspecialchars($article->Metas->pic) .'" style="width: 100px;height: auto;display: inline-block">
     </div>';
 }
 
