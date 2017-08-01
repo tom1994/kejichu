@@ -7,52 +7,45 @@
         <!--		   </div>-->
         <!--面包屑导航-->
         <?php  include $this->GetTemplate('breadcrumb');  ?>
-        <div class="paper-t-full">
-            <?php  echo $article->Title;  ?>
-        </div>
-        <div class="paper-a-full">
-            <?php  echo $article->Metas->author;  ?>
-        </div>
-        <div class="paper-o-full">
-            <?php  echo $article->Metas->org;  ?>
-        </div>
-        <div class="horizon-line bg-lightgray"></div>
-        <div class="paper-content-left">
-            <?php  echo $article->Content;  ?>
-        </div>
-<!--        使用<?php  echo $article->Metas->pic;  ?>替换img的源-->
-        <div class="paper-img-right">
+        <div class="zhuzuo-img">
+            <!--        使用<?php  echo $article->Metas->pic;  ?>替换img的源-->
             <img src="<?php  echo qxcms_FirstIMG($btuid,120,160);  ?>" alt="<?php  echo $btuid->Title;  ?>">
         </div>
-        <!--		   <div class="art-tag">-->
-        <!--			    <ul>-->
-        <!--				    <?php  foreach ( $article->Tags as $tag) { ?>-->
-        <!--					<li><a href="<?php  echo $tag->Url;  ?>" target="_blank"><?php  echo $tag->Name;  ?></a></li>-->
-        <!--					<?php }   ?>-->
-        <!--			    </ul>-->
-        <!--		   </div>-->
-        <!--           <?php if ($zbp->Config('qxcms')->Adon6=='1') { ?>-->
-        <!--		   <div class="art-ad">-->
-        <!--			   <?php  echo $zbp->Config('qxcms')->Ad6;  ?>-->
-        <!--		   </div>-->
-        <!--           <?php } ?>-->
-        <!--		   <div class="art-xg">-->
-        <!--			    <div class="right-t">-->
-        <!--					<span>相关文章</span>	-->
-        <!--			    </div>-->
-        <!--				<div class="art-xg-c">-->
-        <!--                    <?php  foreach ( GetList(4,null,null,null,null,null,array('is_related'=>$article->ID)) as $related) { ?>-->
-        <!--					<div class="art-xg-box">-->
-        <!--		                <a href="<?php  echo $related->Url;  ?>"><img src="<?php  echo qxcms_FirstIMG($related,154,125);  ?>"  alt="<?php  echo $related->Title;  ?>">-->
-        <!--		                <span><?php  echo $related->Title;  ?></span>-->
-        <!--		                </a>-->
-        <!--	                </div>-->
-        <!--                    <?php }   ?>					-->
-        <!--				</div>-->
-        <!--		   </div>-->
+        <div class="zhuzuo-right">
+            <div class="zhuzuo-info-container">
+                <?php 
+                    $info_array = preg_split("/;/", $article->Metas->info);
+                    $headers = array("主办单位", "主管单位", "出版地", "出版周期", "国内统一刊号", "开版");
+                 ?>
 
+                <div class="zhuzuo-info-title">
+                    基本信息
+                </div>
+                <div class="zhuzuo-info">
+                    <?php  foreach ( $info_array as $key=>$item) { ?>
+                        <p>●<?php  echo $headers[$key];  ?>：<?php  echo $item;  ?></p>
+                    <?php }   ?>
+                </div>
+            </div>
+            <div class="zhuzuo-author-container">
+                <div class="zhuzuo-author-title">
+                    作者介绍
+                </div>
+                <div class="zhuzuo-author">
+                    <p><a href="https://www.baidu.com/s?wd=<?php  echo $article->Metas->author;  ?>"><?php  echo $article->Metas->author;  ?></a></p>
+                    <p><?php  echo $article->Metas->author_info;  ?></p>
+                </div>
+            </div>
+        </div>
+        <div class="zhuzuo-content-container">
+            <div class="zhuzuo-content-title">
+                主要内容
+            </div>
+            <div class="zhuzuo-content">
+                <?php  echo $article->Content;  ?>
+            </div>
+        </div>
     </div>
-
 </div>
 <!-- 页脚 -->
 <?php  include $this->GetTemplate('footer');  ?>

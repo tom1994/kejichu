@@ -22,7 +22,7 @@
         </div>
 <!--        使用{$article.Metas.pic}替换img的源-->
         <div class="paper-img-right">
-            <img src="{qxcms_FirstIMG($btuid,120,160)}" alt="{$btuid.Title}">
+            <img src="{$article.Metas.pic}" alt="{$article.Title}">
         </div>
         <!--		   <div class="art-tag">-->
         <!--			    <ul>-->

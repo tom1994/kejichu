@@ -20,7 +20,7 @@
 
         <div class="cms-wbyj-child-xgjg">
             <div class="cms-wbyj-child-title">
-                <div class="wbyj-child-title"><span>论文发表</span></div>
+                <div class="wbyj-child-title"><span>相关机构</span></div>
             </div>
         </div>
     </div>
