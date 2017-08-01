@@ -66,16 +66,17 @@ function add_Img()
 {
     global $zbp, $article;
     echo "<script type=\"text/javascript\" src=\"{$zbp->host}zb_users/theme/qxcms/script/lib.upload.js\"></script>";
-    echo '<div id="divtcimg" class="editmod2">
-        <div id="titleheader" class="editmod">
+    echo '<div id="divtcimg">
+        <div id="titleheader" class="editmod" style="width: 500px;display: inline-block">
             <label for="edtTitle" class="editinputname">文章缩略图</label>
             <p align="left" class="uploadimg">
-<input name="meta_pic" id="edtTitle" type="text" class="uplod_img" style="width: 60%;" value="' . $article->Metas->pic . '" />
+<input name="meta_pic" id="edtTitle" type="text" class="uplod_img" style="width: 60%;" value="' . htmlspecialchars($article->Metas->pic) . '" />
 <strong class="button" style="
     color: #ffffff;    font-size: 1.1em;    height: 29px;      padding: 6px 18px 6px 18px;    margin: 0 0.5em;    background: #3a6ea5;    border: 1px solid #3399cc;    cursor: pointer;
 ">浏览文件</strong>
 </p>
       </div>
+ <img src="'. htmlspecialchars($article->Metas->pic) .'" style="width: 100px;height: auto;display: inline-block">
     </div>';
 }
 

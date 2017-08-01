@@ -42,7 +42,6 @@
                             <span id="divMainLeftTitle">
                                 要闻
                             </span>
-
                         </div>
 
                         <ul>
