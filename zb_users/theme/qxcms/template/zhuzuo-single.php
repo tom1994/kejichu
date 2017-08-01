@@ -7,52 +7,45 @@
         <!--		   </div>-->
         <!--面包屑导航-->
         {template:breadcrumb}
-        <div class="paper-t-full">
-            {$article.Title}
-        </div>
-        <div class="paper-a-full">
-            {$article.Metas.author}
-        </div>
-        <div class="paper-o-full">
-            {$article.Metas.org}
-        </div>
-        <div class="horizon-line bg-lightgray"></div>
-        <div class="paper-content-left">
-            {$article.Content}
-        </div>
-<!--        使用{$article.Metas.pic}替换img的源-->
-        <div class="paper-img-right">
+        <div class="zhuzuo-img">
+            <!--        使用{$article.Metas.pic}替换img的源-->
             <img src="{qxcms_FirstIMG($btuid,120,160)}" alt="{$btuid.Title}">
         </div>
-        <!--		   <div class="art-tag">-->
-        <!--			    <ul>-->
-        <!--				    {foreach $article.Tags as $tag}-->
-        <!--					<li><a href="{$tag.Url}" target="_blank">{$tag.Name}</a></li>-->
-        <!--					{/foreach}-->
-        <!--			    </ul>-->
-        <!--		   </div>-->
-        <!--           {if $zbp->Config('qxcms')->Adon6=='1'}-->
-        <!--		   <div class="art-ad">-->
-        <!--			   {$zbp->Config('qxcms')->Ad6}-->
-        <!--		   </div>-->
-        <!--           {/if}-->
-        <!--		   <div class="art-xg">-->
-        <!--			    <div class="right-t">-->
-        <!--					<span>相关文章</span>	-->
-        <!--			    </div>-->
-        <!--				<div class="art-xg-c">-->
-        <!--                    {foreach GetList(4,null,null,null,null,null,array('is_related'=>$article.ID)) as $related}-->
-        <!--					<div class="art-xg-box">-->
-        <!--		                <a href="{$related.Url}"><img src="{qxcms_FirstIMG($related,154,125)}"  alt="{$related.Title}">-->
-        <!--		                <span>{$related.Title}</span>-->
-        <!--		                </a>-->
-        <!--	                </div>-->
-        <!--                    {/foreach}					-->
-        <!--				</div>-->
-        <!--		   </div>-->
+        <div class="zhuzuo-right">
+            <div class="zhuzuo-info-container">
+                {php}
+                    $info_array = preg_split("/;/", $article->Metas->info);
+                    $headers = array("主办单位", "主管单位", "出版地", "出版周期", "国内统一刊号", "开版");
+                {/php}
 
+                <div class="zhuzuo-info-title">
+                    基本信息
+                </div>
+                <div class="zhuzuo-info">
+                    {foreach $info_array as $key=>$item}
+                        <p>●{$headers[$key]}：{$item}</p>
+                    {/foreach}
+                </div>
+            </div>
+            <div class="zhuzuo-author-container">
+                <div class="zhuzuo-author-title">
+                    作者介绍
+                </div>
+                <div class="zhuzuo-author">
+                    <p><a href="https://www.baidu.com/s?wd={$article.Metas.author}">{$article.Metas.author}</a></p>
+                    <p>{$article.Metas.author_info}</p>
+                </div>
+            </div>
+        </div>
+        <div class="zhuzuo-content-container">
+            <div class="zhuzuo-content-title">
+                主要内容
+            </div>
+            <div class="zhuzuo-content">
+                {$article.Content}
+            </div>
+        </div>
     </div>
-
 </div>
 <!-- 页脚 -->
 {template:footer}

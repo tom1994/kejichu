@@ -26,7 +26,7 @@
         </div>
 <!--        使用<?php  echo $article->Metas->pic;  ?>替换img的源-->
         <div class="paper-img-right">
-            <img src="<?php  echo qxcms_FirstIMG($btuid,120,160);  ?>" alt="<?php  echo $btuid->Title;  ?>">
+            <img src="<?php  echo $article->Metas->pic;  ?>" alt="<?php  echo $article->Title;  ?>">
         </div>
         <!--		   <div class="art-tag">-->
         <!--			    <ul>-->
