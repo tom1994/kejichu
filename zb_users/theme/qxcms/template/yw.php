@@ -28,10 +28,11 @@
             <div class="cms-yw-img">
                     <div id="KinSlideshow" style="visibility:hidden;">
 
-                        <!--取得该分类下前n个置顶文章-->
-                        {$topArray = GetList(4, 1, null, null, null, null, array("only_ontop"  => true));}
-                        {foreach $topArray as $top}
-                        <a href="{$top.Url}" target="_blank"><img src="{$top.Metas.pic}" alt="{$top.Title}" width="750" height="360"/></a>
+                        <!--取得该分类下加入轮播图的文章-->
+                        {foreach GetList(null,1) as $key=>$article}
+                        {if $article->Metas->lunbo==1}
+                        <a href="{$article.Url}" target="_blank"><img src="{$article.Metas.pic}" alt="{$article.Title}" width="750" height="360"/></a>
+                        {/if}
                         {/foreach}
                     </div>
             </div>
@@ -42,7 +43,7 @@
                 <div class="cms-yw-title-mtbd-more"><a href="{$categorys[32].Url}"><span>更多</span></a></div>
                 <div class="cms-yw-mtbd-list">
                     <ul>
-                        {foreach GetList(11,$ason1) as $key=>$article}
+                        {foreach GetList(11,1) as $key=>$article}
                         <li><a href="{$article.Url}">{$article.Title}</a></li>
                         {/foreach}
                     </ul>
@@ -58,7 +59,7 @@
         <div class="cms-yw-zhxw">
             <div class="cms-zhxw-list">
                 <ul>
-                    {foreach GetList(10,$ason1) as $key=>$article}
+                    {foreach GetList(10,1) as $key=>$article}
                     <li><a href="{$article.Url}">{$article.Title}</a></li>
                     {/foreach}
                 </ul>

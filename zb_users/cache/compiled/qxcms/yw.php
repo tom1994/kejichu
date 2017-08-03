@@ -28,10 +28,11 @@
             <div class="cms-yw-img">
                     <div id="KinSlideshow" style="visibility:hidden;">
 
-                        <!--取得该分类下前n个置顶文章-->
-                        <?php  $topArray = GetList(4, 1, null, null, null, null, array("only_ontop"  => true));;  ?>
-                        <?php  foreach ( $topArray as $top) { ?>
-                        <a href="<?php  echo $top->Url;  ?>" target="_blank"><img src="<?php  echo $top->Metas->pic;  ?>" alt="<?php  echo $top->Title;  ?>" width="750" height="360"/></a>
+                        <!--取得该分类下加入轮播图的文章-->
+                        <?php  foreach ( GetList(null,1) as $key=>$article) { ?>
+                        <?php if ($article->Metas->lunbo==1) { ?>
+                        <a href="<?php  echo $article->Url;  ?>" target="_blank"><img src="<?php  echo $article->Metas->pic;  ?>" alt="<?php  echo $article->Title;  ?>" width="750" height="360"/></a>
+                        <?php } ?>
                         <?php }   ?>
                     </div>
             </div>
@@ -42,7 +43,7 @@
                 <div class="cms-yw-title-mtbd-more"><a href="<?php  echo $categorys[32]->Url;  ?>"><span>更多</span></a></div>
                 <div class="cms-yw-mtbd-list">
                     <ul>
-                        <?php  foreach ( GetList(11,$ason1) as $key=>$article) { ?>
+                        <?php  foreach ( GetList(11,1) as $key=>$article) { ?>
                         <li><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Title;  ?></a></li>
                         <?php }   ?>
                     </ul>
@@ -58,7 +59,7 @@
         <div class="cms-yw-zhxw">
             <div class="cms-zhxw-list">
                 <ul>
-                    <?php  foreach ( GetList(10,$ason1) as $key=>$article) { ?>
+                    <?php  foreach ( GetList(10,1) as $key=>$article) { ?>
                     <li><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Title;  ?></a></li>
                     <?php }   ?>
                 </ul>
