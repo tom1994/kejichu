@@ -4,15 +4,7 @@
 <?php  include $this->GetTemplate('breadcrumb');  ?>
 <!-- 焦点文章开始 -->
 <div class="top-content">
-    <?php 
-    $acate = $zbp->Config('qxcms')->Acate;
-    $ason1 = $zbp->Config('qxcms')->Ason1;
-    $ason2 = $zbp->Config('qxcms')->Ason2;
-    $ason3 = $zbp->Config('qxcms')->Ason3;
-     ?>
 
-    <!-- cms2开始 -->
-    <?php if ($zbp->Config('qxcms')->Bcms=='1') { ?>
     <div class="cms-content">
         <div class="cms-wbyj-zxdj">
             <div class="cms-title-wbyj">
@@ -89,8 +81,6 @@
             </div>
         </div>
     </div>
-    <?php } ?>
-    <!-- cms2结束 -->
 
     <!-- 友情链接开始 -->
     <div class="link">

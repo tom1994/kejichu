@@ -86,6 +86,37 @@ img{border:none;}
 .cms-up ul li{margin: 5px 0}
 .cms-up ul li a{color: #4e4e4e;}
 .cms-up ul li a:hover{text-decoration: underline; color: #8c1515;}
+/*要闻样式*/
+.cms-yw{height: 360px}
+.cms-yw-img{width: 750px;display: inline-block;vertical-align: top}
+.cms-yw-mtbd{width: 200px;display: inline-block;vertical-align: top;border:1px solid #2e3190;background-color: #2e3190;}
+.cms-yw-title-mtbd{width: 60%;height: 25px;display: inline-block;text-align: center;vertical-align: top  }
+.cms-yw-title-mtbd-more{width: 15%;display: inline-block;height: 25px;text-align:right;vertical-align: top}
+.cms-yw-title-mtbd-more span{color: white}
+.cms-yw-title-mtbd span{font-size: 20px;line-height: 25px;color: white}
+.cms-yw-mtbd-list{display: inline-block;width: 200px; height: auto;background-color: white}
+.cms-yw-mtbd-list ul{text-align: left}
+.cms-yw-mtbd-list ul li{width:100%;height: 28px; line-height: 28px; margin: 2px 0; overflow: hidden; text-overflow: ellipsis;}
+.cms-yw-mtbd-list ul li a{float: left; font-size:12px; color: #4e4e4e;}
+.cms-yw-mtbd-list ul li a:hover{text-decoration: underline; color: #8c1515;}
+.cms-zhyw{height: 320px;background-color: #f2f2f2}
+.cms-title-yw{height: 30px;margin: 5px 0}
+.title-yw{width: 600px;display: inline-block;text-align: left}
+.title-yw span{font-size: 20px;line-height: 30px;font-weight: 600}
+.more-yw{width: 300px;text-align: left;display: inline-block;}
+.more-yw a{font-size: 20px}
+.title-yw-line{height: 5px;background-color: #2E3190}
+.cms-yw-zhxw{height: 300px;background-color: #f2f2f2 ;padding: 0 6px }
+.cms-zhxw-list{display: inline-block;vertical-align: top;width: 600px; height: auto;background-color: white}
+.cms-zhxw-list ul{text-align: left}
+.cms-zhxw-list ul li{width:100%;height: 25px; line-height: 25px; margin: 2px 0; overflow: hidden; text-overflow: ellipsis;list-style-type: none;background: url("../image/news-li.png")no-repeat 1px;padding-left: 25px}
+.cms-zhxw-list ul li a{float: left; font-size:20px; color: #4e4e4e;}
+.cms-zhxw-list ul li a:hover{text-decoration: underline; color: #8c1515;}
+.tu-yw-f-zhxw{width:340px;height: 272px;display: inline-block;vertical-align: top;}
+.zhxw-img {width: 250px;float: right; }
+.zhxw-img img{width: 250px;height: 200px;}
+.zhxw-imgwords{width: 250px;height:80px;overflow:hidden;float: right; background-color: white}
+/*要闻样式*/
 /*科研项目样式*/
 .cms-kyxm{width: 280px; height: auto; float: left; padding: 0 10px;}
 .cms-kyxm-halving-line{height: 3px;background-color: #00a0e9}
