@@ -1,4 +1,4 @@
-<?php  /* Template Name:论文发表页面 */  ?>
+<?php  /* Template Name:论文著作页面 */  ?>
 <?php  include $this->GetTemplate('header');  ?>
 <!--面包屑导航-->
 <?php  include $this->GetTemplate('breadcrumb');  ?>

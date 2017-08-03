@@ -1,4 +1,4 @@
-{* Template Name:论文发表页面 *}
+{* Template Name:论文著作页面 *}
 {template:header}
 <!--面包屑导航-->
 {template:breadcrumb}

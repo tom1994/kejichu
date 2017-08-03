@@ -4,7 +4,6 @@
 {template:breadcrumb}
 <!-- 焦点文章开始 -->
 <div class="top-content">
-
     <div class="cms-content">
         <div class="cms-yw">
                 <!-- 幻灯片开始 -->
@@ -28,13 +27,11 @@
                 </script>
             <div class="cms-yw-img">
                     <div id="KinSlideshow" style="visibility:hidden;">
-                        {php}
-                        $array = explode(',',$zbp->Config('qxcms')->Slide);
-                        {/php}
-                        {foreach $array as $sliderid}
-                        {$slider=GetPost((int)$sliderid)}
-                        <a href="{$slider.Url}" target="_blank"><img src="{qxcms_FirstIMG($slider,750,360)}" alt="{$slider.Title}"
-                                                                     width="750" height="360"/></a>
+
+                        <!--取得该分类下前n个置顶文章-->
+                        {$topArray = GetList(4, 1, null, null, null, null, array("only_ontop"  => true));}
+                        {foreach $topArray as $top}
+                        <a href="{$top.Url}" target="_blank"><img src="{$top.Metas.pic}" alt="{$top.Title}" width="750" height="360"/></a>
                         {/foreach}
                     </div>
             </div>
@@ -67,12 +64,16 @@
                 </ul>
             </div>
             <div class="tu-yw-f-zhxw">
-                {$btuid=GetPost((int)$zbp->Config('qxcms')->Btuid)}
-                <div class="zhxw-img"><a href="{$btuid.Url}"><img src="{qxcms_FirstIMG($btuid,250,250)}" alt="{$btuid.Title}"></a></div>
+                <!--取得该分类下第一个置顶文章-->
+                {$topArray = GetList(1, 33, null, null, null, null, array("only_ontop"  => true));}
+                    {foreach $topArray as $top}
+                    <div class="zhxw-img"><a href="{$top.Url}"><img src="{$top.Metas.pic}" alt="{$top.Title}"></a></div>
+                    <div class="zhxw-imgwords">
+                        <span>{$top.Content}</span>
+                    </div>
+                    {/foreach}
 
-                <div class="zhxw-imgwords">
-                    <span>{$btuid.Title}ahhhahahaahahahahahaahahahahahahahahahahahahahahahahahahahahahah哎和合哈哈哈哈哈哈哈哈或或哈或或或或或或或或或或或或或或或或或或</span>
-                </div>
+
             </div>
         </div>
        </div>

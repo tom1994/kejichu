@@ -4,7 +4,6 @@
 <?php  include $this->GetTemplate('breadcrumb');  ?>
 <!-- 焦点文章开始 -->
 <div class="top-content">
-
     <div class="cms-content">
         <div class="cms-yw">
                 <!-- 幻灯片开始 -->
@@ -28,13 +27,11 @@
                 </script>
             <div class="cms-yw-img">
                     <div id="KinSlideshow" style="visibility:hidden;">
-                        <?php 
-                        $array = explode(',',$zbp->Config('qxcms')->Slide);
-                         ?>
-                        <?php  foreach ( $array as $sliderid) { ?>
-                        <?php  $slider=GetPost((int)$sliderid);  ?>
-                        <a href="<?php  echo $slider->Url;  ?>" target="_blank"><img src="<?php  echo qxcms_FirstIMG($slider,750,360);  ?>" alt="<?php  echo $slider->Title;  ?>"
-                                                                     width="750" height="360"/></a>
+
+                        <!--取得该分类下前n个置顶文章-->
+                        <?php  $topArray = GetList(4, 1, null, null, null, null, array("only_ontop"  => true));;  ?>
+                        <?php  foreach ( $topArray as $top) { ?>
+                        <a href="<?php  echo $top->Url;  ?>" target="_blank"><img src="<?php  echo $top->Metas->pic;  ?>" alt="<?php  echo $top->Title;  ?>" width="750" height="360"/></a>
                         <?php }   ?>
                     </div>
             </div>
@@ -67,12 +64,16 @@
                 </ul>
             </div>
             <div class="tu-yw-f-zhxw">
-                <?php  $btuid=GetPost((int)$zbp->Config('qxcms')->Btuid);  ?>
-                <div class="zhxw-img"><a href="<?php  echo $btuid->Url;  ?>"><img src="<?php  echo qxcms_FirstIMG($btuid,250,250);  ?>" alt="<?php  echo $btuid->Title;  ?>"></a></div>
+                <!--取得该分类下第一个置顶文章-->
+                <?php  $topArray = GetList(1, 33, null, null, null, null, array("only_ontop"  => true));;  ?>
+                    <?php  foreach ( $topArray as $top) { ?>
+                    <div class="zhxw-img"><a href="<?php  echo $top->Url;  ?>"><img src="<?php  echo $top->Metas->pic;  ?>" alt="<?php  echo $top->Title;  ?>"></a></div>
+                    <div class="zhxw-imgwords">
+                        <span><?php  echo $top->Content;  ?></span>
+                    </div>
+                    <?php }   ?>
 
-                <div class="zhxw-imgwords">
-                    <span><?php  echo $btuid->Title;  ?>ahhhahahaahahahahahaahahahahahahahahahahahahahahahahahahahahahah哎和合哈哈哈哈哈哈哈哈或或哈或或或或或或或或或或或或或或或或或或</span>
-                </div>
+
             </div>
         </div>
        </div>
