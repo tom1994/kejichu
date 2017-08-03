@@ -39,9 +39,9 @@
                         <div id="divMainLeftHeader">
                             <div id="divMainLeftLine">
                             </div>
-                            <span id="divMainLeftTitle">
-                                要闻
-                            </span>
+                            <a href="{$categorys[1].Url}">
+                                <span id="divMainLeftTitle">{$categorys[1].Name}</span>
+                            </a>
                         </div>
 
                         <ul>

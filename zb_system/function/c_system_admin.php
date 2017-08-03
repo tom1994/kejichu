@@ -1111,6 +1111,7 @@ function Admin_UploadMng() {
     $tableths[] = '<th>' . $zbp->lang['msg']['id'] . '</th>';
     $tableths[] = '<th>' . $zbp->lang['msg']['author'] . '</th>';
     $tableths[] = '<th>' . $zbp->lang['msg']['name'] . '</th>';
+    $tableths[] = '<th>图片</th>';
     $tableths[] = '<th>' . $zbp->lang['msg']['date'] . '</th>';
     $tableths[] = '<th>' . $zbp->lang['msg']['size'] . '</th>';
     $tableths[] = '<th>' . $zbp->lang['msg']['type'] . '</th>';
@@ -1123,6 +1124,7 @@ function Admin_UploadMng() {
         $tabletds[] = '<td class="td5">' . $upload->ID . '</td>';
         $tabletds[] = '<td class="td10">' . $upload->Author->Name . '</td>';
         $tabletds[] = '<td><a href="' . $upload->Url . '" target="_blank"><img src="../image/admin/link.png" alt="" title="" width="16" /></a> ' . $upload->Name . '</td>';
+        $tabletds[] = '<td class="td6"><img src="' . $upload->Url . '" style="width: auto;height: 32px"></td>';
         $tabletds[] = '<td class="td15">' . $upload->Time() . '</td>';
         $tabletds[] = '<td class="td10">' . $upload->Size . '</td>';
         $tabletds[] = '<td class="td20">' . $upload->MimeType . '</td>';
