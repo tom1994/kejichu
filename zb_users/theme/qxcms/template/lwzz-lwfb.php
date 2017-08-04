@@ -1,4 +1,4 @@
-{* Template Name:论文著作下的论文发表首页 *}
+{* Template Name:论文著作下的论文发表页面 *}
 {template:header}
 <!--面包屑导航-->
 {template:breadcrumb}
@@ -22,7 +22,7 @@
         </div>
 
         <!--期刊展示-->
-        {template:lwfb-qk}
+        {template:lwzz-lwfb-qk}
     </div>
     <!-- cms2结束 -->
 </div>

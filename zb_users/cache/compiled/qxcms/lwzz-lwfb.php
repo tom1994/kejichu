@@ -1,4 +1,4 @@
-<?php  /* Template Name:论文著作下的论文发表首页 */  ?>
+<?php  /* Template Name:论文著作下的论文发表页面 */  ?>
 <?php  include $this->GetTemplate('header');  ?>
 <!--面包屑导航-->
 <?php  include $this->GetTemplate('breadcrumb');  ?>
@@ -22,7 +22,7 @@
         </div>
 
         <!--期刊展示-->
-        <?php  include $this->GetTemplate('lwfb-qk');  ?>
+        <?php  include $this->GetTemplate('lwzz-lwfb-qk');  ?>
     </div>
     <!-- cms2结束 -->
 </div>

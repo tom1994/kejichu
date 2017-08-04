@@ -22,10 +22,13 @@
             <span><a href="{$categorys[24].Url}"><img src="{$host}zb_users/theme/{$theme}/image/focus.png"></a></span>
         </div>
         <div class="tu-kyxm-f">
-            {$btuid=GetPost((int)$zbp->Config('qxcms')->Btuid)}
-            <a href="{$btuid.Url}"><img src="{qxcms_FirstIMG($btuid,200,100)}" alt="{$btuid.Title}">
-                <h3>{$btuid.Title}</h3>
+            <!--取得该分类下第一个置顶文章-->
+            {$topArray = GetList(1, 1, null, null, null, null, array("only_ontop"  => true));}
+            {foreach $topArray as $top}
+            <a href="{$top.Url}"><img src="{$top.Metas.pic}" alt="{$top.Title}">
+                <h3>{$top.Title}</h3>
             </a>
+            {/foreach}
         </div>
         <div class="cms-kyxm-lr-list">
             <ul>
@@ -44,10 +47,13 @@
             <span><a href="{$categorys[25].Url}"><img src="{$host}zb_users/theme/{$theme}/image/focus.png"></a></span>
         </div>
         <div class="tu-kyxm-f">
-            {$btuid=GetPost((int)$zbp->Config('qxcms')->Btuid)}
-            <a href="{$btuid.Url}"><img src="{qxcms_FirstIMG($btuid,200,100)}" alt="{$btuid.Title}">
-                <h3>{$btuid.Title}</h3>
+            <!--取得该分类下第一个置顶文章-->
+            {$topArray = GetList(1, 1, null, null, null, null, array("only_ontop"  => true));}
+            {foreach $topArray as $top}
+            <a href="{$top.Url}"><img src="{$top.Metas.pic}" alt="{$top.Title}">
+                <h3>{$top.Title}</h3>
             </a>
+            {/foreach}
         </div>
         <div class="cms-kyxm-lr-list">
             <ul>
@@ -65,10 +71,13 @@
             <span><a href="{$categorys[26].Url}"><img src="{$host}zb_users/theme/{$theme}/image/focus.png"></a></span>
         </div>
         <div class="tu-kyxm-f">
-            {$btuid=GetPost((int)$zbp->Config('qxcms')->Btuid)}
-            <a href="{$btuid.Url}"><img src="{qxcms_FirstIMG($btuid,200,100)}" alt="{$btuid.Title}">
-                <h3>{$btuid.Title}</h3>
+            <!--取得该分类下第一个置顶文章-->
+            {$topArray = GetList(1, 1, null, null, null, null, array("only_ontop"  => true));}
+            {foreach $topArray as $top}
+            <a href="{$top.Url}"><img src="{$top.Metas.pic}" alt="{$top.Title}">
+                <h3>{$top.Title}</h3>
             </a>
+            {/foreach}
         </div>
         <div class="cms-kyxm-lr-list">
             <ul>
@@ -87,10 +96,13 @@
             <span><a href="{$categorys[27].Url}"><img src="{$host}zb_users/theme/{$theme}/image/focus.png"></a></span>
         </div>
         <div class="tu-kyxm-f">
-            {$btuid=GetPost((int)$zbp->Config('qxcms')->Btuid)}
-            <a href="{$btuid.Url}"><img src="{qxcms_FirstIMG($btuid,200,100)}" alt="{$btuid.Title}">
-                <h3>{$btuid.Title}</h3>
+            <!--取得该分类下第一个置顶文章-->
+            {$topArray = GetList(1, 1, null, null, null, null, array("only_ontop"  => true));}
+            {foreach $topArray as $top}
+            <a href="{$top.Url}"><img src="{$top.Metas.pic}" alt="{$top.Title}">
+                <h3>{$top.Title}</h3>
             </a>
+            {/foreach}
         </div>
         <div class="cms-kyxm-lr-list">
             <ul>
@@ -109,10 +121,13 @@
             <span><a href="{$categorys[28].Url}"><img src="{$host}zb_users/theme/{$theme}/image/focus.png"></a></span>
         </div>
         <div class="tu-kyxm-f">
-            {$btuid=GetPost((int)$zbp->Config('qxcms')->Btuid)}
-            <a href="{$btuid.Url}"><img src="{qxcms_FirstIMG($btuid,200,100)}" alt="{$btuid.Title}">
-                <h3>{$btuid.Title}</h3>
+            <!--取得该分类下第一个置顶文章-->
+            {$topArray = GetList(1, 1, null, null, null, null, array("only_ontop"  => true));}
+            {foreach $topArray as $top}
+            <a href="{$top.Url}"><img src="{$top.Metas.pic}" alt="{$top.Title}">
+                <h3>{$top.Title}</h3>
             </a>
+            {/foreach}
         </div>
         <div class="cms-kyxm-lr-list">
             <ul>
@@ -130,10 +145,13 @@
             <span><a href="{$categorys[29].Url}"><img src="{$host}zb_users/theme/{$theme}/image/focus.png"></a></span>
         </div>
         <div class="tu-kyxm-f">
-            {$btuid=GetPost((int)$zbp->Config('qxcms')->Btuid)}
-            <a href="{$btuid.Url}"><img src="{qxcms_FirstIMG($btuid,200,100)}" alt="{$btuid.Title}">
-                <h3>{$btuid.Title}</h3>
+            <!--取得该分类下第一个置顶文章-->
+            {$topArray = GetList(1, 1, null, null, null, null, array("only_ontop"  => true));}
+            {foreach $topArray as $top}
+            <a href="{$top.Url}"><img src="{$top.Metas.pic}" alt="{$top.Title}">
+                <h3>{$top.Title}</h3>
             </a>
+            {/foreach}
         </div>
         <div class="cms-kyxm-lr-list">
             <ul>

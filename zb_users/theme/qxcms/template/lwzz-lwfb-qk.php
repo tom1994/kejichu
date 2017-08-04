@@ -1,3 +1,4 @@
+{* Template Name:论文著作下面论文发表的期刊页面 *}
 <div class="cms-zyqk">
     <div class="cms-title-zyqk">
         <div class="zyqk-title"><span>主要期刊</span></div>
