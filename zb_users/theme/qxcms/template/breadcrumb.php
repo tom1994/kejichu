@@ -31,7 +31,7 @@
     navcate($article->Category->ID);
     global $html;
     echo $html;
-    {/php} &raquo; 正文
+    {/php} &raquo; {$article->Title}
     {elseif $type =="page"}
     <i class="fa fa-home"></i> <a href="{$host}" title="{$name}">首页</a>
     &raquo; 正文

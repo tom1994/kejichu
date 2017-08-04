@@ -40,14 +40,16 @@ img{border:none;}
 #nav li ul a:hover{color:#ffffff;text-decoration:none;font-weight:normal;background-color: #d31f07;}
 #nav li:hover ul{left: auto;}
 #nav li.sfhover ul{left: auto;}*/
-
+.top-banner{position: relative; width: 960px; margin: 0 auto;}
+.top-banner img{width: 960px; height: 211px;}
 .navbar-left{width: 150px; height: 300px; float: left; margin: 10px 0 10px 0; background-color: transparent;}
-.navbar-left-item{width: 150px; height: 30px; margin-bottom: 10px; color: black; font-size: 17px; font-weight: bold; line-height: 30px; padding-left: 10px;border-left: 5px solid #2e3190}
+.navbar-left-item{width: 135px; height: 30px; margin-bottom: 10px; color: black; font-size: 17px; font-weight: bold; line-height: 30px; padding-left: 10px;border-left: 5px solid #2e3190}
 .navbar-left-item:hover{background-color: #d7d9f9;}
 .navbar-left-item a:visited, .navbar-left-item a:hover, .navbar-left-item a:link{color: black;}
 .navbar-left-active{background-color: #ced0f0;}
-.main-content{width: 810px; height: auto; float: left;}
-.top-content,.top-content-zjcg{width: 960px;margin: 10px 0 10px 0;overflow: hidden;}
+.navbar-left-title{position: absolute; bottom: 0; left: 0; width: 130px; padding: 10px; font-size: 1.16667em; line-height: 1.5; text-align: center; color: #fff; background: #2e3190;}
+.main-content{width: 790px; height: auto; margin-left: 20px; margin-bottom: 30px; float: left;}
+.top-content,.top-content-zjcg{width: 960px; margin: 10px 0 10px 0;overflow: hidden;}
 .top-content{width: 960px;}
 .top-content-zjcg{width: 810px;}
 .top-content-left{width: 270px; height: 300px; float: left; background-color: #ced0f0}
@@ -86,6 +88,21 @@ img{border:none;}
 .cms-up ul li{margin: 5px 0}
 .cms-up ul li a{color: #4e4e4e;}
 .cms-up ul li a:hover{text-decoration: underline; color: #8c1515;}
+/*研究院概览*/
+.main-content-title{margin: 0 0 23px; padding: 16px 0 8px; border-top: 1px solid #dddddd; border-bottom: 1px solid #dddddd; font-size: 1.5em; font-weight: 400; line-height: 1.5; color: #2e3190; background: url(../image/arrow-right-l.png) no-repeat 100% 50%;}
+.content-yjygl{}
+.content-yjygl p{text-indent: 2em; margin-top: 1em;}
+/*研究院领导*/
+.cms-list-yjyld{width: 690px; height: auto; padding: 0 50px;}
+.cms-list-yjyld-item{width: 155px; height: 300px; margin-top: 0; display: inline-block;}
+.cms-list-yjyld-item img{width: 110px; height: 160px; margin: 10px auto; padding: 5px; border: 1px solid lightgrey; display: block;}
+.cms-list-yjyld-item span{width: 115px;height: 3em; margin: 10px auto; font-size: 12px; line-height: 20px; text-align:center; overflow: hidden; display: block;}
+/*研究院领导文章页面*/
+.title-yjyld{padding-top: 10px; padding-bottom: 10px; border-top: 2px solid #940015; font-size: 15px; font-weight: 400; text-align: center; background: #e5e5e5;}
+.info-yjyld{margin-top: 10px; font-size: 13px; text-align: center;}
+.content-yjyld{margin-top: 10px;}
+.content-yjyld p{text-indent: 2em; margin-top: 1em;}
+.content-yjyld img{width: 120px; height: 160px; float: left; margin: 0 1em 1em 0;}
 /*要闻样式*/
 .cms-yw{height: 360px}
 .cms-yw-img{width: 750px;display: inline-block;vertical-align: top}
