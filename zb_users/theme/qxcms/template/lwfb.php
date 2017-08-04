@@ -1,4 +1,4 @@
-{* Template Name:论文发表首页 *}
+{* Template Name:论文著作下的论文发表首页 *}
 {template:header}
 <!--面包屑导航-->
 {template:breadcrumb}
@@ -17,21 +17,15 @@
                     <li><a href="{$article.Url}">{$article.Title}</a><span class="lwfb-date">[出版日期:{$article.Time('Y-m-d')}]</span></li>
                     {/foreach}
                 </ul>
+                <div class="pagebar">{template:pagebar}</div>
             </div>
         </div>
 
-
-        <div class="cms-zyqk">
-            <div class="cms-title-zyqk">
-                <div class="zyqk-title"><span>主要期刊</span></div>
-            </div>
-            <div class="cms-list-zyqk">
-
-            </div>
-        </div>
+        <!--期刊展示-->
+        {template:lwfb-qk}
     </div>
     <!-- cms2结束 -->
-
+</div>
     <!-- 友情链接开始 -->
     <div class="link">
         <ul>
