@@ -12,12 +12,12 @@
 <div class="cms-content">
     <div class="cms-left-cxtd">
         <div class="cms-left-cxtd-title">
-            <h2>主要研究</h2>
+            <h3>主要研究</h3>
         </div>
         <div class="cms-lr-list">
             <ul>
                 {foreach GetList(6,$ason1) as $key=>$article}
-                <li><a href="{$article.Url}">{$article.Title}</a></li>
+                <li><strong>·</strong><a href="{$article.Url}">{$article.Title}</a></li>
                 {/foreach}
             </ul>
         </div>
@@ -28,10 +28,13 @@
     </div>
     <div class="cms-right-cxtd">
         <div class="tu-f-cxtd">
-            {$btuid=GetPost((int)$zbp->Config('qxcms')->Btuid)}
-            <a href="{$btuid.Url}"><img src="{qxcms_FirstIMG($btuid,280,180)}" alt="{$btuid.Title}">
-                <h3>{$btuid.Title}</h3>
+            <!--取得该分类下第一个置顶文章-->
+            {$topArray = GetList(1, 1, null, null, null, null, array("only_ontop"  => true));}
+            {foreach $topArray as $top}
+            <a href="{$top.Url}"><img src="{$top.Metas.pic}" alt="{$top.Title}">
+                <h3>{$top.Title}</h3>
             </a>
+            {/foreach}
         </div>
     </div>
 </div>
