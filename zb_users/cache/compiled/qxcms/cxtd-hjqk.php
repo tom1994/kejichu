@@ -1,5 +1,7 @@
 <?php  /* Template Name:获奖情况页面 */  ?>
 <?php  include $this->GetTemplate('header');  ?>
+<!--面包屑导航-->
+<?php  include $this->GetTemplate('breadcrumb');  ?>
 <!-- 左侧选项卡开始 -->
 <div class="navbar-left">
     <div class="navbar-left-item">
@@ -19,51 +21,25 @@
     <!-- 专家观点图片开始 -->
     <div class="top-content-zjcg">
         <!--专家观点图片展示-->
+        <!--取得该分类下3个置顶文章-->
+        <?php  $topArray = GetList(3, 1, null, null, null, null, array("only_ontop"  => true));;  ?>
+        <?php  foreach ( $topArray as $top) { ?>
+        <!--专家观点图片展示-->
         <div class="top-content-left">
             <div class="top-content-container">
-                <?php  $btuid=GetPost((int)$zbp->Config('qxcms')->Btuid);  ?>
-                <a href="<?php  echo $btuid->Url;  ?>"><img src="<?php  echo qxcms_FirstIMG($btuid,260,210);  ?>" alt="<?php  echo $btuid->Title;  ?>">
+                <a href="<?php  echo $top->Url;  ?>"><img src="<?php  echo $top->Metas->pic;  ?>" alt="<?php  echo $top->Title;  ?>">
                     <div class="top-content-img-label">
                         <div class="img-label-time">
-                            <?php  echo $btuid->Time('Y-m-d');  ?>
+                            <?php  echo $top->Time('Y-m-d');  ?>
                         </div>
                         <div class="img-label-title">
-                            <?php  echo $btuid->Title;  ?>
+                            <?php  echo $top->Title;  ?>
                         </div>
                     </div>
                 </a>
             </div>
         </div>
-        <div class="top-content-middle">
-            <div class="top-content-container">
-                <?php  $btuid=GetPost((int)$zbp->Config('qxcms')->Btuid);  ?>
-                <a href="<?php  echo $btuid->Url;  ?>"><img src="<?php  echo qxcms_FirstIMG($btuid,260,210);  ?>" alt="<?php  echo $btuid->Title;  ?>">
-                    <div class="top-content-img-label">
-                        <div class="img-label-time">
-                            <?php  echo $btuid->Time('Y-m-d');  ?>
-                        </div>
-                        <div class="img-label-title">
-                            <?php  echo $btuid->Title;  ?>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="top-content-right">
-            <div class="top-content-container">
-                <?php  $btuid=GetPost((int)$zbp->Config('qxcms')->Btuid);  ?>
-                <a href="<?php  echo $btuid->Url;  ?>"><img src="<?php  echo qxcms_FirstIMG($btuid,260,210);  ?>" alt="<?php  echo $btuid->Title;  ?>">
-                    <div class="top-content-img-label">
-                        <div class="img-label-time">
-                            <?php  echo $btuid->Time('Y-m-d');  ?>
-                        </div>
-                        <div class="img-label-title">
-                            <?php  echo $btuid->Title;  ?>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
+        <?php }   ?>
     </div>
     <!-- 专家观点图片结束 -->
 

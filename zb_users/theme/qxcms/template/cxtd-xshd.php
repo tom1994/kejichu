@@ -1,5 +1,7 @@
 {* Template Name:学术活动页面 *}
 {template:header}
+<!--面包屑导航-->
+{template:breadcrumb}
 <!-- 左侧选项卡开始 -->
 <div class="navbar-left">
     <div class="navbar-left-item">
@@ -18,52 +20,25 @@
 <div class="main-content">
     <!-- 专家观点图片开始 -->
     <div class="top-content-zjcg">
+        <!--取得该分类下3个置顶文章-->
+        {$topArray = GetList(3, 1, null, null, null, null, array("only_ontop"  => true));}
+        {foreach $topArray as $top}
         <!--专家观点图片展示-->
         <div class="top-content-left">
             <div class="top-content-container">
-                {$btuid=GetPost((int)$zbp->Config('qxcms')->Btuid)}
-                <a href="{$btuid.Url}"><img src="{qxcms_FirstIMG($btuid,260,210)}" alt="{$btuid.Title}">
+                <a href="{$top.Url}"><img src="{$top.Metas.pic}" alt="{$top.Title}">
                     <div class="top-content-img-label">
                         <div class="img-label-time">
-                            {$btuid.Time('Y-m-d')}
+                            {$top.Time('Y-m-d')}
                         </div>
                         <div class="img-label-title">
-                            {$btuid.Title}
+                            {$top.Title}
                         </div>
                     </div>
                 </a>
             </div>
         </div>
-        <div class="top-content-middle">
-            <div class="top-content-container">
-                {$btuid=GetPost((int)$zbp->Config('qxcms')->Btuid)}
-                <a href="{$btuid.Url}"><img src="{qxcms_FirstIMG($btuid,260,210)}" alt="{$btuid.Title}">
-                    <div class="top-content-img-label">
-                        <div class="img-label-time">
-                            {$btuid.Time('Y-m-d')}
-                        </div>
-                        <div class="img-label-title">
-                            {$btuid.Title}
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="top-content-right">
-            <div class="top-content-container">
-                {$btuid=GetPost((int)$zbp->Config('qxcms')->Btuid)}
-                <a href="{$btuid.Url}"><img src="{qxcms_FirstIMG($btuid,260,210)}" alt="{$btuid.Title}">
-                    <div class="top-content-img-label">
-                        <div class="img-label-time">
-                            {$btuid.Time('Y-m-d')}
-                        </div>
-                        <div class="img-label-title">
-                            {$btuid.Title}
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
+        {/foreach}
     </div>
     <!-- 专家观点图片结束 -->
 

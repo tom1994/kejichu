@@ -1,4 +1,4 @@
-<?php  /* Template Name:论文发表首页 */  ?>
+<?php  /* Template Name:论文著作下的论文发表页面 */  ?>
 <?php  include $this->GetTemplate('header');  ?>
 <!--面包屑导航-->
 <?php  include $this->GetTemplate('breadcrumb');  ?>
@@ -17,21 +17,15 @@
                     <li><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Title;  ?></a><span class="lwfb-date">[出版日期:<?php  echo $article->Time('Y-m-d');  ?>]</span></li>
                     <?php }   ?>
                 </ul>
+                <div class="pagebar"><?php  include $this->GetTemplate('pagebar');  ?></div>
             </div>
         </div>
 
-
-        <div class="cms-zyqk">
-            <div class="cms-title-zyqk">
-                <div class="zyqk-title"><span>主要期刊</span></div>
-            </div>
-            <div class="cms-list-zyqk">
-
-            </div>
-        </div>
+        <!--期刊展示-->
+        <?php  include $this->GetTemplate('lwzz-lwfb-qk');  ?>
     </div>
     <!-- cms2结束 -->
-
+</div>
     <!-- 友情链接开始 -->
     <div class="link">
         <ul>

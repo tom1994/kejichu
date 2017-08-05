@@ -22,10 +22,13 @@
             <span><a href="<?php  echo $categorys[24]->Url;  ?>"><img src="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/image/focus.png"></a></span>
         </div>
         <div class="tu-kyxm-f">
-            <?php  $btuid=GetPost((int)$zbp->Config('qxcms')->Btuid);  ?>
-            <a href="<?php  echo $btuid->Url;  ?>"><img src="<?php  echo qxcms_FirstIMG($btuid,200,100);  ?>" alt="<?php  echo $btuid->Title;  ?>">
-                <h3><?php  echo $btuid->Title;  ?></h3>
+            <!--取得该分类下第一个置顶文章-->
+            <?php  $topArray = GetList(1, 1, null, null, null, null, array("only_ontop"  => true));;  ?>
+            <?php  foreach ( $topArray as $top) { ?>
+            <a href="<?php  echo $top->Url;  ?>"><img src="<?php  echo $top->Metas->pic;  ?>" alt="<?php  echo $top->Title;  ?>">
+                <h3><?php  echo $top->Title;  ?></h3>
             </a>
+            <?php }   ?>
         </div>
         <div class="cms-kyxm-lr-list">
             <ul>
@@ -44,10 +47,13 @@
             <span><a href="<?php  echo $categorys[25]->Url;  ?>"><img src="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/image/focus.png"></a></span>
         </div>
         <div class="tu-kyxm-f">
-            <?php  $btuid=GetPost((int)$zbp->Config('qxcms')->Btuid);  ?>
-            <a href="<?php  echo $btuid->Url;  ?>"><img src="<?php  echo qxcms_FirstIMG($btuid,200,100);  ?>" alt="<?php  echo $btuid->Title;  ?>">
-                <h3><?php  echo $btuid->Title;  ?></h3>
+            <!--取得该分类下第一个置顶文章-->
+            <?php  $topArray = GetList(1, 1, null, null, null, null, array("only_ontop"  => true));;  ?>
+            <?php  foreach ( $topArray as $top) { ?>
+            <a href="<?php  echo $top->Url;  ?>"><img src="<?php  echo $top->Metas->pic;  ?>" alt="<?php  echo $top->Title;  ?>">
+                <h3><?php  echo $top->Title;  ?></h3>
             </a>
+            <?php }   ?>
         </div>
         <div class="cms-kyxm-lr-list">
             <ul>
@@ -65,10 +71,13 @@
             <span><a href="<?php  echo $categorys[26]->Url;  ?>"><img src="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/image/focus.png"></a></span>
         </div>
         <div class="tu-kyxm-f">
-            <?php  $btuid=GetPost((int)$zbp->Config('qxcms')->Btuid);  ?>
-            <a href="<?php  echo $btuid->Url;  ?>"><img src="<?php  echo qxcms_FirstIMG($btuid,200,100);  ?>" alt="<?php  echo $btuid->Title;  ?>">
-                <h3><?php  echo $btuid->Title;  ?></h3>
+            <!--取得该分类下第一个置顶文章-->
+            <?php  $topArray = GetList(1, 1, null, null, null, null, array("only_ontop"  => true));;  ?>
+            <?php  foreach ( $topArray as $top) { ?>
+            <a href="<?php  echo $top->Url;  ?>"><img src="<?php  echo $top->Metas->pic;  ?>" alt="<?php  echo $top->Title;  ?>">
+                <h3><?php  echo $top->Title;  ?></h3>
             </a>
+            <?php }   ?>
         </div>
         <div class="cms-kyxm-lr-list">
             <ul>
@@ -87,10 +96,13 @@
             <span><a href="<?php  echo $categorys[27]->Url;  ?>"><img src="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/image/focus.png"></a></span>
         </div>
         <div class="tu-kyxm-f">
-            <?php  $btuid=GetPost((int)$zbp->Config('qxcms')->Btuid);  ?>
-            <a href="<?php  echo $btuid->Url;  ?>"><img src="<?php  echo qxcms_FirstIMG($btuid,200,100);  ?>" alt="<?php  echo $btuid->Title;  ?>">
-                <h3><?php  echo $btuid->Title;  ?></h3>
+            <!--取得该分类下第一个置顶文章-->
+            <?php  $topArray = GetList(1, 1, null, null, null, null, array("only_ontop"  => true));;  ?>
+            <?php  foreach ( $topArray as $top) { ?>
+            <a href="<?php  echo $top->Url;  ?>"><img src="<?php  echo $top->Metas->pic;  ?>" alt="<?php  echo $top->Title;  ?>">
+                <h3><?php  echo $top->Title;  ?></h3>
             </a>
+            <?php }   ?>
         </div>
         <div class="cms-kyxm-lr-list">
             <ul>
@@ -109,10 +121,13 @@
             <span><a href="<?php  echo $categorys[28]->Url;  ?>"><img src="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/image/focus.png"></a></span>
         </div>
         <div class="tu-kyxm-f">
-            <?php  $btuid=GetPost((int)$zbp->Config('qxcms')->Btuid);  ?>
-            <a href="<?php  echo $btuid->Url;  ?>"><img src="<?php  echo qxcms_FirstIMG($btuid,200,100);  ?>" alt="<?php  echo $btuid->Title;  ?>">
-                <h3><?php  echo $btuid->Title;  ?></h3>
+            <!--取得该分类下第一个置顶文章-->
+            <?php  $topArray = GetList(1, 1, null, null, null, null, array("only_ontop"  => true));;  ?>
+            <?php  foreach ( $topArray as $top) { ?>
+            <a href="<?php  echo $top->Url;  ?>"><img src="<?php  echo $top->Metas->pic;  ?>" alt="<?php  echo $top->Title;  ?>">
+                <h3><?php  echo $top->Title;  ?></h3>
             </a>
+            <?php }   ?>
         </div>
         <div class="cms-kyxm-lr-list">
             <ul>
@@ -130,10 +145,13 @@
             <span><a href="<?php  echo $categorys[29]->Url;  ?>"><img src="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/image/focus.png"></a></span>
         </div>
         <div class="tu-kyxm-f">
-            <?php  $btuid=GetPost((int)$zbp->Config('qxcms')->Btuid);  ?>
-            <a href="<?php  echo $btuid->Url;  ?>"><img src="<?php  echo qxcms_FirstIMG($btuid,200,100);  ?>" alt="<?php  echo $btuid->Title;  ?>">
-                <h3><?php  echo $btuid->Title;  ?></h3>
+            <!--取得该分类下第一个置顶文章-->
+            <?php  $topArray = GetList(1, 1, null, null, null, null, array("only_ontop"  => true));;  ?>
+            <?php  foreach ( $topArray as $top) { ?>
+            <a href="<?php  echo $top->Url;  ?>"><img src="<?php  echo $top->Metas->pic;  ?>" alt="<?php  echo $top->Title;  ?>">
+                <h3><?php  echo $top->Title;  ?></h3>
             </a>
+            <?php }   ?>
         </div>
         <div class="cms-kyxm-lr-list">
             <ul>
