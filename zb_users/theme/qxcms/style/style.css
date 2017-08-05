@@ -88,6 +88,9 @@ img{border:none;}
 .cms-up ul li{margin: 5px 0}
 .cms-up ul li a{color: #4e4e4e;}
 .cms-up ul li a:hover{text-decoration: underline; color: #8c1515;}
+/*一带一路*/
+.gjzl-title{width: 346px;display: inline-block;vertical-align: bottom}
+.gjzl-more{width: 30px;display: inline-block;vertical-align: bottom;text-align: right;border-bottom: 3px solid #336699;}
 /*研究院概览*/
 .main-content-title{margin: 0 0 23px; padding: 16px 0 8px; border-top: 1px solid #dddddd; border-bottom: 1px solid #dddddd; font-size: 1.5em; font-weight: 400; line-height: 1.5; color: #2e3190; background: url(../image/arrow-right-l.png) no-repeat 100% 50%;}
 .content-yjygl{}
