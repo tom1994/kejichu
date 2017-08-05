@@ -27,9 +27,24 @@
                     btn_borderWidth: 1
                 }
             });
+            var myTab = document.getElementById("tab");    //整个div
+            var myUl = myTab.getElementsByTagName("ul")[0];//一个节点
+            var myLi = myUl.getElementsByTagName("li");    //数组
+            var myDiv = document.getElementById("div-content").getElementsByTagName("div"); //内容div
+
+            for (var i = 0; i < myLi.length; i++) {
+                myLi[i].index = i;
+                myLi[i].onmouseover = function () {
+                    for (var j = 0; j < myLi.length; j++) {
+                        myLi[j].className = "tab-item-nbyj";
+                        myDiv[j].className = "cms-up hide";
+                    }
+                    this.className = "tab-item-nbyj tab-item-active";
+                    myDiv[this.index].className = "cms-up show";
+                }
+            }
         })
     </script>
-
 
     <div class="top-img">
         <div id="KinSlideshow" style="visibility:hidden;">
@@ -42,15 +57,50 @@
                                                          width="560" height="335"/></a>
             <?php }   ?>
         </div>
+        <div id="tab" class="tab-nbyj">
+            <ul>
+                <li class="tab-item-nbyj tab-item-active">
+                    <div class="tab-label-nbyj">
+                        研究<br/>观点
+                    </div>
+                </li>
+                <li class="tab-item-nbyj">
+                    <div class="tab-label-nbyj">
+                        科研<br/>成果
+                    </div>
+                </li>
+                <li class="tab-item-nbyj">
+                    <div class="tab-label-nbyj">
+                        研究<br/>观点
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
 
 
     <!-- 幻灯片结束 -->
-    <div class="top-art">
-        <div class="cms-up">
+    <div id="div-content" class="top-art">
+        <div id="firstPage" class="cms-up show">
             <h2><?php  echo $categorys[$ason1]->Name;  ?></h2>
             <ul>
-                <?php  foreach ( GetList(10,$ason1) as $key=>$article) { ?>
+                <?php  foreach ( GetList(10, 1) as $key=>$article) { ?>
+                <li><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Title;  ?></a></li>
+                <?php }   ?>
+            </ul>
+        </div>
+        <div id="secondPage" class="cms-up hide">
+            <h2><?php  echo $categorys[$ason1]->Name;  ?></h2>
+            <ul>
+                <?php  foreach ( GetList(10, 2) as $key=>$article) { ?>
+                <li><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Title;  ?></a></li>
+                <?php }   ?>
+            </ul>
+        </div>
+        <div id="thirdPage" class="cms-up hide">
+            <h2><?php  echo $categorys[$ason1]->Name;  ?></h2>
+            <ul>
+                <?php  foreach ( GetList(10, 1) as $key=>$article) { ?>
                 <li><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Title;  ?></a></li>
                 <?php }   ?>
             </ul>
