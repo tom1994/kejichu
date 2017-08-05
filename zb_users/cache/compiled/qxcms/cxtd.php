@@ -1,5 +1,7 @@
 <?php  /* Template Name:创新团队首页 */  ?>
 <?php  include $this->GetTemplate('header');  ?>
+<!--面包屑导航-->
+<?php  include $this->GetTemplate('breadcrumb');  ?>
 <!-- 焦点文章开始 -->
 <div class="top-content">
     <!--专家介绍-->

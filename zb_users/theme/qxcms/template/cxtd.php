@@ -1,5 +1,7 @@
 {* Template Name:创新团队首页 *}
 {template:header}
+<!--面包屑导航-->
+{template:breadcrumb}
 <!-- 焦点文章开始 -->
 <div class="top-content">
     <!--专家介绍-->
