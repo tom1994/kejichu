@@ -75,8 +75,8 @@
     </style>
 </head>
 <body>
-<div style="width: 1000px;border: solid grey 1px;border-radius: 4px">
-    <div class="pure-g">
+<div style="">
+    <div class="pure-g" style="    min-height: 600px;">
         <div class="pure-u-1-5">
 
 
