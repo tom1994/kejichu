@@ -20,20 +20,27 @@
 .time:hover{
 background-color:#004170;
 }
-.slot{
+.slotbar{
 width:100%;
+height:40px;
 display:block;
+
 }
 .count{
 background-color:#2485cc;
 float:right;
 margin-right:20px;
-
+width:24px;
+height:24px;
+line-height:24px;
+text-align:center;
+border-radius:24px;
 }
-.slot:hover{
+.slotbar:hover{
 background-color:white;
+color:#CECECE;
 }
-.slot:hover .count{
+.slotbar:hover .count{
 background-color:#ff8a69;
 }
 </style>
