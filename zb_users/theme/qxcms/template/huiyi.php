@@ -7,7 +7,7 @@
     <span class="navbar-left-title">会议动态</span>
 </div>
 <!-- 左侧选项卡开始 -->
-<style  type="text/css">
+<style type="text/css">
 .time{
     width: 100%;
     height: 50px;
@@ -15,8 +15,9 @@
     color: white;
     display: inline-block;
     line-height: 50px;
+        cursor: pointer;
 }
-.time :hover{
+.time:hover{
 background-color:#004170;
 }
 </style>
