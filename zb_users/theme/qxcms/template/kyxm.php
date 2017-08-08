@@ -32,7 +32,7 @@
         </div>
         <div class="cms-kyxm-lr-list">
             <ul>
-                {foreach GetList(4,$ason1) as $key=>$article}
+                {foreach GetList(4,24) as $key=>$article}
                 <li><a href="{$article.Url}">{$article.Title}</a></li>
                 {/foreach}
             </ul>
@@ -57,7 +57,7 @@
         </div>
         <div class="cms-kyxm-lr-list">
             <ul>
-                {foreach GetList(4,$ason1) as $key=>$article}
+                {foreach GetList(4,25) as $key=>$article}
                 <li><a href="{$article.Url}">{$article.Title}</a></li>
                 {/foreach}
             </ul>
@@ -81,7 +81,7 @@
         </div>
         <div class="cms-kyxm-lr-list">
             <ul>
-                {foreach GetList(4,$ason1) as $key=>$article}
+                {foreach GetList(4,26) as $key=>$article}
                 <li><a href="{$article.Url}">{$article.Title}</a></li>
                 {/foreach}
             </ul>
@@ -106,7 +106,7 @@
         </div>
         <div class="cms-kyxm-lr-list">
             <ul>
-                {foreach GetList(4,$ason1) as $key=>$article}
+                {foreach GetList(4,27) as $key=>$article}
                 <li><a href="{$article.Url}">{$article.Title}</a></li>
                 {/foreach}
             </ul>

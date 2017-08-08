@@ -73,8 +73,8 @@
     <!-- 头部开始 -->
     <div class="header">
         <div class="header-top">
-            <div class="logo">
-                <a href="{$host}"><img src="{$host}zb_users/theme/{$theme}/include/logo.png" alt=""></a>
+            <div class="logo" style="display:none;">
+                <a href="{$host}"><img src="{$host}zb_users/theme/{$theme}/include/logo1.png" alt=""></a>
             </div>
             <div class="search">
                 <form name="search" method="post" action="{$host}zb_system/cmd.php?act=search">

@@ -486,15 +486,15 @@ function Admin_SiteInfo() {
 
     echo '</table>';
 
-    echo '<table class="tableFull tableBorder table_striped table_hover" id="tbUpdateInfo"><tr><th>&nbsp;' . $zbp->lang['msg']['latest_news'] . ($zbp->CheckRights('root') ? '&nbsp;<a href="javascript:updateinfo(\'?act=misc&amp;type=updateinfo\');">[' . $zbp->lang['msg']['refresh'] . ']</a>' : '') . ' <img id="infoloading" style="display:none" src="../image/admin/loading.gif" alt=""/></th></tr>';
+/*    echo '<table class="tableFull tableBorder table_striped table_hover" id="tbUpdateInfo"><tr><th>&nbsp;' . $zbp->lang['msg']['latest_news'] . ($zbp->CheckRights('root') ? '&nbsp;<a href="javascript:updateinfo(\'?act=misc&amp;type=updateinfo\');">[' . $zbp->lang['msg']['refresh'] . ']</a>' : '') . ' <img id="infoloading" style="display:none" src="../image/admin/loading.gif" alt=""/></th></tr>';*/
 
-    if ((time() - (int) $zbp->cache->reload_updateinfo_time) > (47 * 60 * 60) && $zbp->CheckRights('root') && $echostatistic == true) {
+   /* if ((time() - (int) $zbp->cache->reload_updateinfo_time) > (47 * 60 * 60) && $zbp->CheckRights('root') && $echostatistic == true) {
         echo '<script type="text/javascript">$(document).ready(function(){ updateinfo(\'?act=misc&type=updateinfo\'); });</script>';
     } else {
         echo $zbp->cache->reload_updateinfo;
     }
 
-    echo '</table>';
+    echo '</table>';*/
 
     echo '</div>';
 

@@ -29,9 +29,10 @@
 <div class="main-content">
     <div class="cms-list-kyxm">
         <ul>
-            <?php  foreach ( GetList(11,$ason1) as $key=>$article) { ?>
+            <?php  foreach ( $articles as $article) { ?>
             <li><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Title;  ?></a><span class="lwfb-date">[出版日期:<?php  echo $article->Time('Y-m-d');  ?>]</span></li>
             <?php }   ?>
+            <div class="pagebar"><?php  include $this->GetTemplate('pagebar');  ?></div>
         </ul>
     </div>
 </div>

@@ -32,7 +32,7 @@
         </div>
         <div class="cms-kyxm-lr-list">
             <ul>
-                <?php  foreach ( GetList(4,$ason1) as $key=>$article) { ?>
+                <?php  foreach ( GetList(4,24) as $key=>$article) { ?>
                 <li><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Title;  ?></a></li>
                 <?php }   ?>
             </ul>
@@ -57,7 +57,7 @@
         </div>
         <div class="cms-kyxm-lr-list">
             <ul>
-                <?php  foreach ( GetList(4,$ason1) as $key=>$article) { ?>
+                <?php  foreach ( GetList(4,25) as $key=>$article) { ?>
                 <li><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Title;  ?></a></li>
                 <?php }   ?>
             </ul>
@@ -81,7 +81,7 @@
         </div>
         <div class="cms-kyxm-lr-list">
             <ul>
-                <?php  foreach ( GetList(4,$ason1) as $key=>$article) { ?>
+                <?php  foreach ( GetList(4,26) as $key=>$article) { ?>
                 <li><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Title;  ?></a></li>
                 <?php }   ?>
             </ul>
@@ -106,7 +106,7 @@
         </div>
         <div class="cms-kyxm-lr-list">
             <ul>
-                <?php  foreach ( GetList(4,$ason1) as $key=>$article) { ?>
+                <?php  foreach ( GetList(4,27) as $key=>$article) { ?>
                 <li><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Title;  ?></a></li>
                 <?php }   ?>
             </ul>

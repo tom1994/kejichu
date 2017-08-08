@@ -29,9 +29,10 @@
 <div class="main-content">
     <div class="cms-list-kyxm">
         <ul>
-            {foreach GetList(11,$ason1) as $key=>$article}
+            {foreach $articles as $article}
             <li><a href="{$article.Url}">{$article.Title}</a><span class="lwfb-date">[出版日期:{$article.Time('Y-m-d')}]</span></li>
             {/foreach}
+            <div class="pagebar">{template:pagebar}</div>
         </ul>
     </div>
 </div>
