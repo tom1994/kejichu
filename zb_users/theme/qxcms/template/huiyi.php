@@ -38,6 +38,7 @@ background-color:#004170;
     margin-left: 10%;
     margin-top: 20px;
     font-size: 14px;
+    margin-bottom:20px;
 ">时间优先</span>
 <span class="time">2017.06</span>
 <span class="time">2017.05</span>
@@ -47,6 +48,18 @@ background-color:#004170;
 <span class="time">2017.01</span>
 <span class="time">2016.12</span>
 <span class="time">2016.11</span></div>
+<div style="background-color:#2D90D9">
+<span>活动日程</span>
+<span>类别</span>
+<span>次数</span>
+<div><span>重要讲话</span><span>2</span></div>
+<div><span>会议活动</span><span>0</span></div>
+<div><span>考察调研</span><span>0</span></div>
+<div><span>出访</span><span>0</span></div>
+<div><span>外事</span><span>0</span</div>>
+<div><span>指示批示</span><span>0</span</div>>
+<div><span>致电致信</span><span>0</span</div>>
+</div>
 </div>
 <!-- 左侧选项卡结束 -->
 
