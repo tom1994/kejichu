@@ -101,7 +101,7 @@ color:white;
     width: 100%;
     display: block;
     height: 40px;
-    border-bottom: rgba(255,255,255,0.5) solid 1px;
+    border-bottom: rgba(255,255,255,0.5) solid 1px;margin-bottom:20px;
 "></span>
 <div class="slotbar"><span class="conftitle">重要讲话</span>      <span class="count">2</span></div>
 <div class="slotbar"><span class="conftitle">会议活动</span>      <span class="count">0</span></div>
