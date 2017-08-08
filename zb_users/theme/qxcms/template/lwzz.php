@@ -5,7 +5,7 @@
 <!-- 焦点文章开始 -->
 <div class="top-content">
     <div class="cms-content">
-        <div class="cbzz">
+        <div class="cbzz" style="height:650px;">
             <div class="cms-cbzz-title">
                 <div class="cbzz-title"><span>出版著作</span></div>
                 <span class="cbzz-more"><a href="{$categorys[23].Url}">更多</a></span>
@@ -84,20 +84,20 @@
             <div class="cbzz-lunbo">
                 <div class="stage">
                     <ul class="books-list">
-                        <li><img src="img/11.jpg"></li>
-                        <li><img src="img/12.jpg"></li>
-                        <li><img src="img/13.jpg"></li>
-                        <li><img src="img/14.jpg"></li>
+                        <li><img src="{$host}zb_users/theme/{$theme}/img/11.jpg"></li>
+                        <li><img src="{$host}zb_users/theme/{$theme}/img/12.jpg"></li>
+                        <li><img src="{$host}zb_users/theme/{$theme}/img/13.jpg"></li>
+                        <li><img src="{$host}zb_users/theme/{$theme}/img/14.jpg"></li>
                     </ul>
                     <div class="desk"></div>
                     <div class="desk-shadow"></div>
                 </div>
                 <div class="stage">
                     <ul class="books-list">
-                        <li><img src="img/21.jpg"></li>
-                        <li><img src="img/22.jpg"></li>
-                        <li><img src="img/23.jpg"></li>
-                        <li><img src="img/24.jpg"></li>
+                        <li><img src="{$host}zb_users/theme/{$theme}/img/21.jpg"></li>
+                        <li><img src="{$host}zb_users/theme/{$theme}/img/22.jpg"></li>
+                        <li><img src="{$host}zb_users/theme/{$theme}/img/23.jpg"></li>
+                        <li><img src="{$host}zb_users/theme/{$theme}/img/24.jpg"></li>
                     </ul>
                     <div class="desk"></div>
                     <div class="desk-shadow"></div>
