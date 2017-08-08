@@ -26,6 +26,8 @@ height:40px;
 display:block;
 position:relative;
 line-height:40px;
+
+        cursor: pointer;
 }
 .conftitle{
 margin-left:12px;
