@@ -51,10 +51,10 @@
             background: transparent no-repeat 0 4px;
         }
         ul.tree li .collapsed {
-            background-image: url(images/collapsed.gif);
+            background-image: url({$host}zb_users/theme/{$theme}/images/collapsed.gif);
         }
         ul.tree li .expanded {
-            background-image: url(images/expanded.gif);
+            background-image: url({$host}zb_users/theme/{$theme}/images/expanded.gif);
         }
 
         ul.tree li .checkbox {
@@ -64,13 +64,13 @@
             margin: 0;
             cursor: pointer;
             float: left;
-            background: url(images/check0.gif) no-repeat 0 0px;
+            background: url({$host}zb_users/theme/{$theme}/images/check0.gif) no-repeat 0 0px;
         }
         ul.tree li .checked {
-            background-image: url(images/check2.gif);
+            background-image: url({$host}zb_users/theme/{$theme}/images/check2.gif);
         }
         ul.tree li .half_checked {
-            background-image: url(images/check1.gif);
+            background-image: url({$host}zb_users/theme/{$theme}/images/check1.gif);
         }
     </style>
 </head>
