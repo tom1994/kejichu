@@ -1,4 +1,4 @@
-{* Template Name:创新团队首页 *}
+{* Template Name:智库中心首页 *}
 {template:header}
 <!--面包屑导航-->
 {template:breadcrumb}
