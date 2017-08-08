@@ -8,10 +8,6 @@
         <!--面包屑导航-->
         <?php  include $this->GetTemplate('breadcrumb');  ?>
         <div class="paper-t-full">
-            <img src="<?php  echo $article->Metas->pic;  ?>" style="width: 200px;height: auto">
-            <?php  echo $article->Metas->pic;  ?>
-        </div>
-        <div class="paper-t-full">
             <?php  echo $article->Title;  ?>
         </div>
         <div class="paper-a-full">

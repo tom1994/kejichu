@@ -8,10 +8,6 @@
         <!--面包屑导航-->
         {template:breadcrumb}
         <div class="paper-t-full">
-            <img src="{$article.Metas.pic}" style="width: 200px;height: auto">
-            {$article.Metas.pic}
-        </div>
-        <div class="paper-t-full">
             {$article.Title}
         </div>
         <div class="paper-a-full">
