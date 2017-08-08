@@ -13,6 +13,7 @@
             <style type="text/css">
             .stage ul{
                 list-style:none;
+                    margin-left: 40px;
             }
             .stage{
                 position:relative;
