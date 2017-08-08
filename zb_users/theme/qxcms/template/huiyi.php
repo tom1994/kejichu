@@ -24,7 +24,11 @@ background-color:#004170;
 width:100%;
 height:40px;
 display:block;
-
+position:relative;
+line-height:40px;
+}
+.conftitle{
+margin-left:12px;
 }
 .count{
 background-color:#2485cc;
@@ -35,6 +39,9 @@ height:24px;
 line-height:24px;
 text-align:center;
 border-radius:24px;
+    position: absolute;
+    right: 0px;
+    top: 5px;
 }
 .slotbar:hover{
 background-color:white;
@@ -42,6 +49,7 @@ color:#CECECE;
 }
 .slotbar:hover .count{
 background-color:#ff8a69;
+color:white;
 }
 </style>
 <div class="" style="float:left;width:300px;
@@ -95,13 +103,13 @@ background-color:#ff8a69;
     height: 40px;
     border-bottom: rgba(255,255,255,0.5) solid 1px;
 "></span>
-<div class="slotbar"><span>重要讲话</span>      <span class="count">2</span></div>
-<div class="slotbar"><span>会议活动</span>      <span class="count">0</span></div>
-<div class="slotbar"><span>考察调研</span>      <span class="count">0</span></div>
-<div class="slotbar"><span>出访</span>        <span class="count">0</span></div>
-<div class="slotbar"><span>外事</span>        <span class="count">0</span></div>
-<div class="slotbar"><span>指示批示</span>      <span class="count">0</span></div>
-<div class="slotbar"><span>致电致信</span>      <span class="count">0</span></div>
+<div class="slotbar"><span class="conftitle">重要讲话</span>      <span class="count">2</span></div>
+<div class="slotbar"><span class="conftitle">会议活动</span>      <span class="count">0</span></div>
+<div class="slotbar"><span class="conftitle">考察调研</span>      <span class="count">0</span></div>
+<div class="slotbar"><span class="conftitle">出访</span>        <span class="count">0</span></div>
+<div class="slotbar"><span class="conftitle">外事</span>        <span class="count">0</span></div>
+<div class="slotbar"><span class="conftitle">指示批示</span>      <span class="count">0</span></div>
+<div class="slotbar"><span class="conftitle">致电致信</span>      <span class="count">0</span></div>
 </div>
 
 </div>
