@@ -145,15 +145,15 @@ img{border:none;}
 .zhxw-imgwords{width: 250px;height:80px;overflow:hidden;float: right; background-color: white}
 /*要闻样式*/
 /*科研项目样式*/
-.cms-kyxm{width: 280px; height: auto; float: left; padding: 0 10px;}
+.cms-kyxm{width: 300px; height: auto; float: left; padding: 0 10px;}
 .cms-kyxm-halving-line{height: 3px;background-color: #00a0e9}
-.cms-kyxm-title{width:280px; margin-bottom:3px; display: inline-block}
+.cms-kyxm-title{width:300px; margin-bottom:3px; display: inline-block}
 .cms-kyxm-title h3{ text-align: left;width:250px;display: inline-block;margin: 5px 0; color: #00a0e9; font-family: '黑体'; font-size: 16px; font-weight: bolder;}
 .cms-kyxm-title span{margin: 2px 0;}
 .cms-kyxm-title span img{vertical-align:middle;width:15px; height:15px; margin: 2px 0;display: inline-block}
-.tu-kyxm-f{width: 280px; height: 220px; overflow: hidden; display: inline-block}
-.tu-kyxm-f img{width: 280px; height: 220px; float: left;}
-.tu-kyxm-f h3{text-align: center; bottom: 30px; left: 0; width: 280px; height: 30px; line-height: 30px; padding: 0 10px; margin: 0; font-size: 14px; font-weight: normal; color: #fff; background: rgba(0,0,0,0.6); display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.tu-kyxm-f{width: 300px; height: 220px; overflow: hidden; display: inline-block}
+.tu-kyxm-f img{width: 300px; height: 220px; float: left;}
+.tu-kyxm-f h3{text-align: center; bottom: 30px; left: 0; width: 300px; height: 30px; line-height: 30px; padding: 0 10px; margin: 0; font-size: 14px; font-weight: normal; color: #fff; background: rgba(0,0,0,0.6); display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
 .tu-kyxm-f h3:hover{background: rgba(255,50,0,0.6);}
 .cms-kyxm-lr-list{width: 100%; height: auto; float: left}
 .cms-kyxm-lr-list ul li{height: 20px; line-height: 20px; margin: 2px 0; overflow: hidden; text-overflow: ellipsis;}
