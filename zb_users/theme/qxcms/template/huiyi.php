@@ -20,13 +20,29 @@
 .time:hover{
 background-color:#004170;
 }
+.slot{
+width:100%;
+display:block;
+}
+.count{
+background-color:#2485cc;
+float:right;
+margin-right:20px;
+
+}
+.slot:hover{
+background-color:white;
+}
+.slot:hover .count{
+background-color:#ff8a69;
+}
 </style>
-<div class="" style="float:left
+<div class="" style="float:left;width:300px;
 ">
     <div style="
     width: 80px;
     background: #005999;
-    height: 475px;
+    height: 475px;float:left;
             "><span style="
     color: white;
     display: inline-block;
@@ -48,18 +64,39 @@ background-color:#004170;
 <span class="time">2017.01</span>
 <span class="time">2016.12</span>
 <span class="time">2016.11</span></div>
-<div style="background-color:#2D90D9">
-<span>活动日程</span>
-<span>类别</span>
-<span>次数</span>
-<div><span>重要讲话</span><span>2</span></div>
-<div><span>会议活动</span><span>0</span></div>
-<div><span>考察调研</span><span>0</span></div>
-<div><span>出访</span><span>0</span></div>
-<div><span>外事</span><span>0</span</div>>
-<div><span>指示批示</span><span>0</span</div>>
-<div><span>致电致信</span><span>0</span</div>>
+
+<div style="background-color:#2D90D9;width: 220px;float: right;color: white;font-size: 18px;">
+<span style="
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    margin-top: 30px;
+    margin-bottom: 75px;
+">活动日程</span>
+<span style="
+    float: left;
+    margin-left: 15px;
+">类别</span>
+<span style="
+    float: right;
+    margin-right: 15px;
+">次数</span><span style="
+    width: 100%;
+    display: block;
+    height: 40px;
+    border-bottom: rgba(255,255,255,0.5) solid 1px;
+"></span>
+<div class="slotbar"><span>重要讲话</span>      <span class="count">2</span></div>
+<div class="slotbar"><span>会议活动</span>      <span class="count">0</span></div>
+<div class="slotbar"><span>考察调研</span>      <span class="count">0</span></div>
+<div class="slotbar"><span>出访</span>        <span class="count">0</span></div>
+<div class="slotbar"><span>外事</span>        <span class="count">0</span></div>
+<div class="slotbar"><span>指示批示</span>      <span class="count">0</span></div>
+<div class="slotbar"><span>致电致信</span>      <span class="count">0</span></div>
 </div>
+
 </div>
 <!-- 左侧选项卡结束 -->
 
