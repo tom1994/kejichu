@@ -477,6 +477,8 @@ img{border:none;}
 .right_c ul li{line-height: 1.5;}
 /*搜索页面*/
 .search-list-item{width:658px; height: 150px; overflow: hidden; position: relative;}
-.search-list-item img{width: 220px; height: 150px; float: left; margin-right: 20px;}
-.search-list-item h3{width: 418px; float: left; margin: 0px 0 10px 0; font-size: 20px; line-height: 1.5; font-weight: 400;}
-.search-list-item p{width: 418px; float: left; font-size: 15px; line-height: 1.5; text-indent: 29px;}
+.search-list-item h3{float: left; margin: 0px 0 10px 0; font-size: 20px; line-height: 1.5;}
+.search-list-item p{float: left; font-size: 15px; line-height: 1.5; text-indent: 29px;}
+.search-list-item .list-msg{width: 418px; height: 23px; margin: 0; overflow: hidden;}
+.search-list-item .list-msg img{width: 20px; height: 20px; margin-right: 10px;}
+.search-list-item .list-msg span{font-size: 15px; margin-right: 15px;}
