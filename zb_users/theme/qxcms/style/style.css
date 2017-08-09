@@ -238,6 +238,64 @@ img{border:none;}
 .zyqk-imgwords{width: 100px;height: 38px;overflow: hidden}
 
 /*论文发表样式*/
+/*信息咨询页面样式*/
+.cms-xxzx-xwdt{margin-bottom: 10px}
+.cms-title-xxzx{background-color: #f2f2f2;height: 25px}
+.xxzx-title{width: 100px;height: 25px;background-color: #2e3190;text-align: center;display: inline-block}
+.xxzx-title span{color: white;font-family: 微软雅黑;font-size: 16px;}
+.xxzx-more{width:850px;display: inline-block;text-align: right}
+.xxzx-more{color: black}
+.xwdt{height: 160px}
+.img-xwdt{width: 250px;margin-right: 10px;display: inline-block;vertical-align: top}
+.img-xwdt img{width: 250px;height:160px; }
+.main-content-xwdt{width: 680px;display: inline-block;vertical-align: top;text-align: left}
+.content-title-xwdt{font-size: 18px}
+.content-line-xwdt{height: 3px;width: 80px;background-color: #00b7ee;margin: 5px 0 0 10px}
+.content-xwdt{width: 680px;height: 120px;overflow: hidden;}
+
+.img-hydt{width: 660px;height: 476px;text-align: center;float: left}
+.img-hydt img{width: 660px;height: 446px}
+.content-title-hydt{background-color: #e0e0e0;width: 660px;height: 30px}
+.content-title-hydt span{font-size: 18px;font-weight: 700;line-height: 30px;color: black}
+/*会议动态*/
+.time{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    color: white;
+    display: inline-block;
+    line-height: 50px;
+    cursor: pointer;
+}
+.time:hover{  background-color:#004170;  }
+.slotbar{  width:100%;  height:40px;  display:block;  position:relative;  line-height:40px;  cursor: pointer;  }
+.conftitle{  margin-left:12px;  }
+.count{
+    background-color:#2485cc;
+    float:right;
+    margin-right:20px;
+    width:24px;
+    height:24px;
+    line-height:24px;
+    text-align:center;
+    border-radius:24px;
+    position: absolute;
+    right: 0px;
+    top: 5px;
+}
+.slotbar:hover{
+    background-color:white;
+    color:#CECECE;
+}
+.slotbar:hover .count{
+    background-color:#ff8a69;
+    color:white;
+}
+/*会议动态*/
+
+
+
+/*信息咨询页面样式*/
 .cms-left-title,.cms-right-title{width:380px; margin-bottom:10px; display: inline-block}
 .cms-left-title span,.cms-right-title span{line-height:30px; float: right}
 .cms-left-title span img,.cms-right-title span img{width:25px; height:25px; margin: 5px 0;}

@@ -4,15 +4,7 @@
 {template:breadcrumb}
 <!-- 焦点文章开始 -->
 <div class="top-content">
-    {php}
-    $acate = $zbp->Config('qxcms')->Acate;
-    $ason1 = $zbp->Config('qxcms')->Ason1;
-    $ason2 = $zbp->Config('qxcms')->Ason2;
-    $ason3 = $zbp->Config('qxcms')->Ason3;
-    {/php}
 
-<!-- cms2开始 -->
-{if $zbp->Config('qxcms')->Bcms=='1'}
 <div class="cms-content">
     <div class="cms-kyxm">
         <!--分割线-->
