@@ -18,7 +18,7 @@
                     <a href="{$top.Url}"><img src="{$top.Metas.pic}" alt="{$top.Title}"></a>
                 </div>
                 <div class="main-content-xwdt">
-                    <span class="content-title-xwdt">{$top.Title}</span>
+                    <a href="{$top.Url}"><span class="content-title-xwdt">{$top.Title}</span></a>
                     <div class="content-line-xwdt"></div>
                     <div class="content-xwdt">{$top.Content}</div>
                 </div>
@@ -100,7 +100,7 @@
                 {$topArray = GetList(1, 1, null, null, null, null, array("only_ontop"  => true));}
                 {foreach $topArray as $top}
                 <div class="img-hydt">
-                    <div class="content-title-hydt"><span>{$top.Title}</span></div>
+                    <div class="content-title-hydt"><a href="{$top.Url}"><span>{$top.Title}</span></a></div>
                     <a href="{$top.Url}"><img src="{$top.Metas.pic}" alt="{$top.Title}"></a>
                 </div>
                 {/foreach}

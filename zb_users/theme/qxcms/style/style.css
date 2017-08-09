@@ -50,10 +50,10 @@ img{border:none;}
 .main-content{width: 790px; height: auto; margin-left: 20px; margin-bottom: 30px; float: left;}
 .top-content,.top-content-zjcg{width: 960px; margin: 10px 0 10px 0;overflow: hidden;}
 .top-content{width: 960px;}
-.top-content-zjcg{width: 810px;}
-.top-content-left{width: 270px; height: 300px; float: left; background-color: #ced0f0}
-.top-content-middle{width: 270px; height: 300px; float: left; background-color: #ced0f0}
-.top-content-right{width: 270px; height: 300px; float: left; background-color: #ced0f0}
+.top-content-zjcg{width: 790px;}
+.top-content-left{width: 260px; height: 300px; float: left; background-color: #ced0f0}
+.top-content-middle{width: 260px; height: 300px; float: left; background-color: #ced0f0}
+.top-content-right{width: 260px; height: 300px; float: left; background-color: #ced0f0}
 .top-content-container{max-width: 260px; height: 100%; margin: 0 5px; overflow: hidden; border-radius:15px; -moz-border-radius:15px; /* 老的 Firefox */}
 .top-content-container img{width: 260px; height: 210px;}
 .top-content-left .top-content-container{background-color: #948abf;}
@@ -74,7 +74,7 @@ img{border:none;}
 .big-ad img{width: 960px;height: 60px;}
 .cms-content,.cms-content-zjcg{height: auto; overflow: hidden;}
 .cms-content{width: 960px;}
-.cms-content-zjcg{width: 810px;}
+.cms-content-zjcg{width: 790px;}
 .cms-title{width: 960px; height: 50px; border-bottom: 2px solid #336699; text-align: center}
 .cms-title h2{width: 960px; margin: 0 auto;position: relative;top: 11px;border-bottom: 6px solid #336699;padding-bottom: 2px;padding-right: 20px;font-weight: 500; display: inline-block}
 .cms-title h2 a{color: #336699;}
@@ -143,6 +143,16 @@ img{border:none;}
 .zhxw-img img{width: 250px;height: 200px;}
 .zhxw-imgwords{width: 250px;height:80px;overflow:hidden;float: right; background-color: white}
 /*要闻样式*/
+/*创新团队子类样式*/
+.cms-cxtd-lr-list{width: 100%; height: 420px; float: left}
+.cms-cxtd-lr-list ul{margin: 0 0; padding-left: 0}
+.cms-cxtd-lr-list ul li{list-style:none;height: 30px; line-height: 30px; margin: 5px 0; overflow: hidden; text-overflow: ellipsis;}
+.cms-cxtd-lr-list ul li strong{float: left;font-size: 30px}
+.cms-cxtd-lr-list ul li a{float: left; font-size:16px; color: #4e4e4e;}
+.cms-cxtd-lr-list ul li a:hover{text-decoration: underline; color: #8c1515;}
+.cms-cxtd-lr-list-title{max-width: 350px; height: 30px; overflow: hidden; float: left}
+.cms-cxtd-lr-list-date{width: 100px; height: 30px; float: right}
+/*创新团队子类样式*/
 /*科研项目样式*/
 .cms-kyxm{width: 300px; height: auto; float: left; padding: 0 10px;}
 .cms-kyxm-halving-line{height: 3px;background-color: #00a0e9}
@@ -248,9 +258,10 @@ img{border:none;}
 .img-xwdt{width: 250px;margin-right: 10px;display: inline-block;vertical-align: top}
 .img-xwdt img{width: 250px;height:160px; }
 .main-content-xwdt{width: 680px;display: inline-block;vertical-align: top;text-align: left}
-.content-title-xwdt{font-size: 18px}
+.content-title-xwdt{font-size: 18px;color: black}
 .content-line-xwdt{height: 3px;width: 80px;background-color: #00b7ee;margin: 5px 0 0 10px}
-.content-xwdt{width: 680px;height: 120px;overflow: hidden;}
+.content-xwdt{width: 680px;height: 120px;overflow:hidden;text-overflow:ellipsis;text-align: left}
+
 
 .img-hydt{width: 660px;height: 476px;text-align: center;float: left}
 .img-hydt img{width: 660px;height: 446px}
@@ -291,9 +302,6 @@ img{border:none;}
     color:white;
 }
 /*会议动态*/
-
-
-
 /*信息咨询页面样式*/
 .cms-left-title,.cms-right-title{width:380px; margin-bottom:10px; display: inline-block}
 .cms-left-title span,.cms-right-title span{line-height:30px; float: right}

@@ -18,7 +18,7 @@
                     <a href="<?php  echo $top->Url;  ?>"><img src="<?php  echo $top->Metas->pic;  ?>" alt="<?php  echo $top->Title;  ?>"></a>
                 </div>
                 <div class="main-content-xwdt">
-                    <span class="content-title-xwdt"><?php  echo $top->Title;  ?></span>
+                    <a href="<?php  echo $top->Url;  ?>"><span class="content-title-xwdt"><?php  echo $top->Title;  ?></span></a>
                     <div class="content-line-xwdt"></div>
                     <div class="content-xwdt"><?php  echo $top->Content;  ?></div>
                 </div>
@@ -100,7 +100,7 @@
                 <?php  $topArray = GetList(1, 1, null, null, null, null, array("only_ontop"  => true));;  ?>
                 <?php  foreach ( $topArray as $top) { ?>
                 <div class="img-hydt">
-                    <div class="content-title-hydt"><span><?php  echo $top->Title;  ?></span></div>
+                    <div class="content-title-hydt"><a href="<?php  echo $top->Url;  ?>"><span><?php  echo $top->Title;  ?></span></a></div>
                     <a href="<?php  echo $top->Url;  ?>"><img src="<?php  echo $top->Metas->pic;  ?>" alt="<?php  echo $top->Title;  ?>"></a>
                 </div>
                 <?php }   ?>
