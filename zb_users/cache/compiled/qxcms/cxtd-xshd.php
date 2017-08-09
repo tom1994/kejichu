@@ -45,22 +45,20 @@
     <!-- cms2开始 -->
     <?php if ($zbp->Config('qxcms')->Bcms=='1') { ?>
     <div class="cms-content-zjcg">
-        <div class="cms-lr-list">
+        <div class="cms-cxtd-lr-list">
             <ul>
-                <?php  foreach ( GetList(6,$ason1) as $key=>$article) { ?>
+                <?php  foreach ( GetList(10,$ason1) as $key=>$article) { ?>
                 <li>
-                    <div class="cms-lr-list-title">
+                    <div class="cms-cxtd-lr-list-title">
                         <a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Title;  ?></a>
                     </div>
-                    <div class="cms-lr-list-date">
+                    <div class="cms-cxtd-lr-list-date">
                         <?php  echo $article->Time('Y-m-d');  ?>
                     </div>
                 </li>
                 <?php }   ?>
             </ul>
-        </div>
-        <div class="cms-lr-more">
-            <a href="<?php  echo $categorys[1]->Url;  ?>">更多</a>
+            <div class="pagebar"><?php  include $this->GetTemplate('pagebar');  ?></div>
         </div>
     </div>
     <?php } ?>

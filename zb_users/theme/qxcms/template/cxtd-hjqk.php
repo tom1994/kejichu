@@ -46,22 +46,20 @@
     <!-- cms2开始 -->
     {if $zbp->Config('qxcms')->Bcms=='1'}
     <div class="cms-content-zjcg">
-        <div class="cms-lr-list">
+        <div class="cms-cxtd-lr-list">
             <ul>
-                {foreach GetList(6,$ason1) as $key=>$article}
+                {foreach GetList(10,$ason1) as $key=>$article}
                 <li>
-                    <div class="cms-lr-list-title">
+                    <div class="cms-cxtd-lr-list-title">
                         <a href="{$article.Url}">{$article.Title}</a>
                     </div>
-                    <div class="cms-lr-list-date">
+                    <div class="cms-cxtd-lr-list-date">
                         {$article.Time('Y-m-d')}
                     </div>
                 </li>
                 {/foreach}
             </ul>
-        </div>
-        <div class="cms-lr-more">
-            <a href="{$categorys[1].Url}">更多</a>
+            <div class="pagebar">{template:pagebar}</div>
         </div>
     </div>
     {/if}
