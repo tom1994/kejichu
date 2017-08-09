@@ -101,7 +101,7 @@
             </ul>
         </div>
         <div class="cms-lr-more">
-            <a href="<?php  echo $categorys[1]->Url;  ?>">更多</a>
+            <a href="<?php  echo $categorys[12]->Url;  ?>">更多</a>
         </div>
 
     </div>
