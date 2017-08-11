@@ -4,6 +4,7 @@
     <div class="list-msg">
         <span>{$article.Time('Y年m月d日')}</span>
         <span>点击:{$article.ViewNums}</span>
+        <span>分类:{$article.Category.Name}</span>
     </div>
     <p>{qxcms_jj($article,1,50,'...')}</p>
 </div>

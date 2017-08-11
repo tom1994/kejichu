@@ -389,6 +389,7 @@ function ViewSearch() {
     if (!$zbp->CheckRights($GLOBALS['action'])) {Redirect('./');}
 
     $q = trim(htmlspecialchars(GetVars('q', 'GET')));
+    $qc = '<b style=\'color:red\'>' . $q . '</b>';
     $page = GetVars('page', 'GET');
     $page = (int) $page == 0 ? 1 : (int) $page;
 
@@ -424,36 +425,90 @@ function ViewSearch() {
     foreach ($GLOBALS['hooks']['Filter_Plugin_ViewSearch_Core'] as $fpname => &$fpsignal) {
         $fpname($q, $page, $w, $pagebar);
     }
+    $type=2;
+    if($type==0){
+        $array_final = $zbp->GetArticleList(
+            '',
+            $w,
+            array('log_PostTime' => 'DESC'),
+            array(($pagebar->PageNow - 1) * $pagebar->PageCount, $pagebar->PageCount),
+            array('pagebar' => $pagebar),
+            false
+        );
+    }else{
+        $array = $zbp->GetArticleList(
+            '',
+            $w,
+            array('log_PostTime' => 'DESC'),
+            array(($pagebar->PageNow - 1) * $pagebar->PageCount, $pagebar->PageCount),
+            array('pagebar' => $pagebar),
+            false
+        );
 
-    $array = $zbp->GetArticleList(
-        '',
-        $w,
-        array('log_PostTime' => 'DESC'),
-        array(($pagebar->PageNow - 1) * $pagebar->PageCount, $pagebar->PageCount),
-        array('pagebar' => $pagebar),
-        false
-    );
-
-    foreach ($array as $a) {
-        $article->Content .= '<p><a href="' . $a->Url . '">' . str_replace($q, '<strong>' . $q . '</strong>', $a->Title) . '</a><br/>';
-        $s = strip_tags($a->Intro) . '' . strip_tags($a->Content);
-        $i = strpos($s, $q, 0);
-        if ($i !== false) {
-            if ($i > 50) {
-                $t = SubStrUTF8_Start($s, $i - 50, 100);
-            } else {
-                $t = SubStrUTF8_Start($s, 0, 100);
+        $arr = array();
+        $array_final = array();
+        /*表单的查询的分类*/
+        $categorys=array(25);
+        $get_time = 1;
+        $choose_time = "";
+        foreach ($array as $a) {
+            $isin = in_array($a->Category->ID,$categorys);
+            if($isin) {
+            $arr[] = $a;
             }
-            $article->Content .= str_replace($q, '<strong>' . $q . '</strong>', $t) . '<br/>';
         }
-        $article->Content .= '<a href="' . $a->Url . '">' . $a->Url . '</a><br/></p>';
+        /*一个月前*/
+        print strtotime("-60 days");
+        switch ($get_time)
+        {
+            case 1:
+                $choose_time = "-30 days";
+                break;
+            case 2:
+                $choose_time = "-30 days";
+                break;
+            case 3:
+                echo "Number 3";
+                break;
+            default:
+                echo "No number between 1 and 3";
+        }
+        /*一个月内新闻*/
+        foreach ($arr as $a) {
+            if(strtotime($a->Time())>strtotime("-60 days")){
+                $array_final[] = $a;
+            }
+        }
+        /*按照时间排序*/
+        foreach ($array_final as $a) {
+            $time[] = strtotime($a->Time());
+        }
+        if($array_final!=null){
+            array_multisort($time, SORT_ASC, $array_final);
+        }
+        // 取得列的列表
+        foreach ($array_final as $a) {
+            $a->Title = str_ireplace($q,$qc,$a->Title);
+            $article->Content .= '<p><a href="' . $a->Url . '">' . str_replace($q, '<strong>' . $q . '</strong>', $a->Title) . '</a><br/>';
+            $s = strip_tags($a->Intro) . '' . strip_tags($a->Content);
+            $i = strpos($s, $q, 0);
+            if ($i !== false) {
+                if ($i > 50) {
+                    $t = SubStrUTF8_Start($s, $i - 50, 100);
+                } else {
+                    $t = SubStrUTF8_Start($s, 0, 100);
+                }
+                $article->Content .= str_replace($q, '<strong>' . $q . '</strong>', $t) . '<br/>';
+            }
+            $article->Content .= '<a href="' . $a->Url . '">' . $a->Url . '</a><br/></p>';
+        }
     }
 
     $zbp->header .= '<meta name="robots" content="noindex,follow" />' . "\r\n";
     $zbp->template->SetTags('title', $article->Title);
     $zbp->template->SetTags('article', $article);
     $zbp->template->SetTags('search', $q);
-    $zbp->template->SetTags('articles', $array);
+    $zbp->template->SetTags('articles', $array_final);
     $zbp->template->SetTags('type', $article->TypeName);
     $zbp->template->SetTags('page', $page);
     $zbp->template->SetTags('pagebar', $pagebar);
@@ -463,7 +518,6 @@ function ViewSearch() {
     foreach ($GLOBALS['hooks']['Filter_Plugin_ViewPost_Template'] as $fpname => &$fpsignal) {
         $fpreturn = $fpname($zbp->template);
     }
-
     $zbp->template->Display();
 
 }

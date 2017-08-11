@@ -73,8 +73,6 @@
             background-image: url({$host}zb_users/theme/{$theme}/images/check1.gif);
         }
     </style>
-</head>
-<body>
 <div style="">
     <div class="pure-g" style="    min-height: 600px;">
         <div class="pure-u-1-5">

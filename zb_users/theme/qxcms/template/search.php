@@ -1,10 +1,12 @@
 {template:header}
 <div class="list-content">
-    {foreach $articles as $article}
-    {template:post-search}
-    {/foreach}
-
-
+    <ul>
+        <li>
+            {foreach $articles as $article}
+            {template:post-search}
+            {/foreach}
+        </li>
+    </ul>
     <div class="pagebar">
         {template:pagebar}
     </div>
