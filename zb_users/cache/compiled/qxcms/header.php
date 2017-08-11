@@ -79,6 +79,7 @@
             <div class="search">
                 <form name="search" method="post" action="<?php  echo $host;  ?>zb_system/cmd.php?act=search">
                     <input class="input" name="q" type="text" placeholder="输入关键词..."/>
+                    <input class="input" name="type" type="hidden" value="0"/>
                     <input class="submit" name="t" type="submit" value="搜索"/>
                 </form>
 

@@ -2,7 +2,7 @@
 <div class="search-list-item">
     <h3><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Title;  ?></a></h3>
     <div class="list-msg">
-        <span><?php  echo $article->Time('Y年m月d日');  ?></span>
+        <span><?php  echo $article->Time('Y年m月d日 H:i:s');  ?></span>
         <span>点击:<?php  echo $article->ViewNums;  ?></span>
         <span>分类:<?php  echo $article->Category->Name;  ?></span>
     </div>

@@ -10,14 +10,12 @@ function ActivePlugin_SearchPlus() {
 
 function SearchPlus_Main() {
 	global $zbp;
-
 	foreach ($GLOBALS['Filter_Plugin_ViewSearch_Begin'] as $fpname => &$fpsignal) {
 		$fpreturn = $fpname();
 		if ($fpsignal == PLUGIN_EXITSIGNAL_RETURN) {
 			$fpsignal=PLUGIN_EXITSIGNAL_NONE;return $fpreturn;
 		}
 	}
-
 	if(!$zbp->CheckRights($GLOBALS['action'])){Redirect('./');}
 
 	$q = trim(htmlspecialchars(GetVars('q','GET')));
@@ -57,7 +55,7 @@ function SearchPlus_Main() {
 	}
 
 	$articles = $zbp->GetArticleList(
-		'*',
+		'*', 
 		$w,
 		array('log_PostTime' => 'DESC'),
 		array($zbp->searchcount),

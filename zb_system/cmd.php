@@ -3,6 +3,21 @@ require './function/c_system_base.php';
 $zbp->Load();
 $action = GetVars('act', 'GET');
 
+$dict = array(
+    "wbgd-zxdj" => '30',
+    "wbgd-rmht" => '31',
+    "wbgd-ssjg" => '',
+    "wbgd-yjzj" => '',
+    "nbgd-yjzz" => '17',
+    "nbgd-ssxk" => '17',
+    "nbgd-cglb" => '17',
+    "xlzt-yfzg" => '7,48,49,50,51,52',
+    "xlzt-cyzd" => '10,63,64,65,66,67',
+    "xlzt-ydyl" => '6,43,44,45,46,47',
+    "xlzt-dsj" => '9,58,59,60,61,62',
+    "xlzt-jjjyth" => '8,53,54,55,56,57'
+);
+
 if (!$zbp->CheckRights($action)) {$zbp->ShowError(6, __FILE__, __LINE__);die();}
 
 foreach ($GLOBALS['hooks']['Filter_Plugin_Cmd_Begin'] as $fpname => &$fpsignal) {
@@ -41,7 +56,42 @@ case 'verify':
     break;
 case 'search':
     $q = rawurlencode(trim(strip_tags(GetVars('q', 'POST'))));
-    Redirect($zbp->searchurl . '?q=' . $q);
+    // 搜索类型参数
+    $type = rawurlencode(trim(strip_tags(GetVars('type', 'POST'))));
+    if ($type == "0") {
+        Redirect($zbp->searchurl . '?q=' . $q . '&type=' . $type);
+        break;
+    }
+    // 外部观点参数
+    $wbgd = GetVars('wbgd', 'POST');
+    // 内部观点参数
+    $nbgd = GetVars('nbgd', 'POST');
+    // 系列专题
+    $xlzt = GetVars('xlzt', 'POST');
+    // 是否全文
+    $allText = rawurlencode(trim(strip_tags(GetVars('all-text', 'POST'))));
+    // 包含任意关键词
+    $q_any = rawurlencode(trim(strip_tags(GetVars('q_any', 'POST'))));
+    // 时间
+    $time = rawurlencode(trim(strip_tags(GetVars('time', 'POST'))));
+    // 不包含关键词
+    $q_except = rawurlencode(trim(strip_tags(GetVars('q_except', 'POST'))));
+    // 时间排序方式
+    $sort = rawurlencode(trim(strip_tags(GetVars('sort', 'POST'))));
+    // 重新组装array
+    foreach ($wbgd as $key => $item) {
+        $wbgd[$key] = $dict[$item];
+    }
+    foreach ($nbgd as $key => $item) {
+        $nbgd[$key] = $dict[$item];
+    }
+    foreach ($xlzt as $key => $item) {
+        $xlzt[$key] = $dict[$item];
+    }
+    // 分类信息
+    $cate = implode(',', $wbgd) . ',' . implode(',', $nbgd) . ',' . implode(',', $xlzt);
+    Redirect($zbp->searchurl . '?q=' . $q . '&type=' . $type . '&cate=' . $cate . '&allText=' . $allText . '&q_any='
+        . $q_any . '&time=' . $time . '&q_except=' . $q_except . '&sort=' . $sort);
     break;
 case 'misc':
     require './function/c_system_misc.php';

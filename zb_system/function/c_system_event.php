@@ -425,7 +425,8 @@ function ViewSearch() {
     foreach ($GLOBALS['hooks']['Filter_Plugin_ViewSearch_Core'] as $fpname => &$fpsignal) {
         $fpname($q, $page, $w, $pagebar);
     }
-    $type=2;
+    /*$type = trim(htmlspecialchars(GetVars('$type', 'GET')));*/
+    $type=1;
     if($type==0){
         $array_final = $zbp->GetArticleList(
             '',
@@ -444,47 +445,60 @@ function ViewSearch() {
             array('pagebar' => $pagebar),
             false
         );
-
         $arr = array();
         $array_final = array();
+
+        $cate = trim(htmlspecialchars(GetVars('$cate', 'GET')));
+        print $cate;
         /*表单的查询的分类*/
-        $categorys=array(25);
-        $get_time = 1;
-        $choose_time = "";
-        foreach ($array as $a) {
-            $isin = in_array($a->Category->ID,$categorys);
-            if($isin) {
-            $arr[] = $a;
-            }
-        }
-        /*一个月前*/
-        print strtotime("-60 days");
+        $categorys=array(1,2,24,25);
+        $get_time = 2;
+        $choose_time = "08:00:00 1 January 1970";
+        $sort = SORT_ASC;/*升:SORT_ASC;降:SORT_DESC*/
+        $q_except = "";
         switch ($get_time)
         {
             case 1:
-                $choose_time = "-30 days";
+                $choose_time = "-3 days";
                 break;
             case 2:
-                $choose_time = "-30 days";
+                $choose_time = "-1 week";
                 break;
             case 3:
-                echo "Number 3";
+                $choose_time = "-30 days";
+                break;
+            case 4:
+                $choose_time = "-180 days";/*半年*/
+                break;
+            case 5:
+                $choose_time = "-365 days";
                 break;
             default:
-                echo "No number between 1 and 3";
+                $choose_time = "08:00:00 1 January 1970";/*全部*/
         }
-        /*一个月内新闻*/
-        foreach ($arr as $a) {
-            if(strtotime($a->Time())>strtotime("-60 days")){
-                $array_final[] = $a;
+        foreach ($array as $a) {
+            $isin = in_array($a->Category->ID,$categorys); /*过滤分类*/
+            if($isin) {
+                if(strtotime($a->Time())>strtotime($choose_time)){  /*过滤时间*/
+                   if($q_except==null){     /*过滤关键词*/
+                    $array_final[] = $a;
+                   }else{
+                       if (stristr($a->Title, $q_except)==false&&stristr($a->Content, $q_except)==false){
+                           $array_final[] = $a;
+                       }
+                   }
+                }
             }
         }
+        /*原始时间*/
+        print strtotime("08:00:00 1 January 1970");
+
         /*按照时间排序*/
         foreach ($array_final as $a) {
             $time[] = strtotime($a->Time());
         }
         if($array_final!=null){
-            array_multisort($time, SORT_ASC, $array_final);
+            array_multisort($time, $sort, $array_final);
         }
         // 取得列的列表
         foreach ($array_final as $a) {
