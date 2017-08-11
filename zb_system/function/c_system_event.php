@@ -445,7 +445,6 @@ function ViewSearch() {
             array('pagebar' => $pagebar),
             false
         );
-        $arr = array();
         $array_final = array();
 
         $cate = trim(htmlspecialchars(GetVars('$cate', 'GET')));
@@ -455,7 +454,7 @@ function ViewSearch() {
         $get_time = 2;
         $choose_time = "08:00:00 1 January 1970";
         $sort = SORT_ASC;/*升:SORT_ASC;降:SORT_DESC*/
-        $q_except = "";
+        $q_except = "苏宁";
         switch ($get_time)
         {
             case 1:
@@ -481,7 +480,7 @@ function ViewSearch() {
             if($isin) {
                 if(strtotime($a->Time())>strtotime($choose_time)){  /*过滤时间*/
                    if($q_except==null){     /*过滤关键词*/
-                    $array_final[] = $a;
+                       $array_final[] = $a;
                    }else{
                        if (stristr($a->Title, $q_except)==false&&stristr($a->Content, $q_except)==false){
                            $array_final[] = $a;
@@ -503,6 +502,7 @@ function ViewSearch() {
         // 取得列的列表
         foreach ($array_final as $a) {
             $a->Title = str_ireplace($q,$qc,$a->Title);
+            $a->Q = $q;
             $article->Content .= '<p><a href="' . $a->Url . '">' . str_replace($q, '<strong>' . $q . '</strong>', $a->Title) . '</a><br/>';
             $s = strip_tags($a->Intro) . '' . strip_tags($a->Content);
             $i = strpos($s, $q, 0);
