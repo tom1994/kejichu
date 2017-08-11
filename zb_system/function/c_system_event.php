@@ -389,6 +389,8 @@ function ViewSearch() {
     if (!$zbp->CheckRights($GLOBALS['action'])) {Redirect('./');}
 
     $q = trim(htmlspecialchars(GetVars('q', 'GET')));
+    $v = trim(htmlspecialchars(GetVars('vehicle', 'GET')));
+    $qc = '<b style=\'color:red\'>' . $q . '</b>';
     $page = GetVars('page', 'GET');
     $page = (int) $page == 0 ? 1 : (int) $page;
 
@@ -435,6 +437,7 @@ function ViewSearch() {
     );
 
     foreach ($array as $a) {
+        $a->Title = str_ireplace($q,$qc,$a->Title).$a->Category->Name.$v;
         $article->Content .= '<p><a href="' . $a->Url . '">' . str_replace($q, '<strong>' . $q . '</strong>', $a->Title) . '</a><br/>';
         $s = strip_tags($a->Intro) . '' . strip_tags($a->Content);
         $i = strpos($s, $q, 0);
