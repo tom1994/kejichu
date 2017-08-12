@@ -1,7 +1,7 @@
 <?php 
 $q = $article->Q;
 $qc = '<b style=\'color:red\'>' . $q . '</b>';
-$cont = qxcms_jj($article,1,50,'...')
+$cont = qxcms_jj($article,1,100,'...')
  ?>
 <div class="horizon-line bg-lightgray"></div>
 <div class="search-list-item">

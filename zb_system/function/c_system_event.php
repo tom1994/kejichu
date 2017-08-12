@@ -436,6 +436,7 @@ function ViewSearch() {
             array('pagebar' => $pagebar),
             false
         );
+        $searchresult = array(0,$array_final);
     }else {
         $array = $zbp->GetArticleList(
             '',
@@ -512,31 +513,32 @@ function ViewSearch() {
         if ($array_final != null) {
             array_multisort($time, $sort, $array_final);
         }
+
+        $searchresult = array(1,$array_final);
     }
         // 取得列的列表
-        foreach ($array_final as $a) {
-            $a->Title = str_ireplace($q,$qc,$a->Title);
-            $a->Q = $q;
-            $article->Content .= '<p><a href="' . $a->Url . '">' . str_replace($q, '<strong>' . $q . '</strong>', $a->Title) . '</a><br/>';
-            $s = strip_tags($a->Intro) . '' . strip_tags($a->Content);
-            $i = strpos($s, $q, 0);
-            if ($i !== false) {
-                if ($i > 50) {
-                    $t = SubStrUTF8_Start($s, $i - 50, 100);
-                } else {
-                    $t = SubStrUTF8_Start($s, 0, 100);
-                }
-                $article->Content .= str_replace($q, '<strong>' . $q . '</strong>', $t) . '<br/>';
+    foreach ($array_final as $a) {
+        $a->Title = str_ireplace($q,$qc,$a->Title);
+        $a->Q = $q;
+        $article->Content .= '<p><a href="' . $a->Url . '">' . str_replace($q, '<strong>' . $q . '</strong>', $a->Title) . '</a><br/>';
+        $s = strip_tags($a->Intro) . '' . strip_tags($a->Content);
+        $i = strpos($s, $q, 0);
+        if ($i !== false) {
+            if ($i > 50) {
+                $t = SubStrUTF8_Start($s, $i - 50, 100);
+            } else {
+                $t = SubStrUTF8_Start($s, 0, 100);
             }
-            $article->Content .= '<a href="' . $a->Url . '">' . $a->Url . '</a><br/></p>';
+            $article->Content .= str_replace($q, '<strong>' . $q . '</strong>', $t) . '<br/>';
         }
-
+        $article->Content .= '<a href="' . $a->Url . '">' . $a->Url . '</a><br/></p>';
+    }
 
     $zbp->header .= '<meta name="robots" content="noindex,follow" />' . "\r\n";
     $zbp->template->SetTags('title', $article->Title);
     $zbp->template->SetTags('article', $article);
     $zbp->template->SetTags('search', $q);
-    $zbp->template->SetTags('articles', $array_final);
+    $zbp->template->SetTags('searchresult', $searchresult);
     $zbp->template->SetTags('type', $article->TypeName);
     $zbp->template->SetTags('page', $page);
     $zbp->template->SetTags('pagebar', $pagebar);
