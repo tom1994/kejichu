@@ -4,6 +4,10 @@ $type = $searchresult[0];
 $articles = $searchresult[1];
 {/php}
 {if $type==0}
+<h3>网站搜索结果:</h3>
+{else}
+<h3>智库中心搜索结果:</h3>
+{/if}
 <div class="list-content">
     <ul>
         <li>
@@ -16,7 +20,4 @@ $articles = $searchresult[1];
         {template:pagebar}
     </div>
 </div>
-{else}
-<h1>这是类型1搜索</h1>
-{/if}
 {template:footer}
