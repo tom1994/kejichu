@@ -425,8 +425,8 @@ function ViewSearch() {
     foreach ($GLOBALS['hooks']['Filter_Plugin_ViewSearch_Core'] as $fpname => &$fpsignal) {
         $fpname($q, $page, $w, $pagebar);
     }
-    /*$type = trim(htmlspecialchars(GetVars('$type', 'GET')));*/
-    $type=1;
+    $type = trim(htmlspecialchars(GetVars('type', 'GET')));
+    print "搜索类型:".$type;
     if($type==0){
         $array_final = $zbp->GetArticleList(
             '',
@@ -446,15 +446,29 @@ function ViewSearch() {
             false
         );
         $array_final = array();
-
-        $cate = trim(htmlspecialchars(GetVars('$cate', 'GET')));
-        print $cate;
+        $cate = trim(htmlspecialchars(GetVars('cate', 'GET')));
+        $allText = trim(htmlspecialchars(GetVars('allText', 'GET')));
+        $q_any = trim(htmlspecialchars(GetVars('q_any', 'GET')));
+        $get_time = trim(htmlspecialchars(GetVars('time', 'GET')));
+        $q_except = trim(htmlspecialchars(GetVars('q_except', 'GET')));
+        $sort = trim(htmlspecialchars(GetVars('sort', 'GET')));/*升:SORT_ASC;降:SORT_DESC*/
         /*表单的查询的分类*/
-        $categorys=array(1,2,24,25);
-        $get_time = 2;
-        $choose_time = "08:00:00 1 January 1970";
-        $sort = SORT_ASC;/*升:SORT_ASC;降:SORT_DESC*/
-        $q_except = "苏宁";
+        $categorys = explode(',',$cate);
+        print 'cate:'.$categorys;
+        print "全文:".$allText;
+        print "包含任意关键词:".$q_any;
+        print "时间范围:".$get_time;
+        print "不包含关键词:".$q_except;
+        print "排序:".$sort;
+
+        if ($get_time==null){   /*默认全部时间*/
+            $get_time=6;
+        }
+        if($sort==null||$sort=="SORT_DESC"){      /*默认降序*/
+            $sort = SORT_DESC;
+        }elseif($sort=="SORT_ASC"){
+            $sort = SORT_ASC;
+        }
         switch ($get_time)
         {
             case 1:
@@ -490,7 +504,7 @@ function ViewSearch() {
             }
         }
         /*原始时间*/
-        print strtotime("08:00:00 1 January 1970");
+        print '原始时间:'.strtotime("08:00:00 1 January 1970");
 
         /*按照时间排序*/
         foreach ($array_final as $a) {

@@ -79,14 +79,26 @@ case 'search':
     // 时间排序方式
     $sort = rawurlencode(trim(strip_tags(GetVars('sort', 'POST'))));
     // 重新组装array
-    foreach ($wbgd as $key => $item) {
-        $wbgd[$key] = $dict[$item];
+    if($wbgd!=null){   /*不然不选择会报错*/
+        foreach ($wbgd as $key => $item) {
+            $wbgd[$key] = $dict[$item];
+        }
+    }else{
+        $wbgd = array(-1);/*不选择也赋值-1；不然implode函数无效*/
     }
-    foreach ($nbgd as $key => $item) {
-        $nbgd[$key] = $dict[$item];
+    if($nbgd!=null) {
+        foreach ($nbgd as $key => $item) {
+            $nbgd[$key] = $dict[$item];
+        }
+    }else{
+        $nbgd = array(-1);
     }
-    foreach ($xlzt as $key => $item) {
-        $xlzt[$key] = $dict[$item];
+    if($xlzt!=null) {
+        foreach ($xlzt as $key => $item) {
+            $xlzt[$key] = $dict[$item];
+        }
+    }else{
+        $xlzt = array(-1);
     }
     // 分类信息
     $cate = implode(',', $wbgd) . ',' . implode(',', $nbgd) . ',' . implode(',', $xlzt);

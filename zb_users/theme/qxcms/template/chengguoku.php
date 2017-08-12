@@ -219,11 +219,11 @@
                             <td>
                                 排序方式
                                 <label for="option-three" class="pure-radio">
-                                    <input id="option-three" type="radio" name="sort" value="desc">
+                                    <input id="option-three" type="radio" name="sort" value="SORT_DESC">
                                     发布日期降序
                                 </label>
                                 <label for="option-three" class="pure-radio">
-                                    <input id="option-three" type="radio" name="sort" value="asc">
+                                    <input id="option-three" type="radio" name="sort" value="SORT_ASC">
                                     发布日期升序
                                 </label>
                             </td>
