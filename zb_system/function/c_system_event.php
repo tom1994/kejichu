@@ -436,7 +436,7 @@ function ViewSearch() {
             array('pagebar' => $pagebar),
             false
         );
-    }else{
+    }else {
         $array = $zbp->GetArticleList(
             '',
             $w,
@@ -452,25 +452,24 @@ function ViewSearch() {
         $get_time = trim(htmlspecialchars(GetVars('time', 'GET')));
         $q_except = trim(htmlspecialchars(GetVars('q_except', 'GET')));
         $sort = trim(htmlspecialchars(GetVars('sort', 'GET')));/*升:SORT_ASC;降:SORT_DESC*/
-        /*表单的查询的分类*/
-        $categorys = explode(',',$cate);
-        print 'cate:'.$categorys;
-        print "全文:".$allText;
-        print "包含任意关键词:".$q_any;
-        print "时间范围:".$get_time;
-        print "不包含关键词:".$q_except;
-        print "排序:".$sort;
+        /*表单的查询的分类,分割为数组*/
+        $categorys = explode(',', $cate);
+       /* print 'cate:' . $categorys;
+        print "全文:" . $allText;
+        print "包含任意关键词:" . $q_any;
+        print "时间范围:" . $get_time;
+        print "不包含关键词:" . $q_except;
+        print "排序:" . $sort;*/
 
-        if ($get_time==null){   /*默认全部时间*/
-            $get_time=6;
+        if ($get_time == null) {   /*默认全部时间*/
+            $get_time = 6;
         }
-        if($sort==null||$sort=="SORT_DESC"){      /*默认降序*/
+        if ($sort == null || $sort == "SORT_DESC") {      /*默认降序*/
             $sort = SORT_DESC;
-        }elseif($sort=="SORT_ASC"){
+        } elseif ($sort == "SORT_ASC") {
             $sort = SORT_ASC;
         }
-        switch ($get_time)
-        {
+        switch ($get_time) {
             case 1:
                 $choose_time = "-3 days";
                 break;
@@ -490,29 +489,30 @@ function ViewSearch() {
                 $choose_time = "08:00:00 1 January 1970";/*全部*/
         }
         foreach ($array as $a) {
-            $isin = in_array($a->Category->ID,$categorys); /*过滤分类*/
-            if($isin) {
-                if(strtotime($a->Time())>strtotime($choose_time)){  /*过滤时间*/
-                   if($q_except==null){     /*过滤关键词*/
-                       $array_final[] = $a;
-                   }else{
-                       if (stristr($a->Title, $q_except)==false&&stristr($a->Content, $q_except)==false){
-                           $array_final[] = $a;
-                       }
-                   }
+            $isin = in_array($a->Category->ID, $categorys); /*过滤分类*/
+            if ($isin) {
+                if (strtotime($a->Time()) > strtotime($choose_time)) {  /*过滤时间*/
+                    if ($q_except == null) {     /*过滤关键词*/
+                        $array_final[] = $a;
+                    } else {
+                        if (stristr($a->Title, $q_except) == false && stristr($a->Content, $q_except) == false) {
+                            $array_final[] = $a;
+                        }
+                    }
                 }
             }
         }
         /*原始时间*/
-        print '原始时间:'.strtotime("08:00:00 1 January 1970");
+        print '原始时间:' . strtotime("08:00:00 1 January 1970");
 
         /*按照时间排序*/
         foreach ($array_final as $a) {
             $time[] = strtotime($a->Time());
         }
-        if($array_final!=null){
+        if ($array_final != null) {
             array_multisort($time, $sort, $array_final);
         }
+    }
         // 取得列的列表
         foreach ($array_final as $a) {
             $a->Title = str_ireplace($q,$qc,$a->Title);
@@ -530,7 +530,7 @@ function ViewSearch() {
             }
             $article->Content .= '<a href="' . $a->Url . '">' . $a->Url . '</a><br/></p>';
         }
-    }
+
 
     $zbp->header .= '<meta name="robots" content="noindex,follow" />' . "\r\n";
     $zbp->template->SetTags('title', $article->Title);
