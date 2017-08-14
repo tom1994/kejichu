@@ -10,6 +10,9 @@
     <script type="application/javascript">
         $(document).ready(function(){
             $('input:checkbox').prop('checked', false);
+            $('#full-text').prop('checked', true);
+            $('#time6').prop('checked', true);
+            $('#desc').prop('checked', true);
         });
     </script>
 
@@ -178,58 +181,58 @@
                     <table class="pure-table pure-table-bordered">
                         <tbody>
                         <tr>
-                            <td>包含全部关键词：<input type="text" name="q" placeholder="输入关键词:必填" required="required"></td>
+                            <td>关键词（必填）：<input type="text" name="q" placeholder="输入关键词:必填" required="required"></td>
                             <td>
                                 关键词位置
-                                <label for="option-three" class="pure-radio">
-                                    <input type="checkbox" name="all-text" value="1" checked="checked">全文
+                                <label for="full-text" class="pure-radio">
+                                    <input id="full-text" type="checkbox" name="all-text" value="1" disabled="disabled" checked="checked">全文
                                 </label>
 
                             </td>
                         </tr>
 
                         <tr>
-                            <td>包含任意关键词：<input type="text" name="q_any" placeholder="多个请用空格分开"></td>
+                            <td>不包含的关键词：<input type="text" name="q_except" placeholder="请输入..."></td>
                             <td>
                                 时间范围
-                                <label for="option-three" class="pure-radio">
-                                    <input id="option-three" type="radio" name="time" value="1">
+                                <label for="time1" class="pure-radio">
+                                    <input id="time1" type="radio" name="time" value="1">
                                     3天内
                                 </label>
-                                <label for="option-three" class="pure-radio">
-                                    <input id="option-three" type="radio" name="time" value="2">
+                                <label for="time2" class="pure-radio">
+                                    <input id="time2" type="radio" name="time" value="2">
                                     一周内
                                 </label>
-                                <label for="option-three" class="pure-radio">
-                                    <input id="option-three" type="radio" name="time" value="3">
+                                <label for="time3" class="pure-radio">
+                                    <input id="time3" type="radio" name="time" value="3">
                                     一月内
                                 </label>
-                                <label for="option-three" class="pure-radio">
-                                    <input id="option-three" type="radio" name="time" value="4">
+                                <label for="time4" class="pure-radio">
+                                    <input id="time4" type="radio" name="time" value="4">
                                     半年内
                                 </label>
-                                <label for="option-three" class="pure-radio">
-                                    <input id="option-three" type="radio" name="time" value="5">
+                                <label for="time5" class="pure-radio">
+                                    <input id="time5" type="radio" name="time" value="5">
                                     一年内
                                 </label>
-                                <label for="option-three" class="pure-radio">
-                                    <input id="option-three" type="radio" name="time" value="6">
+                                <label for="time6" class="pure-radio">
+                                    <input id="time6" type="radio" name="time" value="6">
                                     全部
                                 </label>
                             </td>
                         </tr>
 
                         <tr>
-                            <td>不包含的关键词：<input type="text" name="q_except" placeholder="多个请用空格分开"></td>
+                            <td></td>
                             <td>
                                 排序方式
-                                <label for="option-three" class="pure-radio">
-                                    <input id="option-three" type="radio" name="sort" value="SORT_DESC">
-                                    发布日期降序
-                                </label>
-                                <label for="option-three" class="pure-radio">
-                                    <input id="option-three" type="radio" name="sort" value="SORT_ASC">
+                                <label for="asc" class="pure-radio">
+                                    <input id="asc" type="radio" name="sort" value="SORT_ASC">
                                     发布日期升序
+                                </label>
+                                <label for="desc" class="pure-radio">
+                                    <input id="desc" type="radio" name="sort" value="SORT_DESC">
+                                    发布日期降序
                                 </label>
                             </td>
                         </tr>
