@@ -178,11 +178,11 @@
                     <table class="pure-table pure-table-bordered">
                         <tbody>
                         <tr>
-                            <td>包含全部关键词：<input type="text" name="q" placeholder="多个请用空格分开"></td>
+                            <td>包含全部关键词：<input type="text" name="q" placeholder="输入关键词:必填" required="required"></td>
                             <td>
                                 关键词位置
                                 <label for="option-three" class="pure-radio">
-                                    <input type="checkbox" name="all-text" value="1">全文
+                                    <input type="checkbox" name="all-text" value="1" checked="checked">全文
                                 </label>
 
                             </td>
@@ -224,11 +224,11 @@
                             <td>
                                 排序方式
                                 <label for="option-three" class="pure-radio">
-                                    <input id="option-three" type="radio" name="sort" value="desc">
+                                    <input id="option-three" type="radio" name="sort" value="SORT_DESC">
                                     发布日期降序
                                 </label>
                                 <label for="option-three" class="pure-radio">
-                                    <input id="option-three" type="radio" name="sort" value="asc">
+                                    <input id="option-three" type="radio" name="sort" value="SORT_ASC">
                                     发布日期升序
                                 </label>
                             </td>
