@@ -78,20 +78,42 @@ case 'search':
     $q_except = rawurlencode(trim(strip_tags(GetVars('q_except', 'POST'))));
     // 时间排序方式
     $sort = rawurlencode(trim(strip_tags(GetVars('sort', 'POST'))));
+    $wbgd_str = '';
+    $nbgd_str = '';
+    $xlzt_str = '';
     // 重新组装array
-    foreach ($wbgd as $key => $item) {
-        $wbgd[$key] = $dict[$item];
+    if (is_array($wbgd) && !empty($wbgd)) {
+        foreach ($wbgd as $key => $item) {
+            $wbgd[$key] = $dict[$item];
+        }
+        $wbgd_str = implode(',', $wbgd);
+    } else {
+        $wbgd = array();
     }
-    foreach ($nbgd as $key => $item) {
-        $nbgd[$key] = $dict[$item];
+    if (is_array($nbgd) && !empty($nbgd)) {
+        foreach ($nbgd as $key => $item) {
+            $nbgd[$key] = $dict[$item];
+        }
+        $nbgd_str = implode(',', $nbgd);
+    } else {
+        $nbgd = array();
     }
-    foreach ($xlzt as $key => $item) {
-        $xlzt[$key] = $dict[$item];
+    if (is_array($xlzt) && !empty($xlzt)) {
+        foreach ($xlzt as $key => $item) {
+            $xlzt[$key] = $dict[$item];
+        }
+        $xlzt_str = implode(',', $xlzt);
+    } else {
+        $xlzt = array();
     }
     // 分类信息
-    $cate = implode(',', $wbgd) . ',' . implode(',', $nbgd) . ',' . implode(',', $xlzt);
+//    $cate = array();
+    $cate = implode(',', array_merge($wbgd, $nbgd, $xlzt));
     Redirect($zbp->searchurl . '?q=' . $q . '&type=' . $type . '&cate=' . $cate . '&allText=' . $allText . '&q_any='
         . $q_any . '&time=' . $time . '&q_except=' . $q_except . '&sort=' . $sort);
+//    Redirect($zbp->searchurl . '?q=' . $q . '&type=' . $type . '&wbgd=' . $wbgd_str . '&nbgd=' .
+//        $nbgd_str . '&xlzt=' . $xlzt_str . '&allText=' . $allText . '&q_any=' . $q_any .
+//        '&time=' . $time . '&q_except=' . $q_except . '&sort=' . $sort);
     break;
 case 'misc':
     require './function/c_system_misc.php';

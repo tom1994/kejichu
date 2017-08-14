@@ -7,6 +7,11 @@
     <link rel="stylesheet" type="text/css" href="{$host}zb_users/theme/{$theme}/css/pure-min.css"/>
 
     <script type="text/javascript" src="{$host}zb_users/theme/{$theme}/js/jquery-3.2.1.js"></script>
+    <script type="application/javascript">
+        $(document).ready(function(){
+            $('input:checkbox').prop('checked', false);
+        });
+    </script>
 
     <style type="text/css">
         ul.tree, ul.tree * {
