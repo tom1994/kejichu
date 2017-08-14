@@ -129,7 +129,8 @@ class SQLGlobal {
         if (isset($this->$name)) {
             $this->$name = $value;
         } else {
-            throw 'Unknown attribute: ' . $name;
+//            throw 'Unknown attribute: ' . $name;
+            throw $name;
         }
     }
     /**
