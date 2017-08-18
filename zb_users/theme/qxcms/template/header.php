@@ -74,7 +74,7 @@
     <div class="header">
         <div class="header-top">
             <div class="logo">
-                <a href="{$host}"><img src="{$host}zb_users/theme/{$theme}/include/logo.png" alt=""></a>
+                <a href="{$host}"><img src="{$host}zb_users/theme/{$theme}/include/logo.png" alt="" style="display: none"></a>
             </div>
             <div class="search">
                 <form name="search" method="post" action="{$host}zb_system/cmd.php?act=search">
