@@ -1,15 +1,15 @@
-{* Template Name:国家战略下面的从严治党首页 *}
-{template:header}
+<?php  /* Template Name:国家智库下面的从严治党首页 */  ?>
+<?php  include $this->GetTemplate('header');  ?>
 <!--面包屑导航-->
-{template:breadcrumb}
+<?php  include $this->GetTemplate('breadcrumb');  ?>
 <!-- 焦点文章开始 -->
 <div class="top-content">
-    {php}
+    <?php 
     $acate = $zbp->Config('qxcms')->Acate;
     $ason1 = $zbp->Config('qxcms')->Ason1;
     $ason2 = $zbp->Config('qxcms')->Ason2;
     $ason3 = $zbp->Config('qxcms')->Ason3;
-    {/php}
+     ?>
     <!-- 幻灯片开始 -->
     <script type="text/javascript">
         $(function () {
@@ -49,11 +49,11 @@
     <div class="top-img">
         <div id="KinSlideshow" style="visibility:hidden;">
             <!--取得该分类下加入轮播图的文章-->
-            {foreach GetList(null,1) as $key=>$article}
-            {if $article->Metas->lunbo==1}
-            <a href="{$article.Url}" target="_blank"><img src="{$article.Metas.pic}" alt="{$article.Title}"/></a>
-            {/if}
-            {/foreach}
+            <?php  foreach ( GetList(null,1) as $key=>$article) { ?>
+            <?php if ($article->Metas->lunbo==1) { ?>
+            <a href="<?php  echo $article->Url;  ?>" target="_blank"><img src="<?php  echo $article->Metas->pic;  ?>" alt="<?php  echo $article->Title;  ?>"/></a>
+            <?php } ?>
+            <?php }   ?>
         </div>
         <div id="tab" class="tab-nbyj">
             <ul>
@@ -81,29 +81,29 @@
     <div id="div-content" class="top-art">
         <div id="firstPage" class="cms-up show">
             <h2 class="gjzl-title">内部研究</h2>
-            <a class="gjzl-more" href="{$categorys[63].Url}">更多</a>
+            <a class="gjzl-more" href="<?php  echo $categorys[63]->Url;  ?>">更多</a>
             <ul>
-                {foreach GetList(10, 1) as $key=>$article}
-                <li><a href="{$article.Url}">{$article.Title}</a></li>
-                {/foreach}
+                <?php  foreach ( GetList(10, 1) as $key=>$article) { ?>
+                <li><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Title;  ?></a></li>
+                <?php }   ?>
             </ul>
         </div>
         <div id="secondPage" class="cms-up hide">
             <h2 class="gjzl-title">内部研究</h2>
-            <a class="gjzl-more" href="{$categorys[64].Url}">更多</a>
+            <a class="gjzl-more" href="<?php  echo $categorys[64]->Url;  ?>">更多</a>
             <ul>
-                {foreach GetList(10, 2) as $key=>$article}
-                <li><a href="{$article.Url}">{$article.Title}</a></li>
-                {/foreach}
+                <?php  foreach ( GetList(10, 2) as $key=>$article) { ?>
+                <li><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Title;  ?></a></li>
+                <?php }   ?>
             </ul>
         </div>
         <div id="thirdPage" class="cms-up hide">
             <h2 class="gjzl-title">内部研究</h2>
-            <a class="gjzl-more" href="{$categorys[65].Url}">更多</a>
+            <a class="gjzl-more" href="<?php  echo $categorys[65]->Url;  ?>">更多</a>
             <ul>
-                {foreach GetList(10, 1) as $key=>$article}
-                <li><a href="{$article.Url}">{$article.Title}</a></li>
-                {/foreach}
+                <?php  foreach ( GetList(10, 1) as $key=>$article) { ?>
+                <li><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Title;  ?></a></li>
+                <?php }   ?>
             </ul>
         </div>
     </div>
@@ -111,36 +111,36 @@
 <!-- 焦点文章结束 -->
 
 <!-- cms2开始 -->
-{if $zbp->Config('qxcms')->Bcms=='1'}
+<?php if ($zbp->Config('qxcms')->Bcms=='1') { ?>
 <div class="cms-content">
     <div class="cms-title">
-        {php}
+        <?php 
         $bcate = $zbp->Config('qxcms')->Bcate;
         $bson1 = $zbp->Config('qxcms')->Bson1;
         $bson2 = $zbp->Config('qxcms')->Bson2;
         $bson3 = $zbp->Config('qxcms')->Bson3;
-        {/php}
+         ?>
         <h2>外部观点</h2>
     </div>
     <div class="cms-left">
         <div class="cms-left-title">
             <h2>研究观点</h2>
-            <span><a href="{$categorys[66].Url}"><img src="{$host}zb_users/theme/{$theme}/image/focus.png"></a></span>
+            <span><a href="<?php  echo $categorys[66]->Url;  ?>"><img src="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/image/focus.png"></a></span>
         </div>
         <div class="tu-f">
             <!--取得该分类下第一个置顶文章-->
-            {$topArray = GetList(1, 1, null, null, null, null, array("only_ontop"  => true));}
-            {foreach $topArray as $top}
-            <a href="{$top.Url}"><img src="{$top.Metas.pic}" alt="{$top.Title}">
-                <h3>{$top.Title}</h3>
+            <?php  $topArray = GetList(1, 1, null, null, null, null, array("only_ontop"  => true));;  ?>
+            <?php  foreach ( $topArray as $top) { ?>
+            <a href="<?php  echo $top->Url;  ?>"><img src="<?php  echo $top->Metas->pic;  ?>" alt="<?php  echo $top->Title;  ?>">
+                <h3><?php  echo $top->Title;  ?></h3>
             </a>
-            {/foreach}
+            <?php }   ?>
         </div>
         <div class="cms-lr-list">
             <ul>
-                {foreach GetList(4,$ason1) as $key=>$article}
-                <li><a href="{$article.Url}">{$article.Title}</a></li>
-                {/foreach}
+                <?php  foreach ( GetList(4,$ason1) as $key=>$article) { ?>
+                <li><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Title;  ?></a></li>
+                <?php }   ?>
             </ul>
         </div>
 
@@ -148,35 +148,35 @@
     <div class="cms-right">
         <div class="cms-right-title">
             <h2>科研成果</h2>
-            <span><a href="{$categorys[67].Url}"><img src="{$host}zb_users/theme/{$theme}/image/focus.png"></a></span>
+            <span><a href="<?php  echo $categorys[67]->Url;  ?>"><img src="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/image/focus.png"></a></span>
         </div>
         <div class="tu-f">
             <!--取得该分类下第一个置顶文章-->
-            {$topArray = GetList(1, 1, null, null, null, null, array("only_ontop"  => true));}
-            {foreach $topArray as $top}
-            <a href="{$top.Url}"><img src="{$top.Metas.pic}" alt="{$top.Title}">
-                <h3>{$top.Title}</h3>
+            <?php  $topArray = GetList(1, 1, null, null, null, null, array("only_ontop"  => true));;  ?>
+            <?php  foreach ( $topArray as $top) { ?>
+            <a href="<?php  echo $top->Url;  ?>"><img src="<?php  echo $top->Metas->pic;  ?>" alt="<?php  echo $top->Title;  ?>">
+                <h3><?php  echo $top->Title;  ?></h3>
             </a>
-            {/foreach}
+            <?php }   ?>
         </div>
         <div class="cms-lr-list">
             <ul>
-                {foreach GetList(4,$ason1) as $key=>$article}
-                <li><a href="{$article.Url}">{$article.Title}</a></li>
-                {/foreach}
+                <?php  foreach ( GetList(4,$ason1) as $key=>$article) { ?>
+                <li><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Title;  ?></a></li>
+                <?php }   ?>
             </ul>
         </div>
     </div>
 </div>
-{/if}
+<?php } ?>
 <!-- cms2结束 -->
 
 <!-- 友情链接开始 -->
 <div class="link">
     <ul>
         <li>友情链接:</li>
-        {module:link}
+        <?php  if(isset($modules['link'])){echo $modules['link']->Content;}  ?>
     </ul>
 </div>
 <!-- 友情链接结束 -->
-{template:footer}
+<?php  include $this->GetTemplate('footer');  ?>

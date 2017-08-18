@@ -1,4 +1,4 @@
-<?php  /* Template Name:国家战略下面的一带一路首页 */  ?>
+<?php  /* Template Name:国家智库下面的大数据首页 */  ?>
 <?php  include $this->GetTemplate('header');  ?>
 <!--面包屑导航-->
 <?php  include $this->GetTemplate('breadcrumb');  ?>
@@ -81,7 +81,7 @@
     <div id="div-content" class="top-art">
         <div id="firstPage" class="cms-up show">
             <h2 class="gjzl-title">内部研究</h2>
-            <a class="gjzl-more" href="<?php  echo $categorys[43]->Url;  ?>">更多</a>
+            <a class="gjzl-more" href="<?php  echo $categorys[58]->Url;  ?>">更多</a>
             <ul>
                 <?php  foreach ( GetList(10, 1) as $key=>$article) { ?>
                 <li><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Title;  ?></a></li>
@@ -90,7 +90,7 @@
         </div>
         <div id="secondPage" class="cms-up hide">
             <h2 class="gjzl-title">内部研究</h2>
-            <a class="gjzl-more" href="<?php  echo $categorys[44]->Url;  ?>">更多</a>
+            <a class="gjzl-more" href="<?php  echo $categorys[59]->Url;  ?>">更多</a>
             <ul>
                 <?php  foreach ( GetList(10, 2) as $key=>$article) { ?>
                 <li><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Title;  ?></a></li>
@@ -99,7 +99,7 @@
         </div>
         <div id="thirdPage" class="cms-up hide">
             <h2 class="gjzl-title">内部研究</h2>
-            <a class="gjzl-more" href="<?php  echo $categorys[45]->Url;  ?>">更多</a>
+            <a class="gjzl-more" href="<?php  echo $categorys[60]->Url;  ?>">更多</a>
             <ul>
                 <?php  foreach ( GetList(10, 1) as $key=>$article) { ?>
                 <li><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Title;  ?></a></li>
@@ -125,7 +125,7 @@
     <div class="cms-left">
         <div class="cms-left-title">
             <h2>研究观点</h2>
-            <span><a href="<?php  echo $categorys[46]->Url;  ?>"><img src="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/image/focus.png"></a></span>
+            <span><a href="<?php  echo $categorys[61]->Url;  ?>"><img src="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/image/focus.png"></a></span>
         </div>
         <div class="tu-f">
             <!--取得该分类下第一个置顶文章-->
@@ -148,7 +148,7 @@
     <div class="cms-right">
         <div class="cms-right-title">
             <h2>科研成果</h2>
-            <span><a href="<?php  echo $categorys[47]->Url;  ?>"><img src="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/image/focus.png"></a></span>
+            <span><a href="<?php  echo $categorys[62]->Url;  ?>"><img src="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/image/focus.png"></a></span>
         </div>
         <div class="tu-f">
             <!--取得该分类下第一个置顶文章-->
