@@ -1,4 +1,4 @@
-{* Template Name:国家战略下面的京津冀一体化首页 *}
+{* Template Name:国家智库下面的京津冀一体化首页 *}
 {template:header}
 <!--面包屑导航-->
 {template:breadcrumb}

@@ -48,7 +48,7 @@ function add_Organization()
 {
     global $zbp, $article;
     echo '<div id="alias" class="editmod">
-<label for="meta_org" class="editinputname">所属组织</label>
+<label for="meta_org" class="editinputname">所属组织(论文发表模板)</label>
 <input type="text" name="meta_org" value="' . htmlspecialchars($article->Metas->org) . '"/>
 </div>';
 }
@@ -58,7 +58,7 @@ function add_Author()
 {
     global $zbp, $article;
     echo '<div id="alias" class="editmod">
-<label for="meta_author" class="editinputname">文章作者</label>
+<label for="meta_author" class="editinputname">文章作者(论文发表模板)</label>
 <input type="text" name="meta_author" value="' . htmlspecialchars($article->Metas->author) . '"/>
 </div>';
 }
@@ -68,7 +68,7 @@ function add_Code()
 {
     global $zbp, $article;
     echo '<div id="alias" class="editmod">
-<label for="meta_code" class="editinputname">文章编号</label>
+<label for="meta_code" class="editinputname">文章编号(论文发表模板)</label>
 <input type="text" name="meta_code" value="' . htmlspecialchars($article->Metas->code) . '"/>
 </div>';
 }
@@ -80,7 +80,7 @@ function add_Img()
     echo "<script type=\"text/javascript\" src=\"{$zbp->host}zb_users/theme/qxcms/script/lib.upload.js\"></script>";
     echo '<div id="divtcimg" class="editmod2">
         <div id="titleheader" class="editmod">
-            <label for="meta_pic" class="editinputname">文章缩略图</label>
+            <label for="meta_pic" class="editinputname">文章缩略图(用于轮播图或者置顶图片显示或者论文期刊与著作封面)</label>
             <p align="left" class="uploadimg">
 <input name="meta_pic" id="edtTitle" type="text" class="uplod_img" style="width: 60%;" value="'. htmlspecialchars($article->Metas->pic) . '" />
 <strong class="button" style="
@@ -98,7 +98,7 @@ function add_Info()
     global $zbp, $article;
     echo '
         <div id="titleheader" class="editmod">
-            <label for="meta_info" class="editinputname">基本信息（以英文分号;分隔字段，字段分别是主办单位、主管单位、出版地、出版周期、刊号、开版）</label>
+            <label for="meta_info" class="editinputname">(出版著作模板才填写)基本信息（以英文分号;分隔字段，字段分别是主办单位、主管单位、出版地、出版周期、刊号、开版）</label>
             <p align="left" class="uploadimg">
             <input type="text" name="meta_info" style="width: 60%;" value="' . htmlspecialchars($article->Metas->info) . '"/>
             </p>
@@ -110,7 +110,7 @@ function add_Author_Info()
 {
     global $zbp, $article;
     echo '<div id="titleheader" class="editmod">
-            <label for="meta_author_info" class="editinputname">作者信息</label>
+            <label for="meta_author_info" class="editinputname">作者信息(出版著作模板才填写)</label>
             <p align="left" class="uploadimg">
             <textarea rows="4" cols="60" name="meta_author_info" style="width: 60%; resize: none; padding: 5px">
                 ' . htmlspecialchars($article->Metas->author_info) . '

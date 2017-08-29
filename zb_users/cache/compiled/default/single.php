@@ -4,8 +4,7 @@
 <div id="divAll">
 	<div id="divPage">
 	<div id="divMiddle">
-		<!--面包屑导航-->
-		<?php  include $this->GetTemplate('breadcrumb');  ?>
+
 		<div id="divTop">
 			<h1 id="BlogTitle"><a href="<?php  echo $article->Category->Url;  ?>"><?php  echo $article->Category->Name;  ?></a></h1>
 		</div>

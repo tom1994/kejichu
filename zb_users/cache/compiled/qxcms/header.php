@@ -73,9 +73,9 @@
     <!-- 头部开始 -->
     <div class="header">
         <div class="header-top">
-<!--            <div class="logo">-->
-<!--                <a href="<?php  echo $host;  ?>"><img src="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/include/logo1.png" alt=""></a>-->
-<!--            </div>-->
+            <div class="logo">
+                <a href="<?php  echo $host;  ?>"><img src="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/include/logo.png" alt="" style="display: none"></a>
+            </div>
             <div class="search">
                 <form name="search" method="post" action="<?php  echo $host;  ?>zb_system/cmd.php?act=search">
                     <input class="input" name="q" type="text" placeholder="输入关键词..."/>
