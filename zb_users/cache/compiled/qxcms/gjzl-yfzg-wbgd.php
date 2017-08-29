@@ -18,7 +18,7 @@
     <div class="cms-list-kyxm">
         <ul>
             <?php  foreach ( $articles as $article) { ?>
-            <li><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Title;  ?></a><span class="lwfb-date">[出版日期:<?php  echo $article->Time('Y-m-d');  ?>]</span></li>
+            <li><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Title;  ?></a><span class="lwfb-date">时间:<?php  echo $article->Time('Y-m-d');  ?></span></li>
             <?php }   ?>
             <div class="pagebar"><?php  include $this->GetTemplate('pagebar');  ?></div>
         </ul>
