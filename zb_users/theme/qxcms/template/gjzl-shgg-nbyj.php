@@ -5,10 +5,10 @@
 <!-- 左侧选项卡开始 -->
 <div class="navbar-left">
     <div class="navbar-left-item navbar-left-active">
-        <a href="{$categorys[24].Url}">内部研究</a>
+        <a href="{$categorys[65].Url}">内部研究</a>
     </div>
     <div class="navbar-left-item">
-        <a href="{$categorys[26].Url}">外部观点</a>
+        <a href="{$categorys[64].Url}">外部观点</a>
     </div>
 </div>
 <!-- 左侧选项卡结束 -->
