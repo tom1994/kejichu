@@ -13,10 +13,11 @@
         </div>
         <div class="art-msg-container">
             <div class="art-msg-full">
-			   <span><a href="<?php  echo $article->Author->Url;  ?>"><img src="<?php  echo $article->Author->Avatar;  ?>" alt="<?php  echo $article->Author->Name;  ?>">
-			   <?php  echo $article->Author->Name;  ?></a>
-			   </span>
-                <span><?php  echo $article->Time('Y年m月d日');  ?></span>
+<!--			   <span><a href="<?php  echo $article->Author->Url;  ?>"><img src="<?php  echo $article->Author->Avatar;  ?>" alt="<?php  echo $article->Author->Name;  ?>">-->
+<!--			   <?php  echo $article->Author->Name;  ?></a>-->
+<!--			   </span>-->
+<!--                <span><?php  echo $article->Time('Y年m月d日');  ?></span>-->
+                <span><?php  echo $article->Intro;  ?></span>
                 <span><a href="<?php  echo $article->Category->Url;  ?>"><?php  echo $article->Category->Name;  ?></a></span>
                 <span><?php  echo $article->ViewNums;  ?>次浏览</span>
             </div>
