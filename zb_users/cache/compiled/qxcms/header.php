@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/plugins/bxslider/jquery.bxslider.min.css"/>
     <script src="<?php  echo $host;  ?>zb_system/script/common.js" type="text/javascript"></script>
     <script src="<?php  echo $host;  ?>zb_system/script/c_html_js_add.php" type="text/javascript"></script>
-    <script src="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/plugins/bxslider/jquery.bxslider.min.js" type="application/javascript" ></script>
+    <script src="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/plugins/bxslider/jquery.bxslider.min.js"
+            type="application/javascript"></script>
     <script type="text/javascript"
             src="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/script/jquery.KinSlideshow-1.2.1.min.js "></script>
     <script src="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/script/custom.js" type="text/javascript"></script>
@@ -52,7 +53,7 @@
     <?php }elseif($type=='category') {  ?>
     <!--通知页的样式文件-->
     <link rel="stylesheet" rev="stylesheet" href="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/style/default.css" type="text/css"
-                                  media="all"/>
+          media="all"/>
     <?php }else{  ?>
     <title><?php  echo $title;  ?>_<?php  echo $name;  ?>_第<?php  echo $pagebar->PageNow;  ?>页</title>
     <meta name="Keywords" content="<?php  echo $title;  ?>,<?php  echo $name;  ?>"/>
@@ -69,28 +70,30 @@
     <link rel="shortcut icon" href="<?php  echo $host;  ?>favicon.ico"/>
 </head>
 <body>
-<div class="index-box">
-    <!-- 头部开始 -->
-    <div class="header">
-        <div class="header-top">
-            <div class="logo">
-                <a href="<?php  echo $host;  ?>"><img src="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/include/logo.png" alt="" style="display: none"></a>
-            </div>
-            <div class="search">
-                <form name="search" method="post" action="<?php  echo $host;  ?>zb_system/cmd.php?act=search">
-                    <input class="input" name="q" type="text" placeholder="输入关键词..."/>
-                    <input class="input" name="type" type="hidden" value="0"/>
-                    <input class="submit" name="t" type="submit" value="搜索"/>
-                </form>
 
-            </div>
+<!-- 头部开始 -->
+<div class="header">
+    <div class="header-top">
+        <div class="logo">
+            <a href="<?php  echo $host;  ?>"><img src="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/include/logo.png" alt=""
+                                   style="display: none"></a>
+        </div>
+        <div class="search">
+            <form name="search" method="post" action="<?php  echo $host;  ?>zb_system/cmd.php?act=search">
+                <input class="input" name="q" type="text" placeholder="输入关键词..."/>
+                <input class="input" name="type" type="hidden" value="0"/>
+                <input class="submit" name="t" type="submit" value="搜索"/>
+            </form>
 
         </div>
-        <div class="header-nav">
-            <ul>
-                <?php  if(isset($modules['navbar'])){echo $modules['navbar']->Content;}  ?>
-            </ul>
-        </div>
-        <!--<div  id="nav"><ul><li><a href="<?php  echo $host;  ?>">首页</a></li><?php  if(isset($modules['navbar'])){echo $modules['navbar']->Content;}  ?></ul></div>-->
+
     </div>
-    <!-- 头部结束 -->
+    <div class="header-nav">
+        <ul class="nav-ul">
+            <?php  if(isset($modules['navbar'])){echo $modules['navbar']->Content;}  ?>
+        </ul>
+    </div>
+    <!--<div  id="nav"><ul><li><a href="<?php  echo $host;  ?>">首页</a></li><?php  if(isset($modules['navbar'])){echo $modules['navbar']->Content;}  ?></ul></div>-->
+</div>
+<!-- 头部结束 -->
+<div class="index-box">
