@@ -4,13 +4,15 @@ a:hover{color: #FF3300;}
 img{border:none;}
 .index-box{width: 960px;height: auto;margin: 0 auto;}
 .header{width: 100%;}
-.header-top{width: 960px;height: 50px;margin: 10px auto;}
-.header-top .logo{height: 50px;float: left;}
-.header-top .logo img{height:50px;}
-.header-top .search{width: 580px;height: 50px;float: right;}
+.header-top{width: 960px;height: 70px;margin: 10px auto;}
+.header-top .logo{height: 70px;float: left;}
+.header-top .logo img{height:70px;}
+.header-top .slogan{height: 70px; float: left;}
+.header-top .slogan img{height:30px; margin: 15px 20px;}
+.header-top .search{height: 70px; float: right;}
 .header-top .search form{width: 300px;float: right;}
-.header-top .search .input{float: left; width: 200px; height: 25px; margin:10px;}
-.header-top .search .submit{width: 48px; height: 30px; margin: 10px 0 10px 0; border: 1px solid #C1C1C1; background-color: #F1F1F1;}
+.header-top .search .input{float: left; width: 200px; height: 25px; margin: 20px;}
+.header-top .search .submit{width: 48px; height: 30px; margin: 20px 0 20px 0; border: 1px solid #C1C1C1; background-color: #F1F1F1;}
 .header-top .search .search-tag{width: 280px; float: left; margin: 14px 0 14px 0; overflow: hidden;}
 .header-top .search .search-tag ul{list-style-type: none; padding: 0px; margin: 0px;}
 .header-top .search .search-tag ul li{float: left; font-size: 15px; margin-right: 10px;}

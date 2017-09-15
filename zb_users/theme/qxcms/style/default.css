@@ -543,41 +543,41 @@ div.pagebar {
 }
 
 /*------------------------------翻页条---------------------------*/
-.pagebar {
-    margin: 15px auto;
-    padding-top: 15px;
-    width: 98%;
-    height: 34px;
-    line-height: 34px;
-    font-family: verdana, geneva, sans-serif;
-    text-align: center;
-    border-top: 1px solid #e8e8e8;
-}
+/*.pagebar {*/
+    /*margin: 15px auto;*/
+    /*padding-top: 15px;*/
+    /*width: 98%;*/
+    /*height: 34px;*/
+    /*line-height: 34px;*/
+    /*font-family: verdana, geneva, sans-serif;*/
+    /*text-align: center;*/
+    /*border-top: 1px solid #e8e8e8;*/
+/*}*/
 
-.pagebar span {
-    padding: 3px 8px;
-    margin-left: 2px;
-    border: 1px solid #026ab8;
-}
+/*.pagebar span {*/
+    /*padding: 3px 8px;*/
+    /*margin-left: 2px;*/
+    /*border: 1px solid #026ab8;*/
+/*}*/
 
-.pagebar span.now-page {
-    background: #026ab8;
-    color: #fff;
-    font-weight: bold;
-}
+/*.pagebar span.now-page {*/
+    /*background: #026ab8;*/
+    /*color: #fff;*/
+    /*font-weight: bold;*/
+/*}*/
 
-.pagebar span.page-numbers {
-    margin-right: 4px;
-    background: #026ab8;
-    color: #fff;
-    font-weight: bold;
-}
+/*.pagebar span.page-numbers {*/
+    /*margin-right: 4px;*/
+    /*background: #026ab8;*/
+    /*color: #fff;*/
+    /*font-weight: bold;*/
+/*}*/
 
-.pagebar span:hover {
-    background: #026ab8;
-    border: 1px solid #026ab8;
-    color: #fff
-}
+/*.pagebar span:hover {*/
+    /*background: #026ab8;*/
+    /*border: 1px solid #026ab8;*/
+    /*color: #fff*/
+/*}*/
 
 /*---------------------------文章上下翻条------------------------*/
 div.post-nav {

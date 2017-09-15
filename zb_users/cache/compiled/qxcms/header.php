@@ -75,8 +75,10 @@
 <div class="header">
     <div class="header-top">
         <div class="logo">
-            <a href="<?php  echo $host;  ?>"><img src="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/include/logo.png" alt=""
-                                   style="display: none"></a>
+            <a href="<?php  echo $host;  ?>"><img src="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/include/logo.png" alt=""></a>
+        </div>
+        <div class="slogan">
+            <a href="<?php  echo $host;  ?>"><img src="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/include/slogan.png" alt=""></a>
         </div>
         <div class="search">
             <form name="search" method="post" action="<?php  echo $host;  ?>zb_system/cmd.php?act=search">
