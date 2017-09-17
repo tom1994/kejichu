@@ -147,7 +147,7 @@ img{border:none;}
 .jg{width: 30px;height: 234.2px; display: inline-block;vertical-align: top}
 .qm{margin: 10px 0; display: inline-block;vertical-align: top}
 .gjzl{width: 460px;height:50px;background-color: #2e3190  }
-.zl-title{width: 390px;display: inline-block;vertical-align: top;text-align: center}
+.zl-title{width: 370px;display: inline-block;vertical-align: top;text-align: left;padding-left: 20px}
 .zl-more{width: 60px;display: inline-block;vertical-align: top}
 .zl-title span{color: white;font-size: 22px;font-weight: 400;line-height: 50px}
 .zl-more a span{color: white;font-size: 16px;font-weight: 600;line-height: 50px}
