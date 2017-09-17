@@ -13,10 +13,11 @@
         </div>
         <div class="art-msg-container">
             <div class="art-msg-full">
-			   <span><a href="{$article.Author.Url}"><img src="{$article.Author.Avatar}" alt="{$article.Author.Name}">
-			   {$article.Author.Name}</a>
-			   </span>
-                <span>{$article.Time('Y年m月d日')}</span>
+<!--			   <span><a href="{$article.Author.Url}"><img src="{$article.Author.Avatar}" alt="{$article.Author.Name}">-->
+<!--			   {$article.Author.Name}</a>-->
+<!--			   </span>-->
+<!--                <span>{$article.Time('Y年m月d日')}</span>-->
+                <span>{$article.Intro}</span>
                 <span><a href="{$article.Category.Url}">{$article.Category.Name}</a></span>
                 <span>{$article.ViewNums}次浏览</span>
             </div>

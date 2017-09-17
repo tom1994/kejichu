@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/plugins/bxslider/jquery.bxslider.min.css"/>
     <script src="{$host}zb_system/script/common.js" type="text/javascript"></script>
     <script src="{$host}zb_system/script/c_html_js_add.php" type="text/javascript"></script>
-    <script src="{$host}zb_users/theme/{$theme}/plugins/bxslider/jquery.bxslider.min.js" type="application/javascript" ></script>
+    <script src="{$host}zb_users/theme/{$theme}/plugins/bxslider/jquery.bxslider.min.js"
+            type="application/javascript"></script>
     <script type="text/javascript"
             src="{$host}zb_users/theme/{$theme}/script/jquery.KinSlideshow-1.2.1.min.js "></script>
     <script src="{$host}zb_users/theme/{$theme}/script/custom.js" type="text/javascript"></script>
@@ -52,7 +53,7 @@
     {elseif $type=='category'}
     <!--通知页的样式文件-->
     <link rel="stylesheet" rev="stylesheet" href="{$host}zb_users/theme/{$theme}/style/default.css" type="text/css"
-                                  media="all"/>
+          media="all"/>
     {else}
     <title>{$title}_{$name}_第{$pagebar.PageNow}页</title>
     <meta name="Keywords" content="{$title},{$name}"/>
@@ -69,28 +70,32 @@
     <link rel="shortcut icon" href="{$host}favicon.ico"/>
 </head>
 <body>
-<div class="index-box">
-    <!-- 头部开始 -->
-    <div class="header">
-        <div class="header-top">
-            <div class="logo">
-                <a href="{$host}"><img src="{$host}zb_users/theme/{$theme}/include/logo.png" alt="" style="display: none"></a>
-            </div>
-            <div class="search">
-                <form name="search" method="post" action="{$host}zb_system/cmd.php?act=search">
-                    <input class="input" name="q" type="text" placeholder="输入关键词..."/>
-                    <input class="input" name="type" type="hidden" value="0"/>
-                    <input class="submit" name="t" type="submit" value="搜索"/>
-                </form>
 
-            </div>
+<!-- 头部开始 -->
+<div class="header">
+    <div class="header-top">
+        <div class="logo">
+            <a href="{$host}"><img src="{$host}zb_users/theme/{$theme}/include/logo.png" alt=""></a>
+        </div>
+        <div class="slogan">
+            <a href="{$host}"><img src="{$host}zb_users/theme/{$theme}/include/slogan.png" alt=""></a>
+        </div>
+        <div class="search">
+            <form name="search" method="post" action="{$host}zb_system/cmd.php?act=search">
+                <input class="input" name="q" type="text" placeholder="输入关键词..."/>
+                <input class="input" name="type" type="hidden" value="0"/>
+                <input class="submit" name="t" type="submit" value="搜索"/>
+            </form>
 
         </div>
-        <div class="header-nav">
-            <ul>
-                {module:navbar}
-            </ul>
-        </div>
-        <!--<div  id="nav"><ul><li><a href="{$host}">首页</a></li>{module:navbar}</ul></div>-->
+
     </div>
-    <!-- 头部结束 -->
+    <div class="header-nav">
+        <ul class="nav-ul">
+            {module:navbar}
+        </ul>
+    </div>
+    <!--<div  id="nav"><ul><li><a href="{$host}">首页</a></li>{module:navbar}</ul></div>-->
+</div>
+<!-- 头部结束 -->
+<div class="index-box">
