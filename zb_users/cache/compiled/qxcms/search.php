@@ -7,13 +7,13 @@ $articles = $searchresult[1];
     <style>
         .Pagination{height: 55px;_height: 45px; line-height: 20px;_margin-right: 5px; color:
             #565656;_margin-top: 20px; clear:both;margin: 0 140px}
-        .Pagination span{margin-right: 5px;display: block;float: left;margin-left: 5px;}
+        .Pagination span{margin-right: 5px;display: block;float: left;margin-left: 5px;height: 37px;line-height: 37px}
         .Pagination span b{padding: 0 2px;}
         .Pagination div {float:left}
-        .Pagination a{ font-size: 12px;text-decoration: none;display: block;float: left;color: #565656;border: 1px solid #cacaca;height: 20px;line-height: 20px;padding: 0 10px;margin: 0 2px;}
+        .Pagination a{ font-size: 12px;text-decoration: none;display: block;float: left;color: #565656;border: 1px solid #cacaca;height: 37px;line-height: 37px;padding: 0 10px;margin: 0 2px;}
         .Pagination .Ellipsis {line-height: 32px;overflow: hidden; display:none;}
-        cite.FormNum{display: block;float: left;line-height: 20px;height: 20px; font-style: normal; padding-left:10px;}
-        #PageNum{ color:#777;width: 30px;height: 20px;line-height: 20px; border: 1px solid #cacaca; margin:0 5px; text-align:center;}
+        cite.FormNum{display: block;float: left;line-height: 37px;height: 37px; font-style: normal; padding-left:10px;}
+        #PageNum{ color:#777;width: 30px;height: 37px;line-height: 37px; border: 1px solid #cacaca; margin:0 5px; text-align:center;}
         .Pagination a:hover,.Pagination a.PageCur{background-color: #65B5F0;border: 1px solid #65B5F0;color: #ffffff; }
     </style>
     <?php if ($type==0) { ?>
