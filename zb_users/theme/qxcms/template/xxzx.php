@@ -13,7 +13,7 @@
                 <div class="more-wbyj"><a href="{$categorys[73].Url}">更多</a></div>
             </div>
             <!--取得最新洞见分类下4个置顶文章-->
-            {$topArray = GetList(4, 1, null, null, null, null, array("only_ontop"  => true));}
+            {$topArray = GetList(4, 73, null, null, null, null, array("only_ontop"  => true));}
             {foreach $topArray as $top}
             <div class="cms-wbyj">
                 <div class="tu-wbyj-f">
@@ -33,14 +33,14 @@
         <div class="cms-wbyj-redian">
             <div class="tu-wbyj-f-redian">
                 <!--取得热点话题分类下第1个置顶文章-->
-                {$topArray = GetList(1, 1, null, null, null, null, array("only_ontop"  => true));}
+                {$topArray = GetList(1, 74, null, null, null, null, array("only_ontop"  => true));}
                 {foreach $topArray as $top}
                         <a href="{$top.Url}"><img src="{$top.Metas.pic}" alt="{$top.Title}"></a>
                 {/foreach}
             </div>
             <div class="cms-redian-list">
                 <ul>
-                    {foreach GetList(5,$ason1) as $key=>$article}
+                    {foreach GetList(5,74) as $key=>$article}
                     <li><a href="{$article.Url}">{$article.Title}</a></li>
                     {/foreach}
                 </ul>

@@ -9,7 +9,7 @@
             <div class="cms-img-wbyj"></div>
             <div class="cms-list-wbyj">
                 <ul>
-                    {foreach GetList(9,$ason1) as $key=>$article}
+                    {foreach GetList(9,74) as $key=>$article}
                     <li><a href="{$article.Url}">{$article.Title}</a><span class="wbyj-date">{$article.Time('Y-m-d')}</span></li>
                     <div class="cms-list-wbyj-line"></div>
                     {/foreach}

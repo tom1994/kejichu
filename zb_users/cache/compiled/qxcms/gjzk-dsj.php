@@ -49,7 +49,19 @@
     <div class="top-img">
         <div id="KinSlideshow" style="visibility:hidden;">
             <!--取得该分类下加入轮播图的文章-->
-            <?php  foreach ( GetList(null,1) as $key=>$article) { ?>
+            <?php  foreach ( GetList(null,58) as $key=>$article) { ?>
+            <?php if ($article->Metas->lunbo==1) { ?>
+            <a href="<?php  echo $article->Url;  ?>" target="_blank"><img src="<?php  echo $article->Metas->pic;  ?>" alt="<?php  echo $article->Title;  ?>"/></a>
+            <?php } ?>
+            <?php }   ?>
+            <!--取得该分类下加入轮播图的文章-->
+            <?php  foreach ( GetList(null,59) as $key=>$article) { ?>
+            <?php if ($article->Metas->lunbo==1) { ?>
+            <a href="<?php  echo $article->Url;  ?>" target="_blank"><img src="<?php  echo $article->Metas->pic;  ?>" alt="<?php  echo $article->Title;  ?>"/></a>
+            <?php } ?>
+            <?php }   ?>
+            <!--取得该分类下加入轮播图的文章-->
+            <?php  foreach ( GetList(null,60) as $key=>$article) { ?>
             <?php if ($article->Metas->lunbo==1) { ?>
             <a href="<?php  echo $article->Url;  ?>" target="_blank"><img src="<?php  echo $article->Metas->pic;  ?>" alt="<?php  echo $article->Title;  ?>"/></a>
             <?php } ?>
@@ -83,7 +95,7 @@
             <h2 class="gjzl-title">内部研究</h2>
             <a class="gjzl-more" href="<?php  echo $categorys[58]->Url;  ?>">更多</a>
             <ul>
-                <?php  foreach ( GetList(10, 1) as $key=>$article) { ?>
+                <?php  foreach ( GetList(10, 58) as $key=>$article) { ?>
                 <li><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Title;  ?></a></li>
                 <?php }   ?>
             </ul>
@@ -92,7 +104,7 @@
             <h2 class="gjzl-title">内部研究</h2>
             <a class="gjzl-more" href="<?php  echo $categorys[59]->Url;  ?>">更多</a>
             <ul>
-                <?php  foreach ( GetList(10, 2) as $key=>$article) { ?>
+                <?php  foreach ( GetList(10, 59) as $key=>$article) { ?>
                 <li><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Title;  ?></a></li>
                 <?php }   ?>
             </ul>
@@ -101,7 +113,7 @@
             <h2 class="gjzl-title">内部研究</h2>
             <a class="gjzl-more" href="<?php  echo $categorys[60]->Url;  ?>">更多</a>
             <ul>
-                <?php  foreach ( GetList(10, 1) as $key=>$article) { ?>
+                <?php  foreach ( GetList(10, 60) as $key=>$article) { ?>
                 <li><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Title;  ?></a></li>
                 <?php }   ?>
             </ul>
@@ -129,7 +141,7 @@
         </div>
         <div class="tu-f">
             <!--取得该分类下第一个置顶文章-->
-            <?php  $topArray = GetList(1, 1, null, null, null, null, array("only_ontop"  => true));;  ?>
+            <?php  $topArray = GetList(1, 61, null, null, null, null, array("only_ontop"  => true));;  ?>
             <?php  foreach ( $topArray as $top) { ?>
             <a href="<?php  echo $top->Url;  ?>"><img src="<?php  echo $top->Metas->pic;  ?>" alt="<?php  echo $top->Title;  ?>">
                 <h3><?php  echo $top->Title;  ?></h3>
@@ -138,7 +150,7 @@
         </div>
         <div class="cms-lr-list">
             <ul>
-                <?php  foreach ( GetList(4,$ason1) as $key=>$article) { ?>
+                <?php  foreach ( GetList(4,61) as $key=>$article) { ?>
                 <li><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Title;  ?></a></li>
                 <?php }   ?>
             </ul>
@@ -152,7 +164,7 @@
         </div>
         <div class="tu-f">
             <!--取得该分类下第一个置顶文章-->
-            <?php  $topArray = GetList(1, 1, null, null, null, null, array("only_ontop"  => true));;  ?>
+            <?php  $topArray = GetList(1, 62, null, null, null, null, array("only_ontop"  => true));;  ?>
             <?php  foreach ( $topArray as $top) { ?>
             <a href="<?php  echo $top->Url;  ?>"><img src="<?php  echo $top->Metas->pic;  ?>" alt="<?php  echo $top->Title;  ?>">
                 <h3><?php  echo $top->Title;  ?></h3>
@@ -161,7 +173,7 @@
         </div>
         <div class="cms-lr-list">
             <ul>
-                <?php  foreach ( GetList(4,$ason1) as $key=>$article) { ?>
+                <?php  foreach ( GetList(4,62) as $key=>$article) { ?>
                 <li><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Title;  ?></a></li>
                 <?php }   ?>
             </ul>

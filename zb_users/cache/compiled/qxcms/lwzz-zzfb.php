@@ -9,7 +9,7 @@
             著作发表
         </div>
         <div class="cms-list-zzfb">
-            <?php  foreach ( GetList(10,$ason1) as $key=>$article) { ?>
+            <?php  foreach ( GetList(10,23) as $key=>$article) { ?>
             <div class="cms-list-item">
                 <a href="<?php  echo $article->Url;  ?>">
                     <img src="<?php  echo qxcms_FirstIMG($btuid,120,160);  ?>" alt="<?php  echo $btuid->Title;  ?>">

@@ -166,7 +166,7 @@ return array(
 
     'ZC_ALIAS_BACK_ATTR' => 'Name',
 
-    'ZC_SEARCH_COUNT' => 20,
+    'ZC_SEARCH_COUNT' => 8,
     'ZC_SEARCH_REGEX' => '{%host%}search.php?q={%q%}&page={%page%}',
 
     #首页，分类页，文章页，页面页的默认模板

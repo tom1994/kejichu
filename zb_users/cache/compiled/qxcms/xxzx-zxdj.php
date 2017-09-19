@@ -9,7 +9,7 @@
             <div class="cms-img-wbyj"></div>
             <div class="cms-list-wbyj">
                 <ul>
-                    <?php  foreach ( GetList(9,$ason1) as $key=>$article) { ?>
+                    <?php  foreach ( GetList(9,73) as $key=>$article) { ?>
                     <li><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Title;  ?></a><span class="wbyj-date"><?php  echo $article->Time('Y-m-d');  ?></span></li>
                     <div class="cms-list-wbyj-line"></div>
                     <?php }   ?>

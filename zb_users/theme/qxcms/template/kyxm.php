@@ -15,7 +15,7 @@
         </div>
         <div class="tu-kyxm-f">
             <!--取得该分类下第一个置顶文章-->
-            {$topArray = GetList(1, 1, null, null, null, null, array("only_ontop"  => true));}
+            {$topArray = GetList(1, 24, null, null, null, null, array("only_ontop"  => true));}
             {foreach $topArray as $top}
             <a href="{$top.Url}"><img src="{$top.Metas.pic}" alt="{$top.Title}">
                 <h3>{$top.Title}</h3>
@@ -40,7 +40,7 @@
         </div>
         <div class="tu-kyxm-f">
             <!--取得该分类下第一个置顶文章-->
-            {$topArray = GetList(1, 1, null, null, null, null, array("only_ontop"  => true));}
+            {$topArray = GetList(1, 25, null, null, null, null, array("only_ontop"  => true));}
             {foreach $topArray as $top}
             <a href="{$top.Url}"><img src="{$top.Metas.pic}" alt="{$top.Title}">
                 <h3>{$top.Title}</h3>
@@ -64,7 +64,7 @@
         </div>
         <div class="tu-kyxm-f">
             <!--取得该分类下第一个置顶文章-->
-            {$topArray = GetList(1, 1, null, null, null, null, array("only_ontop"  => true));}
+            {$topArray = GetList(1, 26, null, null, null, null, array("only_ontop"  => true));}
             {foreach $topArray as $top}
             <a href="{$top.Url}"><img src="{$top.Metas.pic}" alt="{$top.Title}">
                 <h3>{$top.Title}</h3>
@@ -89,7 +89,7 @@
         </div>
         <div class="tu-kyxm-f">
             <!--取得该分类下第一个置顶文章-->
-            {$topArray = GetList(1, 1, null, null, null, null, array("only_ontop"  => true));}
+            {$topArray = GetList(1, 27, null, null, null, null, array("only_ontop"  => true));}
             {foreach $topArray as $top}
             <a href="{$top.Url}"><img src="{$top.Metas.pic}" alt="{$top.Title}">
                 <h3>{$top.Title}</h3>
@@ -114,7 +114,7 @@
         </div>
         <div class="tu-kyxm-f">
             <!--取得该分类下第一个置顶文章-->
-            {$topArray = GetList(1, 1, null, null, null, null, array("only_ontop"  => true));}
+            {$topArray = GetList(1, 28, null, null, null, null, array("only_ontop"  => true));}
             {foreach $topArray as $top}
             <a href="{$top.Url}"><img src="{$top.Metas.pic}" alt="{$top.Title}">
                 <h3>{$top.Title}</h3>
@@ -123,7 +123,7 @@
         </div>
         <div class="cms-kyxm-lr-list">
             <ul>
-                {foreach GetList(4,$ason1) as $key=>$article}
+                {foreach GetList(4,28) as $key=>$article}
                 <li><a href="{$article.Url}">{$article.Title}</a></li>
                 {/foreach}
             </ul>
@@ -138,7 +138,7 @@
         </div>
         <div class="tu-kyxm-f">
             <!--取得该分类下第一个置顶文章-->
-            {$topArray = GetList(1, 1, null, null, null, null, array("only_ontop"  => true));}
+            {$topArray = GetList(1, 29, null, null, null, null, array("only_ontop"  => true));}
             {foreach $topArray as $top}
             <a href="{$top.Url}"><img src="{$top.Metas.pic}" alt="{$top.Title}">
                 <h3>{$top.Title}</h3>
@@ -147,7 +147,7 @@
         </div>
         <div class="cms-kyxm-lr-list">
             <ul>
-                {foreach GetList(4,$ason1) as $key=>$article}
+                {foreach GetList(4,29) as $key=>$article}
                 <li><a href="{$article.Url}">{$article.Title}</a></li>
                 {/foreach}
             </ul>

@@ -25,7 +25,7 @@
         研究院领导
     </h1>
     <div class="cms-list-yjyld">
-        <?php  foreach ( GetList(10,$ason1) as $key=>$article) { ?>
+        <?php  foreach ( GetList(10,4) as $key=>$article) { ?>
         <div class="cms-list-yjyld-item">
             <a href="<?php  echo $article->Url;  ?>">
                 <img src="<?php  echo qxcms_FirstIMG($btuid,120,160);  ?>" alt="<?php  echo $btuid->Title;  ?>">

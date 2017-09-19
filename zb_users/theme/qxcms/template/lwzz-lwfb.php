@@ -13,7 +13,7 @@
             <div class="line-lwfb"></div>
             <div class="cms-list-lwfb">
                 <ul>
-                    {foreach GetList(8,$ason1) as $key=>$article}
+                    {foreach GetList(8,22) as $key=>$article}
                     <li><a href="{$article.Url}">{$article.Title}</a><span class="lwfb-date">[出版日期:{$article.Time('Y-m-d')}]</span></li>
                     {/foreach}
                 </ul>

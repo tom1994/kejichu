@@ -78,7 +78,7 @@
         </div>
         <div class="cms-lr-list">
             <ul>
-                {foreach GetList(6,$ason1) as $key=>$article}
+                {foreach GetList(6,12) as $key=>$article}
                 <li><strong>·</strong><a href="{$article.Url}">{$article.Title}</a></li>
                 {/foreach}
             </ul>
@@ -91,7 +91,7 @@
     <div class="cms-right-cxtd">
         <div class="tu-f-cxtd">
             <!--取得该分类下第一个置顶文章-->
-            {$topArray = GetList(1, 1, null, null, null, null, array("only_ontop" => true));}
+            {$topArray = GetList(1, 12, null, null, null, null, array("only_ontop" => true));}
             {foreach $topArray as $top}
             <a href="{$top.Url}"><img src="{$top.Metas.pic}" alt="{$top.Title}">
                 <h3>{$top.Title}</h3>

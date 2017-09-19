@@ -295,7 +295,7 @@ class ZBlogPHP {
 
         $this->managecount = &$this->option['ZC_MANAGE_COUNT'];
         $this->pagebarcount = &$this->option['ZC_PAGEBAR_COUNT'];
-        $this->searchcount = &$this->option['ZC_SEARCH_COUNT'];
+        $this->searchcount = $this->option['ZC_SEARCH_COUNT'];
         $this->displaycount = &$this->option['ZC_DISPLAY_COUNT'];
         $this->commentdisplaycount = &$this->option['ZC_COMMENTS_DISPLAY_COUNT'];
 

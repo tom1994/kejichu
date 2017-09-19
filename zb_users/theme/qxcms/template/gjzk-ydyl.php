@@ -49,7 +49,19 @@
     <div class="top-img">
         <div id="KinSlideshow" style="visibility:hidden;">
             <!--取得该分类下加入轮播图的文章-->
-            {foreach GetList(null,1) as $key=>$article}
+            {foreach GetList(null,43) as $key=>$article}
+            {if $article->Metas->lunbo==1}
+            <a href="{$article.Url}" target="_blank"><img src="{$article.Metas.pic}" alt="{$article.Title}"/></a>
+            {/if}
+            {/foreach}
+            <!--取得该分类下加入轮播图的文章-->
+            {foreach GetList(null,44) as $key=>$article}
+            {if $article->Metas->lunbo==1}
+            <a href="{$article.Url}" target="_blank"><img src="{$article.Metas.pic}" alt="{$article.Title}"/></a>
+            {/if}
+            {/foreach}
+            <!--取得该分类下加入轮播图的文章-->
+            {foreach GetList(null,45) as $key=>$article}
             {if $article->Metas->lunbo==1}
             <a href="{$article.Url}" target="_blank"><img src="{$article.Metas.pic}" alt="{$article.Title}"/></a>
             {/if}
@@ -83,7 +95,7 @@
             <h2 class="gjzl-title">内部研究</h2>
             <a class="gjzl-more" href="{$categorys[43].Url}">更多</a>
             <ul>
-                {foreach GetList(10, 1) as $key=>$article}
+                {foreach GetList(10, 43) as $key=>$article}
                 <li><a href="{$article.Url}">{$article.Title}</a></li>
                 {/foreach}
             </ul>
@@ -92,7 +104,7 @@
             <h2 class="gjzl-title">内部研究</h2>
             <a class="gjzl-more" href="{$categorys[44].Url}">更多</a>
             <ul>
-                {foreach GetList(10, 2) as $key=>$article}
+                {foreach GetList(10, 44) as $key=>$article}
                 <li><a href="{$article.Url}">{$article.Title}</a></li>
                 {/foreach}
             </ul>
@@ -101,7 +113,7 @@
             <h2 class="gjzl-title">内部研究</h2>
             <a class="gjzl-more" href="{$categorys[45].Url}">更多</a>
             <ul>
-                {foreach GetList(10, 1) as $key=>$article}
+                {foreach GetList(10, 45) as $key=>$article}
                 <li><a href="{$article.Url}">{$article.Title}</a></li>
                 {/foreach}
             </ul>
@@ -129,7 +141,7 @@
         </div>
         <div class="tu-f">
             <!--取得该分类下第一个置顶文章-->
-            {$topArray = GetList(1, 1, null, null, null, null, array("only_ontop"  => true));}
+            {$topArray = GetList(1, 46, null, null, null, null, array("only_ontop"  => true));}
             {foreach $topArray as $top}
             <a href="{$top.Url}"><img src="{$top.Metas.pic}" alt="{$top.Title}">
                 <h3>{$top.Title}</h3>
@@ -138,7 +150,7 @@
         </div>
         <div class="cms-lr-list">
             <ul>
-                {foreach GetList(4,$ason1) as $key=>$article}
+                {foreach GetList(4,46) as $key=>$article}
                 <li><a href="{$article.Url}">{$article.Title}</a></li>
                 {/foreach}
             </ul>
@@ -152,7 +164,7 @@
         </div>
         <div class="tu-f">
             <!--取得该分类下第一个置顶文章-->
-            {$topArray = GetList(1, 1, null, null, null, null, array("only_ontop"  => true));}
+            {$topArray = GetList(1, 47, null, null, null, null, array("only_ontop"  => true));}
             {foreach $topArray as $top}
             <a href="{$top.Url}"><img src="{$top.Metas.pic}" alt="{$top.Title}">
                 <h3>{$top.Title}</h3>
@@ -161,7 +173,7 @@
         </div>
         <div class="cms-lr-list">
             <ul>
-                {foreach GetList(4,$ason1) as $key=>$article}
+                {foreach GetList(4,47) as $key=>$article}
                 <li><a href="{$article.Url}">{$article.Title}</a></li>
                 {/foreach}
             </ul>
