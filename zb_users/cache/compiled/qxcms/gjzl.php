@@ -106,13 +106,4 @@
         </div>
 
     </div>
-
-    <!-- 友情链接开始 -->
-    <div class="link">
-        <ul>
-            <li>友情链接:</li>
-            <?php  if(isset($modules['link'])){echo $modules['link']->Content;}  ?>
-        </ul>
-    </div>
-    <!-- 友情链接结束 -->
     <?php  include $this->GetTemplate('footer');  ?>

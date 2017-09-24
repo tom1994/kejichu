@@ -214,7 +214,8 @@ img{border:none;}
 /*外部研究样式*/
 /*外部研究2个子页面样式*/
 .cms-wbyj-child{width: 960px;height: 430px}
-.cms-img-wbyj{width: 250px;height: 430px;display: inline-block;vertical-align: top;background-color: red}
+.cms-img-wbyj{width: 250px;height: 430px;display: inline-block;vertical-align: top;}
+.cms-img-wbyj img{width: 250px; height: 430px;}
 .cms-list-wbyj{display: inline-block;vertical-align: top;width: 650px; height: auto;margin-top:5px;background-color: white;margin-left: 30px}
 .cms-list-wbyj ul{text-align: left}
 .cms-list-wbyj ul li{width:100%;height: 40px; line-height: 40px; margin: 2px 0; overflow: hidden; text-overflow: ellipsis;list-style-type: none;background: url("../image/news-li.png")no-repeat 10px;padding-left: 30px}
