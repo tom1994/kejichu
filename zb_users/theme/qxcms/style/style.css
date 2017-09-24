@@ -96,6 +96,12 @@ img{border:none;}
 .main-content-title{margin: 0 0 23px; padding: 16px 0 8px; border-top: 1px solid #dddddd; border-bottom: 1px solid #dddddd; font-size: 1.5em; font-weight: 400; line-height: 1.5; color: #2e3190; background: url(../image/arrow-right-l.png) no-repeat 100% 50%;}
 .content-yjygl{}
 .content-yjygl p{text-indent: 2em; margin-top: 1em;}
+.content-yjygl h2{position: relative; margin: 0 0 1em; padding: 5px 10px; border-left: 12px solid #2e3190; font-size: 1.1667em; font-weight: 400; color: #2e3190; background: #dfe1e0;}
+.content-yjygl ul{}
+.content-yjygl ul li{float: left; display: inline; width: 180px; margin: 0 45px 10px 0; border-left: 12px solid #cccccc;}
+.content-yjygl ul li p{text-indent: 0; margin-top: 0}
+.content-yjygl ul li a{display: block; padding: 3px 7px 3px 25px; color: #8b8b8b; background: #e0e0e0 5px 10px;}
+.content-yjygl ul li a:hover{background: #2e3190; color: white;}
 /*研究院领导*/
 .cms-list-yjyld{width: 690px; height: auto; padding: 0 50px;}
 .cms-list-yjyld-item{width: 155px; height: 300px; margin-top: 0; display: inline-block;}
@@ -380,11 +386,11 @@ img{border:none;}
 .link{overflow: hidden; margin-bottom: 15px;}
 .link ul{list-style-type: none;margin: 0;padding: 0;}
 .link ul li{margin-right: 15px;float: left;font-size: 13px;}
-.footer{width: 960px;height: auto;margin: 0 auto;overflow: hidden;background-color: #DDDDDD;}
+.footer{height: auto;margin: 0 auto;overflow: hidden; width: 100%; display: inline-block; border-top: 1px solid #c0c0c0; color: #5f5f5f; background-color: #e8e8e8;}
 .footer .foot-nav{overflow: hidden;text-align: center;margin-top: 15px;font-size: 13px;}
 .footer .foot-nav a{margin-left: 15px;}
 .beian{text-align: center; margin-top: 15px; font-size: 13px;}
-.banquan{width: 960px;height: auto;margin-top: 15px;float: left;text-align: center;}
+.banquan{width: 100%; height: auto; margin: 15px; float: left; text-align: center;}
 .banquan p,.banquan p a,.banquan li a{line-height: 150%; margin: 0px; font-size: 13px;}
 .tu-mar{margin: 8px 0;}
 /*列表页*/
