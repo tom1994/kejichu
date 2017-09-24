@@ -426,7 +426,7 @@ function ViewSearch() {
         $fpname($q, $page, $w, $pagebar);
     }
     $type = trim(htmlspecialchars(GetVars('type', 'GET')));
-    print "搜索类型:".$type;
+//    print "搜索类型:".$type;
     if($type==0){
         $array_final = $zbp->GetArticleList(
             '',
@@ -504,7 +504,7 @@ function ViewSearch() {
             }
         }
         /*原始时间*/
-        print '原始时间:' . strtotime("08:00:00 1 January 1970");
+//        print '原始时间:' . strtotime("08:00:00 1 January 1970");
 
         /*按照时间排序*/
         foreach ($array_final as $a) {

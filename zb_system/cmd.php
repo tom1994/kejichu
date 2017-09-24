@@ -4,18 +4,18 @@ $zbp->Load();
 $action = GetVars('act', 'GET');
 
 $dict = array(
-    "wbgd-zxdj" => '30',
-    "wbgd-rmht" => '31',
-    "wbgd-ssjg" => '',
-    "wbgd-yjzj" => '',
-    "nbgd-yjzz" => '17',
-    "nbgd-ssxk" => '17',
-    "nbgd-cglb" => '17',
+    "gjzl-xksh" => '75,52,63',
+    "gjzl-shgg" => '76,64,65',
+    "gjzl-yfzg" => '77,7,50',
+    "gjzl-cyzd" => '78,10,51',
+    "gjzk-ydyl" => '6,43,44,45,46,47',
+    "gjzk-jjjyth" => '8,53,54,55,56,57',
+    "gjzk-dsj" => '9,58,59,60,61,62',
     "xlzt-yfzg" => '7,48,49,50,51,52',
     "xlzt-cyzd" => '10,63,64,65,66,67',
-    "xlzt-ydyl" => '6,43,44,45,46,47',
-    "xlzt-dsj" => '9,58,59,60,61,62',
-    "xlzt-jjjyth" => '8,53,54,55,56,57'
+    "xlzt-ydyl" => '',
+    "xlzt-dsj" => '',
+    "xlzt-jjjyth" =>''
 );
 
 if (!$zbp->CheckRights($action)) {$zbp->ShowError(6, __FILE__, __LINE__);die();}
@@ -63,9 +63,9 @@ case 'search':
         break;
     }
     // 外部观点参数
-    $wbgd = GetVars('wbgd', 'POST');
+    $gjzl = GetVars('gjzl', 'POST');
     // 内部观点参数
-    $nbgd = GetVars('nbgd', 'POST');
+    $gjzk = GetVars('gjzk', 'POST');
     // 系列专题
     $xlzt = GetVars('xlzt', 'POST');
     // 是否全文
@@ -78,25 +78,25 @@ case 'search':
     $q_except = rawurlencode(trim(strip_tags(GetVars('q_except', 'POST'))));
     // 时间排序方式
     $sort = rawurlencode(trim(strip_tags(GetVars('sort', 'POST'))));
-    $wbgd_str = '';
-    $nbgd_str = '';
+    $gjzl_str = '';
+    $gjzk_str = '';
     $xlzt_str = '';
     // 重新组装array
-    if (is_array($wbgd) && !empty($wbgd)) {
-        foreach ($wbgd as $key => $item) {
-            $wbgd[$key] = $dict[$item];
+    if (is_array($gjzl) && !empty($gjzl)) {
+        foreach ($gjzl as $key => $item) {
+            $gjzl[$key] = $dict[$item];
         }
-        $wbgd_str = implode(',', $wbgd);
+        $gjzl_str = implode(',', $gjzl);
     } else {
-        $wbgd = array();
+        $gjzl = array();
     }
-    if (is_array($nbgd) && !empty($nbgd)) {
-        foreach ($nbgd as $key => $item) {
-            $nbgd[$key] = $dict[$item];
+    if (is_array($gjzk) && !empty($gjzk)) {
+        foreach ($gjzk as $key => $item) {
+            $gjzk[$key] = $dict[$item];
         }
-        $nbgd_str = implode(',', $nbgd);
+        $gjzk_str = implode(',', $gjzk);
     } else {
-        $nbgd = array();
+        $gjzk = array();
     }
     if (is_array($xlzt) && !empty($xlzt)) {
         foreach ($xlzt as $key => $item) {
@@ -108,11 +108,11 @@ case 'search':
     }
     // 分类信息
 //    $cate = array();
-    $cate = implode(',', array_merge($wbgd, $nbgd, $xlzt));
+    $cate = implode(',', array_merge($gjzl, $gjzk, $xlzt));
     Redirect($zbp->searchurl . '?q=' . $q . '&type=' . $type . '&cate=' . $cate . '&allText=' . $allText . '&q_any='
         . $q_any . '&time=' . $time . '&q_except=' . $q_except . '&sort=' . $sort);
-//    Redirect($zbp->searchurl . '?q=' . $q . '&type=' . $type . '&wbgd=' . $wbgd_str . '&nbgd=' .
-//        $nbgd_str . '&xlzt=' . $xlzt_str . '&allText=' . $allText . '&q_any=' . $q_any .
+//    Redirect($zbp->searchurl . '?q=' . $q . '&type=' . $type . '&gjzl=' . $gjzl_str . '&gjzk=' .
+//        $gjzk_str . '&xlzt=' . $xlzt_str . '&allText=' . $allText . '&q_any=' . $q_any .
 //        '&time=' . $time . '&q_except=' . $q_except . '&sort=' . $sort);
     break;
 case 'misc':

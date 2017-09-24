@@ -21,7 +21,7 @@
     <!-- 专家观点图片开始 -->
     <div class="top-content-zjcg">
         <!--取得该分类下3个置顶文章-->
-        <?php  $topArray = GetList(3, 1, null, null, null, null, array("only_ontop"  => true));;  ?>
+        <?php  $topArray = GetList(3, 13, null, null, null, null, array("only_ontop"  => true));;  ?>
         <?php  foreach ( $topArray as $top) { ?>
         <!--专家观点图片展示-->
         <div class="top-content-left">
@@ -47,7 +47,7 @@
     <div class="cms-content-zjcg">
         <div class="cms-cxtd-lr-list">
             <ul>
-                <?php  foreach ( GetList(10,$ason1) as $key=>$article) { ?>
+                <?php  foreach ( GetList(10,13) as $key=>$article) { ?>
                 <li>
                     <div class="cms-cxtd-lr-list-title">
                         <a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Title;  ?></a>

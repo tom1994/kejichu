@@ -9,7 +9,7 @@
             著作发表
         </div>
         <div class="cms-list-zzfb">
-            {foreach GetList(10,$ason1) as $key=>$article}
+            {foreach GetList(10,23) as $key=>$article}
             <div class="cms-list-item">
                 <a href="{$article.Url}">
                     <img src="{qxcms_FirstIMG($btuid,120,160)}" alt="{$btuid.Title}">

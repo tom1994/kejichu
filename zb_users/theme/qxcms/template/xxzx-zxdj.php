@@ -9,7 +9,7 @@
             <div class="cms-img-wbyj"><img src="{$host}zb_users/theme/{$theme}/include/views_left_banner.png" alt="最新洞见&热门观点"></div>
             <div class="cms-list-wbyj">
                 <ul>
-                    {foreach GetList(9,$ason1) as $key=>$article}
+                    {foreach GetList(9,73) as $key=>$article}
                     <li><a href="{$article.Url}">{$article.Title}</a><span class="wbyj-date">{$article.Time('Y-m-d')}</span></li>
                     <div class="cms-list-wbyj-line"></div>
                     {/foreach}

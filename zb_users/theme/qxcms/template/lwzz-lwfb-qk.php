@@ -5,7 +5,7 @@
     </div>
     <div class="cms-list-zyqk">
         <!--取得该分类下第一个置顶文章-->
-        {$topArray = GetList(4, 1, null, null, null, null, array("only_ontop"  => true));}
+        {$topArray = GetList(4, 42, null, null, null, null, array("only_ontop"  => true));}
         {foreach $topArray as $top}
         <div class="zyqk">
             <div class="zyqk-img"><a href="{$top.Url}"><img src="{$top.Metas.pic}" alt="{$top.Title}"></a></div>

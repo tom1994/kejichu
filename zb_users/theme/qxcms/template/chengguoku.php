@@ -96,77 +96,73 @@
     <div style="">
         <form name="search-chengguoku" method="post" action="{$host}zb_system/cmd.php?act=search">
             <div class="pure-g" style="    min-height: 600px;">
-                <div class="pure-u-1-5">
+                <div class="pure-u-5-24">
                     <ul class="tree" style="margin-left: 15px;">
                         <li>
                             <input type="checkbox" name="all" value="all">
                             <label>所有项</label>
                             <ul>
                                 <li>
-                                    <input type="checkbox" name="wbgd-all" value="wbgd-all">
-                                    <label>外部观点</label>
+                                    <input type="checkbox" name="gjzl-all" value="gjzl-all">
+                                    <label>国家战略专题</label>
                                     <ul>
                                         <li>
-                                            <input type="checkbox" name="wbgd[]" value="wbgd-zxdj">
-                                            <label>最新洞见</label>
+                                            <input type="checkbox" name="gjzl[]" value="gjzl-xksh">
+                                            <label>全面建设小康社会</label>
                                         </li>
                                         <li>
-                                            <input type="checkbox" name="wbgd[]" value="wbgd-rmht">
-                                            <label>热门话题</label>
+                                            <input type="checkbox" name="gjzl[]" value="gjzl-shgg">
+                                            <label>全面深化改革</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" name="gjzl[]" value="gjzl-yfzg">
+                                            <label>全面推进依法治国</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" name="gjzl[]" value="gjzl-cyzd">
+                                            <label>全面从严治党</label>
                                         </li>
 <!--                                        <li>-->
-<!--                                            <input type="checkbox" name="wbgd[]" value="wbgd-ssjg">-->
+<!--                                            <input type="checkbox" name="gjzl[]" value="gjzl-ssjg">-->
 <!--                                            <label>所属机构</label>-->
 <!--                                        </li>-->
 <!--                                        <li>-->
-<!--                                            <input type="checkbox" name="wbgd[]" value="wbgd-yjzj">-->
+<!--                                            <input type="checkbox" name="gjzl[]" value="gjzl-yjzj">-->
 <!--                                            <label>研究专家</label>-->
 <!--                                        </li>-->
                                     </ul>
                                 </li>
 
                                 <li>
-                                    <input type="checkbox" name="nbgd-all" value="nbgd-all">
-                                    <label>内部研究</label>
+                                    <input type="checkbox" name="gjzk-all" value="gjzk-all">
+                                    <label>国家智库专题</label>
                                     <ul>
                                         <li>
-                                            <input type="checkbox" name="nbgd[]" value="nbgd-yjzz">
-                                            <label>研究专家</label>
+                                            <input type="checkbox" name="gjzk[]" value="gjzk-ydyl">
+                                            <label>一带一路</label>
                                         </li>
                                         <li>
-                                            <input type="checkbox" name="nbgd[]" value="nbgd-ssxk">
-                                            <label>所属学科</label>
+                                            <input type="checkbox" name="gjzk[]" value="gjzk-jjjyth">
+                                            <label>京津冀一体化</label>
                                         </li>
                                         <li>
-                                            <input type="checkbox" name="nbgd[]" value="nbgd-cglb">
-                                            <label>成果类别</label>
+                                            <input type="checkbox" name="gjzk[]" value="gjzk-dsj">
+                                            <label>大数据</label>
                                         </li>
                                     </ul>
                                 </li>
 
                                 <li>
                                     <input type="checkbox" name="xlzt-all" value="xlzt-all">
-                                    <label>系列专题</label>
+                                    <label>其他内部研究</label>
                                     <ul>
                                         <li>
                                             <input type="checkbox" name="xlzt[]" value="xlzt-yfzg">
-                                            <label>依法治国</label>
+                                            <label>研究专家</label>
                                         </li>
                                         <li>
                                             <input type="checkbox" name="xlzt[]" value="xlzt-cyzd">
-                                            <label>从严治党</label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" name="xlzt[]" value="xlzt-ydyl">
-                                            <label>一带一路</label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" name="xlzt[]" value="xlzt-dsj">
-                                            <label>大数据</label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" name="xlzt[]" value="xlzt-jjjyth">
-                                            <label>京津冀一体化</label>
+                                            <label>所属学科</label>
                                         </li>
                                     </ul>
                                 </li>
@@ -176,7 +172,7 @@
 
 
                 </div>
-                <div class="pure-u-4-5">
+                <div class="pure-u-19-24">
                     <h3>成果库</h3>
                     <table class="pure-table pure-table-bordered">
                         <tbody>

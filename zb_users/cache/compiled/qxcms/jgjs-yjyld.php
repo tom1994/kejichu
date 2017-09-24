@@ -25,7 +25,11 @@
         研究院领导
     </h1>
     <div class="cms-list-yjyld">
+<<<<<<< HEAD
         <?php  foreach ( array_reverse($articles) as $article) { ?>
+=======
+        <?php  foreach ( GetList(10,4) as $key=>$article) { ?>
+>>>>>>> dd32b909e5bbaf5667a23bf50232d6ee3de1ae6f
         <div class="cms-list-yjyld-item">
             <a href="<?php  echo $article->Url;  ?>">
                 <img src="<?php  echo $article->Metas->pic;  ?>" alt="<?php  echo $article->Title;  ?>">
