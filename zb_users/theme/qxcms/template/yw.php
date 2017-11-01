@@ -43,7 +43,7 @@
                 <div class="cms-yw-title-mtbd-more"><a href="{$categorys[32].Url}"><span>更多</span></a></div>
                 <div class="cms-yw-mtbd-list">
                     <ul>
-                        {foreach GetList(11,1) as $key=>$article}
+                        {foreach GetList(11,32) as $key=>$article}
                         <li><a href="{$article.Url}">{$article.Title}</a></li>
                         {/foreach}
                     </ul>
@@ -59,7 +59,7 @@
         <div class="cms-yw-zhxw">
             <div class="cms-zhxw-list">
                 <ul>
-                    {foreach GetList(10,1) as $key=>$article}
+                    {foreach GetList(10,33) as $key=>$article}
                     <li><a href="{$article.Url}">{$article.Title}</a></li>
                     {/foreach}
                 </ul>

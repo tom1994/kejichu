@@ -43,7 +43,7 @@
                 <div class="cms-yw-title-mtbd-more"><a href="<?php  echo $categorys[32]->Url;  ?>"><span>更多</span></a></div>
                 <div class="cms-yw-mtbd-list">
                     <ul>
-                        <?php  foreach ( GetList(11,1) as $key=>$article) { ?>
+                        <?php  foreach ( GetList(11,32) as $key=>$article) { ?>
                         <li><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Title;  ?></a></li>
                         <?php }   ?>
                     </ul>
@@ -59,7 +59,7 @@
         <div class="cms-yw-zhxw">
             <div class="cms-zhxw-list">
                 <ul>
-                    <?php  foreach ( GetList(10,1) as $key=>$article) { ?>
+                    <?php  foreach ( GetList(10,33) as $key=>$article) { ?>
                     <li><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Title;  ?></a></li>
                     <?php }   ?>
                 </ul>
