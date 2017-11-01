@@ -25,10 +25,10 @@
         研究院领导
     </h1>
     <div class="cms-list-yjyld">
-        {foreach GetList(10,4) as $key=>$article}
+        {foreach array_reverse($articles) as $article}
         <div class="cms-list-yjyld-item">
             <a href="{$article.Url}">
-                <img src="{qxcms_FirstIMG($btuid,120,160)}" alt="{$btuid.Title}">
+                <img src="{$article.Metas.pic}" alt="{$article.Title}">
                 <span>{$article.Title}</span>
             </a>
         </div>

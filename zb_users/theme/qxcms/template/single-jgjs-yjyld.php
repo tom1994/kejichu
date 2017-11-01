@@ -25,13 +25,13 @@
         研究院领导
     </h1>
     <div class="title-yjyld">
-        校长 黄进
+        {$article.Title}
     </div>
     <div class="info-yjyld">
         发布单位：{$article.Metas.org} 发布时间：{$article.Time('Y年m月d日')} 点击数：{$article.ViewNums}
     </div>
     <div class="content-yjyld">
-        <img src="{qxcms_FirstIMG($btuid,120,160)}" alt="{$btuid.Title}">
+        <img src="{$article.Metas.pic}" alt="{$article.Title}">
         {$article.Content}
     </div>
 </div>

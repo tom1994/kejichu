@@ -20,8 +20,8 @@
             {foreach $articles as $article}
             <li><a href="{$article.Url}">{$article.Title}</a><span class="lwfb-date">时间:{$article.Time('Y-m-d')}</span></li>
             {/foreach}
-            <div class="pagebar">{template:pagebar}</div>
         </ul>
+        <div class="pagebar">{template:pagebar}</div>
     </div>
 </div>
 <!-- 右侧页面内容结束 -->

@@ -15,12 +15,12 @@
             <!--z-index:-999;position:relative防止轮播图遮挡-->
             <div id="divTop" class="slider">
                 {ResponsiveSlides_call('')}
-               <!-- <ul class="bxslider">
-                    <li><img src="{$host}zb_users/theme/{$theme}/image/slider_image_1.jpg"/></li>
-                    <li><img src="{$host}zb_users/theme/{$theme}/image/slider_image_2.jpg"/></li>
-                    <li><img src="{$host}zb_users/theme/{$theme}/image/slider_image_3.jpg"/></li>
-                    <li><img src="{$host}zb_users/theme/{$theme}/image/slider_image_4.jpg"/></li>
-                </ul>-->
+                <!-- <ul class="bxslider">
+                     <li><img src="{$host}zb_users/theme/{$theme}/image/slider_image_1.jpg"/></li>
+                     <li><img src="{$host}zb_users/theme/{$theme}/image/slider_image_2.jpg"/></li>
+                     <li><img src="{$host}zb_users/theme/{$theme}/image/slider_image_3.jpg"/></li>
+                     <li><img src="{$host}zb_users/theme/{$theme}/image/slider_image_4.jpg"/></li>
+                 </ul>-->
             </div>
             <div id="divMain">
                 <!--                {foreach $articles as $article}-->
@@ -72,4 +72,7 @@
             <!--            <div id="divSidebar">-->
             <!--                {template:sidebar}-->
             <!--            </div>-->
-            {template:footer}
+        </div>
+    </div>
+</div>
+{template:footer}

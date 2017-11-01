@@ -6,7 +6,7 @@
 <div class="top-content">
     <div class="cms-content">
         <div class="cms-wbyj-child">
-            <div class="cms-img-wbyj"></div>
+            <div class="cms-img-wbyj"><img src="<?php  echo $host;  ?>zb_users/theme/<?php  echo $theme;  ?>/include/views_left_banner.png" alt="最新洞见&热门观点"></div>
             <div class="cms-list-wbyj">
                 <ul>
                     <?php  foreach ( GetList(9,73) as $key=>$article) { ?>

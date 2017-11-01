@@ -25,13 +25,13 @@
         研究院领导
     </h1>
     <div class="title-yjyld">
-        校长 黄进
+        <?php  echo $article->Title;  ?>
     </div>
     <div class="info-yjyld">
         发布单位：<?php  echo $article->Metas->org;  ?> 发布时间：<?php  echo $article->Time('Y年m月d日');  ?> 点击数：<?php  echo $article->ViewNums;  ?>
     </div>
     <div class="content-yjyld">
-        <img src="<?php  echo qxcms_FirstIMG($btuid,120,160);  ?>" alt="<?php  echo $btuid->Title;  ?>">
+        <img src="<?php  echo $article->Metas->pic;  ?>" alt="<?php  echo $article->Title;  ?>">
         <?php  echo $article->Content;  ?>
     </div>
 </div>

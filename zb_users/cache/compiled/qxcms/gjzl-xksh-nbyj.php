@@ -20,8 +20,8 @@
             <?php  foreach ( $articles as $article) { ?>
             <li><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Title;  ?></a><span class="lwfb-date">时间:<?php  echo $article->Time('Y-m-d');  ?></span></li>
             <?php }   ?>
-            <div class="pagebar"><?php  include $this->GetTemplate('pagebar');  ?></div>
         </ul>
+        <div class="pagebar"><?php  include $this->GetTemplate('pagebar');  ?></div>
     </div>
 </div>
 <!-- 右侧页面内容结束 -->

@@ -25,7 +25,7 @@
         组织架构
     </h1>
     {php}
-    $id='121'; //设置研究院概览文章ID
+    $id='8327'; //设置组织架构文章ID
     $indexpost=GetPost((int)$id);
     {/php}
     <div class="content-yjygl">

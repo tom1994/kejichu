@@ -106,13 +106,4 @@
         </div>
 
     </div>
-
-    <!-- 友情链接开始 -->
-    <div class="link">
-        <ul>
-            <li>友情链接:</li>
-            {module:link}
-        </ul>
-    </div>
-    <!-- 友情链接结束 -->
     {template:footer}
