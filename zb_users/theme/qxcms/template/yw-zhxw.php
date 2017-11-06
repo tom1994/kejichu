@@ -17,7 +17,7 @@
                             <div class="list-table-th notice-list-title">标题</div>
                             <div class="list-table-th notice-list-date">发布时间</div>
                         </li>
-                        {foreach GetList(18,$ason1) as $key=>$article}
+                        {foreach $articles as $article}
                         <li>
                             <div class="list-table-td notice-list-title">
                                 <a href="{$article.Url}">{$article.Title}</a>

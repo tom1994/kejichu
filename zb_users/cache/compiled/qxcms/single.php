@@ -17,7 +17,7 @@
                 <!--			   <?php  echo $article->Author->Name;  ?></a>-->
                 <!--			   </span>-->
                 <!--                <span><?php  echo $article->Time('Y年m月d日');  ?></span>-->
-                <span><?php  echo $article->Intro;  ?></span>
+<!--                <span><?php  echo $article->Intro;  ?></span>-->
                 <span><?php  echo $article->ViewNums;  ?>次浏览</span>
             </div>
         </div>

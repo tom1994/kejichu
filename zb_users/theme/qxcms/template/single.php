@@ -17,7 +17,7 @@
                 <!--			   {$article.Author.Name}</a>-->
                 <!--			   </span>-->
                 <!--                <span>{$article.Time('Y年m月d日')}</span>-->
-                <span>{$article.Intro}</span>
+<!--                <span>{$article.Intro}</span>-->
                 <span>{$article.ViewNums}次浏览</span>
             </div>
         </div>
