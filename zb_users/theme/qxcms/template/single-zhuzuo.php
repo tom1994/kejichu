@@ -9,7 +9,7 @@
         {template:breadcrumb}
         <div class="zhuzuo-img">
             <!--        使用{$article.Metas.pic}替换img的源-->
-            <img src="{qxcms_FirstIMG($btuid,120,160)}" alt="{$btuid.Title}">
+            <img src="{$article.Metas.pic}" alt="{$btuid.Title}">
         </div>
         <div class="zhuzuo-right">
             <div class="zhuzuo-info-container">
