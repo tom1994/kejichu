@@ -57,6 +57,9 @@
             </div>
             <div class="cms-gjzl-list">
                 <ul>
+                    {foreach GetList(3,63) as $key=>$article}
+                    <li><a href="{$article.Url}">{$article.Title}</a></li>
+                    {/foreach}
                     {foreach GetList(5,52) as $key=>$article}
                     <li><a href="{$article.Url}">{$article.Title}</a></li>
                     {/foreach}
@@ -71,6 +74,9 @@
             </div>
             <div class="cms-gjzl-list">
                 <ul>
+                    {foreach GetList(3,65) as $key=>$article}
+                    <li><a href="{$article.Url}">{$article.Title}</a></li>
+                    {/foreach}
                     {foreach GetList(5,64) as $key=>$article}
                     <li><a href="{$article.Url}">{$article.Title}</a></li>
                     {/foreach}
@@ -84,6 +90,9 @@
             </div>
             <div class="cms-gjzl-list">
                 <ul>
+                    {foreach GetList(3,50) as $key=>$article}
+                    <li><a href="{$article.Url}">{$article.Title}</a></li>
+                    {/foreach}
                     {foreach GetList(5,7) as $key=>$article}
                     <li><a href="{$article.Url}">{$article.Title}</a></li>
                     {/foreach}
@@ -98,6 +107,9 @@
             </div>
             <div class="cms-gjzl-list">
                 <ul>
+                    {foreach GetList(3,51) as $key=>$article}
+                    <li><a href="{$article.Url}">{$article.Title}</a></li>
+                    {/foreach}
                     {foreach GetList(5,10) as $key=>$article}
                     <li><a href="{$article.Url}">{$article.Title}</a></li>
                     {/foreach}
