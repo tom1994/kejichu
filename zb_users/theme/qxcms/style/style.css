@@ -449,7 +449,7 @@ img{border:none;}
 .art-msg span img{width: 20px; height: 20px; position: relative; top: 5px;}
 .art-content p{width: 658px; margin-top: 40px; text-indent: 28px;}
 .art-content-full p{width: 960px; margin-top: 40px; text-indent: 28px;}
-.art-content-full p img{max-width: 960px}
+.art-content-full p img{max-width: 930px}
 .art-tag{width: 658px; overflow: hidden; margin-bottom: 20px;}
 .art-tag ul{list-style-type: none; padding: 0; margin: 20px 0;}
 .art-tag ul li{float: left; background: #ddd; margin: 10px; padding: 5px;}
