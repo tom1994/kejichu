@@ -8,7 +8,6 @@
         <!--面包屑导航-->
         {template:breadcrumb}
         <div class="zhuzuo-img">
-            <!--        使用{$article.Metas.pic}替换img的源-->
             <img src="{$article.Metas.pic}" alt="{$article.Title}" width="300" height="400">
         </div>
         <div class="zhuzuo-right">
