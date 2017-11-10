@@ -57,6 +57,9 @@
             </div>
             <div class="cms-gjzl-list">
                 <ul>
+                    <?php  foreach ( GetList(3,63) as $key=>$article) { ?>
+                    <li><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Title;  ?></a></li>
+                    <?php }   ?>
                     <?php  foreach ( GetList(5,52) as $key=>$article) { ?>
                     <li><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Title;  ?></a></li>
                     <?php }   ?>
@@ -71,6 +74,9 @@
             </div>
             <div class="cms-gjzl-list">
                 <ul>
+                    <?php  foreach ( GetList(3,65) as $key=>$article) { ?>
+                    <li><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Title;  ?></a></li>
+                    <?php }   ?>
                     <?php  foreach ( GetList(5,64) as $key=>$article) { ?>
                     <li><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Title;  ?></a></li>
                     <?php }   ?>
@@ -84,6 +90,9 @@
             </div>
             <div class="cms-gjzl-list">
                 <ul>
+                    <?php  foreach ( GetList(3,50) as $key=>$article) { ?>
+                    <li><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Title;  ?></a></li>
+                    <?php }   ?>
                     <?php  foreach ( GetList(5,7) as $key=>$article) { ?>
                     <li><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Title;  ?></a></li>
                     <?php }   ?>
@@ -98,6 +107,9 @@
             </div>
             <div class="cms-gjzl-list">
                 <ul>
+                    <?php  foreach ( GetList(3,51) as $key=>$article) { ?>
+                    <li><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Title;  ?></a></li>
+                    <?php }   ?>
                     <?php  foreach ( GetList(5,10) as $key=>$article) { ?>
                     <li><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Title;  ?></a></li>
                     <?php }   ?>

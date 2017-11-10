@@ -160,7 +160,7 @@ img{border:none;}
 .zl-title span{color: white; font-size: 20px; font-weight: 400; line-height: 40px}
 .zl-more a span{color: white; font-size: 16px; font-weight: 600; line-height: 40px}
 .cms-gjzl-list{display: inline-block;vertical-align: top;width: 458px; height: 182.9px;background-color: white;border:1px solid #78abdd;}
-.cms-gjzl-list ul{text-align: left}
+.cms-gjzl-list ul{text-align: left;height: 182.9px;  overflow-y: hidden}
 .cms-gjzl-list ul li{width:90%;height: 35px; line-height: 35px; margin: 2px 0; overflow: hidden; text-overflow: ellipsis;list-style-type: none;background: url("../image/news-li.png")no-repeat 1px;padding-left: 25px}
 .cms-gjzl-list ul li a{float: left; font-size:16px; color: #4e4e4e;font-weight: 500}
 .cms-gjzl-list ul li a:hover{text-decoration: underline; color: #8c1515;}
