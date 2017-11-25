@@ -8,8 +8,8 @@
         <!--面包屑导航-->
         <?php  include $this->GetTemplate('breadcrumb');  ?>
         <div class="zhuzuo-img">
-            <!--        使用<?php  echo $article->Metas->pic;  ?>替换img的源-->
-            <img src="<?php  echo qxcms_FirstIMG($btuid,120,160);  ?>" alt="<?php  echo $btuid->Title;  ?>">
+            <img src="<?php  echo $article->Metas->pic;  ?>" alt="<?php  echo $article->Title;  ?>" width="300" height="400">
+            <span><?php  echo $article->Metas->pic;  ?></span>
         </div>
         <div class="zhuzuo-right">
             <div class="zhuzuo-info-container">

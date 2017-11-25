@@ -440,7 +440,7 @@ img{border:none;}
 .art-full{width: 960px; height: auto; padding-right: 20px; float: left;}
 .art-left{width: 658px; height: auto; padding-right: 20px; float: left;}
 .art-msg-container{width:960px; text-align:center;}
-.art-msg-full{display:inline-block;}
+.art-msg-full{display:inline-block; margin: 10px auto;}
 .art-msg-full{_display:inline;} /*针对ie6 hack*/
 .art-msg-full span{margin-right: 10px;}
 .art-msg-full span img{width: 20px; height: 20px; position: relative; top: 5px;}
@@ -483,7 +483,7 @@ img{border:none;}
 .zhuzuo-info-title,.zhuzuo-author-title,.zhuzuo-content-title{width: 80px; height: 30px; line-height: 30px; padding: 0 20px; margin-bottom: 20px; font-size: 20px; background-color: #ced0f0}
 .zhuzuo-content-title{margin-left: 10px;}
 .zhuzuo-info,.zhuzuo-author{margin-bottom: 10px;}
-.zhuzuo-info p,.zhuzuo-author p{margin: 0 10px;}
+.zhuzuo-info p,.zhuzuo-author p{margin: 0 10px; font-size: 14px}
 .zhuzuo-author a{text-decoration: underline;}
 /*联系我们*/
 .lxwm-title{width: 925px; font-size: 20px; color: #9b0000; float: left; padding-left: 35px; margin: 20px 0; background: url(../image/content_us_logo.png) no-repeat left 8px;}
