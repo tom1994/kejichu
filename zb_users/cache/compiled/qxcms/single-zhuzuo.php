@@ -9,6 +9,10 @@
         <?php  include $this->GetTemplate('breadcrumb');  ?>
         <div class="zhuzuo-img">
             <img src="<?php  echo $article->Metas->pic;  ?>" alt="<?php  echo $article->Title;  ?>" width="300" height="400">
+<<<<<<< HEAD
+=======
+            <span><?php  echo $article->Metas->pic;  ?></span>
+>>>>>>> 543560c57e95665c94ab2498e45e93d414b450fe
         </div>
         <div class="zhuzuo-right">
             <div class="zhuzuo-info-container">

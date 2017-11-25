@@ -9,6 +9,7 @@
         {template:breadcrumb}
         <div class="zhuzuo-img">
             <img src="{$article.Metas.pic}" alt="{$article.Title}" width="300" height="400">
+            <span>{$article.Metas.pic}</span>
         </div>
         <div class="zhuzuo-right">
             <div class="zhuzuo-info-container">
