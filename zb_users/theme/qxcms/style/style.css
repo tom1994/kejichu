@@ -176,7 +176,7 @@ img{border:none;}
 .cms-cxtd-lr-list-date{width: 100px; height: 30px; float: right}
 /*创新团队子类样式*/
 /*科研项目样式*/
-.cms-kyxm{width: 300px; height: auto; float: left; padding: 0 10px;}
+.cms-kyxm{width: 300px; height: auto; display: inline-block; padding: 0 8px;}
 .cms-kyxm-halving-line{height: 3px;background-color: #00a0e9}
 .cms-kyxm-title{width:300px; margin-bottom:3px; display: inline-block}
 .cms-kyxm-title h3{ text-align: left;width:280px;display: inline-block;margin: 5px 0; color: #00a0e9; font-family: '黑体'; font-size: 16px; font-weight: bolder;}

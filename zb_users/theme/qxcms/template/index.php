@@ -45,7 +45,10 @@
                         </div>
 
                         <ul>
-                            {foreach GetList(10,1) as $key=>$article}
+                            {foreach GetList(5,32) as $key=>$article}
+                            <li><a href="{$article.Url}">{$article.Title}</a></li>
+                            {/foreach}
+                            {foreach GetList(10,33) as $key=>$article}
                             <li><a href="{$article.Url}">{$article.Title}</a></li>
                             {/foreach}
                         </ul>

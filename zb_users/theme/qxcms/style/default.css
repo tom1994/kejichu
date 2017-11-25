@@ -125,6 +125,7 @@ h1, h2, h3, h4, h5, h6 {
     /*padding: 0 0 30px 10px;*/
     text-align: left;
     float: left;
+    min-height: 452px;
 
 }
 /*---------------------------面包屑导航 样式开始-------------------------------*/
@@ -167,6 +168,8 @@ h1, h2, h3, h4, h5, h6 {
 #divMainLeftContent ul {
     padding: 5px 5px;
     list-style-position: inside;
+    min-height: 250px;
+    overflow-y: hidden;
 }
 
 #divMainLeftContent ul li {
@@ -216,6 +219,7 @@ h1, h2, h3, h4, h5, h6 {
 #divMainRightContent ul {
     padding: 5px 5px;
     list-style-position: inside;
+    min-height: 250px;
 }
 
 #divMainRightContent ul li {
