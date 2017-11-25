@@ -116,7 +116,7 @@
                 <ul>
                     <?php  foreach ( GetList(4,22) as $key=>$article) { ?>
                     <li><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Title;  ?></a><span class="lwfb-date">[出版日期:<?php  echo $article->Time('Y-m-d');  ?>]</span></li>
-                    <li><span class="lufb-zz"><strong>·</strong>作者:<?php  echo $article->Author->Name;  ?></span><span class="lufb-cbs"><strong>·</strong>出版社</span></li>
+                    <li><span class="lufb-zz"><strong>·</strong>作者:<?php  echo $article->Metas->author;  ?></span><span class="lufb-cbs"><strong>·</strong>出版社:<?php  echo $article->Metas->org;  ?></span></li>
                     <?php }   ?>
                 </ul>
             </div>

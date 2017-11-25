@@ -116,7 +116,7 @@
                 <ul>
                     {foreach GetList(4,22) as $key=>$article}
                     <li><a href="{$article.Url}">{$article.Title}</a><span class="lwfb-date">[出版日期:{$article.Time('Y-m-d')}]</span></li>
-                    <li><span class="lufb-zz"><strong>·</strong>作者:{$article.Author.Name}</span><span class="lufb-cbs"><strong>·</strong>出版社</span></li>
+                    <li><span class="lufb-zz"><strong>·</strong>作者:{$article.Metas.author}</span><span class="lufb-cbs"><strong>·</strong>出版社:{$article.Metas.org}</span></li>
                     {/foreach}
                 </ul>
             </div>

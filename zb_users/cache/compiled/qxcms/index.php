@@ -45,7 +45,10 @@
                         </div>
 
                         <ul>
-                            <?php  foreach ( GetList(10,1) as $key=>$article) { ?>
+                            <?php  foreach ( GetList(5,32) as $key=>$article) { ?>
+                            <li><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Title;  ?></a></li>
+                            <?php }   ?>
+                            <?php  foreach ( GetList(10,33) as $key=>$article) { ?>
                             <li><a href="<?php  echo $article->Url;  ?>"><?php  echo $article->Title;  ?></a></li>
                             <?php }   ?>
                         </ul>
